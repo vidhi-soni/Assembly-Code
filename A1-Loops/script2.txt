@@ -1,0 +1,87 @@
+Script started on 2022-02-01 07:42:11-07:00
+]0;vidhi.soni1@csa3:~vidhi.soni1@csa3:~$ b last
+bash: b: command not found
+]0;vidhi.soni1@csa3:~vidhi.soni1@csa3:~$ gdb assign1b
+GNU gdb (GDB) Fedora 8.1.1-4.fc28
+Copyright (C) 2018 Free Software Foundation, Inc.
+License GPLv3+: GNU GPL version 3 or later <http://gnu.org/licenses/gpl.html>
+This is free software: you are free to change and redistribute it.
+There is NO WARRANTY, to the extent permitted by law.  Type "show copying"
+and "show warranty" for details.
+This GDB was configured as "aarch64-redhat-linux-gnu".
+Type "show configuration" for configuration details.
+For bug reporting instructions, please see:
+<http://www.gnu.org/software/gdb/bugs/>.
+Find the GDB manual and other documentation resources online at:
+<http://www.gnu.org/software/gdb/documentation/>.
+For help, type "help".
+Type "apropos word" to search for commands related to "word"...
+Reading symbols from assign1b...(no debugging symbols found)...done.
+(gdb) b done
+Function "done" not defined.
+Make breakpoint pending on future shared library load? (y or [n]) b [K[Kn
+(gdb) b last
+Breakpoint 1 at 0x400654
+(gdb) r
+Starting program: /home/uga/vidhi.soni1/assign1b 
+warning: the debug information found in "/usr/lib/debug//usr/lib64/ld-2.27.so.debug" does not match "/lib/ld-linux-aarch64.so.1" (CRC mismatch).
+
+Missing separate debuginfos, use: dnf debuginfo-install glibc-2.27-38.fc28.aarch64
+warning: the debug information found in "/usr/lib/debug//lib64/libc-2.27.so.debug" does not match "/lib64/libc.so.6" (CRC mismatch).
+
+warning: the debug information found in "/usr/lib/debug//usr/lib64/libc-2.27.so.debug" does not match "/lib64/libc.so.6" (CRC mismatch).
+
+ x = -10, y = 1967. 
+ Minimum value of y = 1967. 
+ x = -9, y = -2960. 
+ Minimum value of y = -2960. 
+ x = -8, y = -5539. 
+ Minimum value of y = -5539. 
+ x = -7, y = -6382. 
+ Minimum value of y = -6382. 
+ x = -6, y = -6029. 
+ Minimum value of y = -6382. 
+ x = -5, y = -4948. 
+ Minimum value of y = -6382. 
+ x = -4, y = -3535. 
+ Minimum value of y = -6382. 
+ x = -3, y = -2114. 
+ Minimum value of y = -6382. 
+ x = -2, y = -937. 
+ Minimum value of y = -6382. 
+ x = -1, y = -184. 
+ Minimum value of y = -6382. 
+ x = 0, y = 37. 
+ Minimum value of y = -6382. 
+ x = 1, y = -310. 
+ Minimum value of y = -6382. 
+ x = 2, y = -1189. 
+ Minimum value of y = -6382. 
+ x = 3, y = -2492. 
+ Minimum value of y = -6382. 
+ x = 4, y = -4039. 
+ Minimum value of y = -6382. 
+ x = 5, y = -5578. 
+ Minimum value of y = -6382. 
+ x = 6, y = -6785. 
+ Minimum value of y = -6785. 
+ x = 7, y = -7264. 
+ Minimum value of y = -7264. 
+ x = 8, y = -6547. 
+ Minimum value of y = -7264. 
+ x = 9, y = -4094. 
+ Minimum value of y = -7264. 
+ x = 10, y = 707. 
+ Minimum value of y = -7264. 
+
+Breakpoint 1, 0x0000000000400654 in last ()
+(gdb) p $x21
+$1 = -7264
+(gdb) q
+A debugging session is active.
+
+	Inferior 1 [process 20997] will be killed.
+
+Quit anyway? (y or n) y
+]0;vidhi.soni1@csa3:~vidhi.soni1@csa3:~$ nano script2.txt
+

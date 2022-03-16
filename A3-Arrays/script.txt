@@ -1,0 +1,810 @@
+Script started on 2022-03-04 09:01:36-07:00
+]0;vidhi.soni1@csa1:~vidhi.soni1@csa1:~$ f\g[K[K[Kgdb assign3
+GNU gdb (GDB) Fedora 8.1.1-4.fc28
+Copyright (C) 2018 Free Software Foundation, Inc.
+License GPLv3+: GNU GPL version 3 or later <http://gnu.org/licenses/gpl.html>
+This is free software: you are free to change and redistribute it.
+There is NO WARRANTY, to the extent permitted by law.  Type "show copying"
+and "show warranty" for details.
+This GDB was configured as "aarch64-redhat-linux-gnu".
+Type "show configuration" for configuration details.
+For bug reporting instructions, please see:
+<http://www.gnu.org/software/gdb/bugs/>.
+Find the GDB manual and other documentation resources online at:
+<http://www.gnu.org/software/gdb/documentation/>.
+For help, type "help".
+Type "apropos word" to search for commands related to "word"...
+Reading symbols from assign3...(no debugging symbols found)...done.
+(gdb) b loop_two
+Breakpoint 1 at 0x400654
+(gdb) x/i $PC
+Value can't be converted to integer.
+(gdb) x/i $PC[1PCPC[1PCpC[1PCpC[C[Kc
+No registers.
+(gdb) r
+Starting program: /home/uga/vidhi.soni1/assign3 
+warning: the debug information found in "/usr/lib/debug//usr/lib64/ld-2.27.so.debug" does not match "/lib/ld-linux-aarch64.so.1" (CRC mismatch).
+
+Missing separate debuginfos, use: dnf debuginfo-install glibc-2.27-38.fc28.aarch64
+warning: the debug information found in "/usr/lib/debug//lib64/libc-2.27.so.debug" does not match "/lib64/libc.so.6" (CRC mismatch).
+
+warning: the debug information found in "/usr/lib/debug//usr/lib64/libc-2.27.so.debug" does not match "/lib64/libc.so.6" (CRC mismatch).
+
+v[0]: 103
+v[1]: 198
+v[2]: 105
+v[3]: 115
+v[4]: 81
+v[5]: 255
+v[6]: 74
+v[7]: 236
+v[8]: 41
+v[9]: 205
+v[10]: 186
+v[11]: 171
+v[12]: 242
+v[13]: 251
+v[14]: 227
+v[15]: 70
+v[16]: 124
+v[17]: 194
+v[18]: 84
+v[19]: 248
+v[20]: 27
+v[21]: 232
+v[22]: 231
+v[23]: 141
+v[24]: 118
+v[25]: 90
+v[26]: 46
+v[27]: 99
+v[28]: 51
+v[29]: 159
+v[30]: 201
+v[31]: 154
+v[32]: 102
+v[33]: 50
+v[34]: 13
+v[35]: 183
+v[36]: 49
+v[37]: 88
+v[38]: 163
+v[39]: 90
+v[40]: 37
+v[41]: 93
+v[42]: 5
+v[43]: 23
+v[44]: 88
+v[45]: 233
+v[46]: 94
+v[47]: 212
+v[48]: 171
+v[49]: 178
+
+Breakpoint 1, 0x0000000000400654 in loop_two ()
+(gdb) rx/i $pc
+=> 0x400654 <loop_two>:	ldr	w21, [x20, w22, sxtw #2]
+(gdb) x/50d $sp
+0xfffffffff0d0:	-3648	65535	-1084900956	65535
+0xfffffffff0e0:	1	65535	0	103
+0xfffffffff0f0:	198	105	115	81
+0xfffffffff100:	255	74	236	41
+0xfffffffff110:	205	186	171	242
+0xfffffffff120:	251	227	70	124
+0xfffffffff130:	194	84	248	27
+0xfffffffff140:	232	231	141	118
+0xfffffffff150:	90	46	99	51
+0xfffffffff160:	159	201	154	102
+0xfffffffff170:	50	13	183	49
+0xfffffffff180:	88	163	90	37
+0xfffffffff190:	93	5
+(gdb) x/50d $sp[2Pi $pc50d $sp
+0xfffffffff0d0:	-3648	65535	-1084900956	65535
+0xfffffffff0e0:	1	65535	0	103
+0xfffffffff0f0:	198	105	115	81
+0xfffffffff100:	255	74	236	41
+0xfffffffff110:	205	186	171	242
+0xfffffffff120:	251	227	70	124
+0xfffffffff130:	194	84	248	27
+0xfffffffff140:	232	231	141	118
+0xfffffffff150:	90	46	99	51
+0xfffffffff160:	159	201	154	102
+0xfffffffff170:	50	13	183	49
+0xfffffffff180:	88	163	90	37
+0xfffffffff190:	93	5
+(gdb) x/50d $sp[K[K28
+History has not yet reached $28.
+(gdb) c
+Continuing.
+
+Breakpoint 1, 0x0000000000400654 in loop_two ()
+(gdb) cx/50d $28sp[2Pi $pc
+=> 0x400654 <loop_two>:	ldr	w21, [x20, w22, sxtw #2]
+(gdb) c
+Continuing.
+
+Breakpoint 1, 0x0000000000400654 in loop_two ()
+(gdb) b check_wt[K[Ktwo
+Breakpoint 2 at 0x4006c0`
+(gdb) c
+Continuing.
+
+Breakpoint 2, 0x00000000004006c0 in check_two ()
+(gdb) cb check_two[C[C[C[C[C[Cc[Kx/i $pcc[Kx/50d $28sp[2Pi $pcr[Kx/i $pc
+=> 0x4006c0 <check_two>:	cmp	w22, #0x32
+(gdb) x/i $pcc[Kx/i $pc
+=> 0x4006c0 <check_two>:	cmp	w22, #0x32
+(gdb) cb t[Kcheck_wt[K[Kto[Kwo
+Undefined command: "cb".  Try "help".
+(gdb) c
+Continuing.
+
+Breakpoint 1, 0x0000000000400654 in loop_two ()
+(gdb) cb check_two[C[C[C[C[C[C[5Px/i $pc
+=> 0x400654 <loop_two>:	ldr	w21, [x20, w22, sxtw #2]
+(gdb) cx/50d $sp
+Undefined command: "cx".  Try "help".
+(gdb) cx/50d $sp[C[C[C[C[C[C[3Px/i $pcc[Kb check_two[C[C[C[C[C[C[5Px/i $pcc[Kb check_two[C[C[C[C[C[Cc[Kx/i $pcc[Kx/50d $28sp
+0xfffffffff0d0:	-3648	65535	-1084900956	65535
+0xfffffffff0e0:	4	2	115	103
+0xfffffffff0f0:	105	115	198	81
+0xfffffffff100:	255	74	236	41
+0xfffffffff110:	205	186	171	242
+0xfffffffff120:	251	227	70	124
+0xfffffffff130:	194	84	248	27
+0xfffffffff140:	232	231	141	118
+0xfffffffff150:	90	46	99	51
+0xfffffffff160:	159	201	154	102
+0xfffffffff170:	50	13	183	49
+0xfffffffff180:	88	163	90	37
+0xfffffffff190:	93	5
+(gdb) c
+Continuing.
+
+Breakpoint 2, 0x00000000004006c0 in check_two ()
+(gdb) cx/50d $sp[C[C[C[C[C[C[1@c[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[3Px/i $pc
+=> 0x4006c0 <check_two>:	cmp	w22, #0x32
+(gdb) c
+Continuing.
+
+Breakpoint 1, 0x0000000000400654 in loop_two ()
+(gdb) cx/i $pcc[Kx/i $pc
+=> 0x400654 <loop_two>:	ldr	w21, [x20, w22, sxtw #2]
+(gdb) x/i $pcc[Kx/i $pcc[Kx/50d $sp[C[C[C[C[C[C[1@c[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[1P[C[C[C[C[C[C[C[C[C
+0xfffffffff0d0:	-3648	65535	-1084900956	65535
+0xfffffffff0e0:	5	0	81	81
+0xfffffffff0f0:	103	105	115	198
+0xfffffffff100:	255	74	236	41
+0xfffffffff110:	205	186	171	242
+0xfffffffff120:	251	227	70	124
+0xfffffffff130:	194	84	248	27
+0xfffffffff140:	232	231	141	118
+0xfffffffff150:	90	46	99	51
+0xfffffffff160:	159	201	154	102
+0xfffffffff170:	50	13	183	49
+0xfffffffff180:	88	163	90	37
+0xfffffffff190:	93	5
+(gdb) c
+Continuing.
+
+Breakpoint 2, 0x00000000004006c0 in check_two ()
+(gdb) cx/50d $sp[2Pi $pc
+=> 0x4006c0 <check_two>:	cmp	w22, #0x32
+(gdb) c
+Continuing.
+
+Breakpoint 1, 0x0000000000400654 in loop_two ()
+(gdb) cx/i $pcc[Kx/i $pc
+=> 0x400654 <loop_two>:	ldr	w21, [x20, w22, sxtw #2]
+(gdb) x/i $pcc[Kx/i $pcc[Kx/50d $sp[2Pi $pcc[Kx/i $pcc[Kx/50d $sp
+0xfffffffff0d0:	-3648	65535	-1084900956	65535
+0xfffffffff0e0:	6	5	255	81
+0xfffffffff0f0:	103	105	115	198
+0xfffffffff100:	255	74	236	41
+0xfffffffff110:	205	186	171	242
+0xfffffffff120:	251	227	70	124
+0xfffffffff130:	194	84	248	27
+0xfffffffff140:	232	231	141	118
+0xfffffffff150:	90	46	99	51
+0xfffffffff160:	159	201	154	102
+0xfffffffff170:	50	13	183	49
+0xfffffffff180:	88	163	90	37
+0xfffffffff190:	93	5
+(gdb) c
+Continuing.
+
+Breakpoint 2, 0x00000000004006c0 in check_two ()
+(gdb) cx/50d $sp[2Pi $pc
+=> 0x4006c0 <check_two>:	cmp	w22, #0x32
+(gdb) c
+Continuing.
+
+Breakpoint 1, 0x0000000000400654 in loop_two ()
+(gdb) cx/i $pc
+=> 0x400654 <loop_two>:	ldr	w21, [x20, w22, sxtw #2]
+(gdb) c
+Continuing.
+
+Breakpoint 2, 0x00000000004006c0 in check_two ()
+(gdb) cx/i $pc
+=> 0x4006c0 <check_two>:	cmp	w22, #0x32
+(gdb) x/i $pcc[Kx/i $pcc[Kx/i $pcc[Kx/50d $sp[2Pi $pcc[Kx/i $pcc[Kx/50d $sp[2Pi $pc50d $sp
+0xfffffffff0d0:	-3648	65535	-1084900956	65535
+0xfffffffff0e0:	8	6	236	74
+0xfffffffff0f0:	81	103	105	115
+0xfffffffff100:	198	236	255	41
+0xfffffffff110:	205	186	171	242
+0xfffffffff120:	251	227	70	124
+0xfffffffff130:	194	84	248	27
+0xfffffffff140:	232	231	141	118
+0xfffffffff150:	90	46	99	51
+0xfffffffff160:	159	201	154	102
+0xfffffffff170:	50	13	183	49
+0xfffffffff180:	88	163	90	37
+0xfffffffff190:	93	5
+(gdb) c
+Continuing.
+
+Breakpoint 1, 0x0000000000400654 in loop_two ()
+(gdb) cx/50d $sp[2Pi $pcc[Kx/i $pc
+=> 0x400654 <loop_two>:	ldr	w21, [x20, w22, sxtw #2]
+(gdb) c
+Continuing.
+
+Breakpoint 2, 0x00000000004006c0 in check_two ()
+(gdb) cx/i $pc
+=> 0x4006c0 <check_two>:	cmp	w22, #0x32
+(gdb) c
+Continuing.
+
+Breakpoint 1, 0x0000000000400654 in loop_two ()
+(gdb) cx/i $pc
+=> 0x400654 <loop_two>:	ldr	w21, [x20, w22, sxtw #2]
+(gdb) c
+Continuing.
+
+Breakpoint 2, 0x00000000004006c0 in check_two ()
+(gdb) cx/i $pc
+=> 0x4006c0 <check_two>:	cmp	w22, #0x32
+(gdb) c
+Continuing.
+
+Breakpoint 1, 0x0000000000400654 in loop_two ()
+(gdb) cx/i $pcc[Kx/i $pcc[Kx/i $pcc[Kx/i $pcc[Kx/50d $sp
+0xfffffffff0d0:	-3648	65535	-1084900956	65535
+0xfffffffff0e0:	10	7	205	41
+0xfffffffff0f0:	74	81	103	105
+0xfffffffff100:	115	198	205	236
+0xfffffffff110:	255	186	171	242
+0xfffffffff120:	251	227	70	124
+0xfffffffff130:	194	84	248	27
+0xfffffffff140:	232	231	141	118
+0xfffffffff150:	90	46	99	51
+0xfffffffff160:	159	201	154	102
+0xfffffffff170:	50	13	183	49
+0xfffffffff180:	88	163	90	37
+0xfffffffff190:	93	5
+(gdb) c
+Continuing.
+
+Breakpoint 2, 0x00000000004006c0 in check_two ()
+(gdb) c
+Continuing.
+
+Breakpoint 1, 0x0000000000400654 in loop_two ()
+(gdb) cx/50d $sp[C[C[C[C[C[Cc[Kx/i $pc
+=> 0x400654 <loop_two>:	ldr	w21, [x20, w22, sxtw #2]
+(gdb) c
+Continuing.
+
+Breakpoint 2, 0x00000000004006c0 in check_two ()
+(gdb) cx/i $pc
+=> 0x4006c0 <check_two>:	cmp	w22, #0x32
+(gdb) c
+Continuing.
+
+Breakpoint 1, 0x0000000000400654 in loop_two ()
+(gdb) cx/i $pc
+=> 0x400654 <loop_two>:	ldr	w21, [x20, w22, sxtw #2]
+(gdb) c
+Continuing.
+
+Breakpoint 2, 0x00000000004006c0 in check_two ()
+(gdb) cx/i $pcc[Kx/i $pc
+=> 0x4006c0 <check_two>:	cmp	w22, #0x32
+(gdb) c
+Continuing.
+
+Breakpoint 1, 0x0000000000400654 in loop_two ()
+(gdb) cx/i $pc
+=> 0x400654 <loop_two>:	ldr	w21, [x20, w22, sxtw #2]
+(gdb) c
+Continuing.
+
+Breakpoint 2, 0x00000000004006c0 in check_two ()
+(gdb) cx/i $pc
+=> 0x4006c0 <check_two>:	cmp	w22, #0x32
+(gdb) c
+Continuing.
+
+Breakpoint 1, 0x0000000000400654 in loop_two ()
+(gdb) c
+Continuing.
+
+Breakpoint 2, 0x00000000004006c0 in check_two ()
+(gdb) cx/i $pc
+=> 0x4006c0 <check_two>:	cmp	w22, #0x32
+(gdb) c
+Continuing.
+
+Breakpoint 1, 0x0000000000400654 in loop_two ()
+(gdb) cx/i $pc
+=> 0x400654 <loop_two>:	ldr	w21, [x20, w22, sxtw #2]
+(gdb) c
+Continuing.
+
+Breakpoint 2, 0x00000000004006c0 in check_two ()
+(gdb) cx/i $pc
+=> 0x4006c0 <check_two>:	cmp	w22, #0x32
+(gdb) c
+Continuing.
+
+Breakpoint 1, 0x0000000000400654 in loop_two ()
+(gdb) cx/i $pc
+=> 0x400654 <loop_two>:	ldr	w21, [x20, w22, sxtw #2]
+(gdb) x/i $pcc[Kx/i $pcc[Kx/i $pcc[Kx/i $pcc[Kx/i $pcc[Kx/i $pcc[Kx/i $pcc[Kx/i $pcc[Kx/i $pcc[Kx/i $pcc[Kx/50d $sp[C[C[C[C[C[Cc[Kx/50d $sp
+0xfffffffff0d0:	-3648	65535	-1084900956	65535
+0xfffffffff0e0:	16	1	70	41
+0xfffffffff0f0:	70	74	81	103
+0xfffffffff100:	105	115	171	186
+0xfffffffff110:	198	205	227	236
+0xfffffffff120:	242	251	255	124
+0xfffffffff130:	194	84	248	27
+0xfffffffff140:	232	231	141	118
+0xfffffffff150:	90	46	99	51
+0xfffffffff160:	159	201	154	102
+0xfffffffff170:	50	13	183	49
+0xfffffffff180:	88	163	90	37
+0xfffffffff190:	93	5
+(gdb) c
+Continuing.
+
+Breakpoint 2, 0x00000000004006c0 in check_two ()
+(gdb) cx/50d $sp[2Pi $pc
+=> 0x4006c0 <check_two>:	cmp	w22, #0x32
+(gdb) c
+Continuing.
+
+Breakpoint 1, 0x0000000000400654 in loop_two ()
+(gdb) cx/i $pc
+=> 0x400654 <loop_two>:	ldr	w21, [x20, w22, sxtw #2]
+(gdb) c
+Continuing.
+
+Breakpoint 2, 0x00000000004006c0 in check_two ()
+(gdb) cx/i $pc
+=> 0x4006c0 <check_two>:	cmp	w22, #0x32
+(gdb) c
+Continuing.
+
+Breakpoint 1, 0x0000000000400654 in loop_two ()
+(gdb) cx/i $pc
+=> 0x400654 <loop_two>:	ldr	w21, [x20, w22, sxtw #2]
+(gdb) c
+Continuing.
+
+Breakpoint 2, 0x00000000004006c0 in check_two ()
+(gdb) cx/i $pc
+=> 0x4006c0 <check_two>:	cmp	w22, #0x32
+(gdb) c
+Continuing.
+
+Breakpoint 1, 0x0000000000400654 in loop_two ()
+(gdb) cx/i $pc
+=> 0x400654 <loop_two>:	ldr	w21, [x20, w22, sxtw #2]
+(gdb) c
+Continuing.
+
+Breakpoint 2, 0x00000000004006c0 in check_two ()
+(gdb) cx/i $pc
+=> 0x4006c0 <check_two>:	cmp	w22, #0x32
+(gdb) c
+Continuing.
+
+Breakpoint 1, 0x0000000000400654 in loop_two ()
+(gdb) cx/i $pc
+=> 0x400654 <loop_two>:	ldr	w21, [x20, w22, sxtw #2]
+(gdb) c
+Continuing.
+
+Breakpoint 2, 0x00000000004006c0 in check_two ()
+(gdb) cx/i $pc
+=> 0x4006c0 <check_two>:	cmp	w22, #0x32
+(gdb) c
+Continuing.
+
+Breakpoint 1, 0x0000000000400654 in loop_two ()
+(gdb) cx/i $pc
+=> 0x400654 <loop_two>:	ldr	w21, [x20, w22, sxtw #2]
+(gdb) c
+Continuing.
+
+Breakpoint 2, 0x00000000004006c0 in check_two ()
+(gdb) cx/i $pc
+=> 0x4006c0 <check_two>:	cmp	w22, #0x32
+(gdb) c
+Continuing.
+
+Breakpoint 1, 0x0000000000400654 in loop_two ()
+(gdb) cx/i $pc
+=> 0x400654 <loop_two>:	ldr	w21, [x20, w22, sxtw #2]
+(gdb) c
+Continuing.
+
+Breakpoint 2, 0x00000000004006c0 in check_two ()
+(gdb) cx/i $pc
+=> 0x4006c0 <check_two>:	cmp	w22, #0x32
+(gdb) c
+Continuing.
+
+Breakpoint 1, 0x0000000000400654 in loop_two ()
+(gdb) cx/i $pc
+=> 0x400654 <loop_two>:	ldr	w21, [x20, w22, sxtw #2]
+(gdb) c
+Continuing.
+
+Breakpoint 2, 0x00000000004006c0 in check_two ()
+(gdb) c
+Continuing.
+
+Breakpoint 1, 0x0000000000400654 in loop_two ()
+(gdb) cx/i $pc
+=> 0x400654 <loop_two>:	ldr	w21, [x20, w22, sxtw #2]
+(gdb) c
+Continuing.
+
+Breakpoint 2, 0x00000000004006c0 in check_two ()
+(gdb) cx/i $pc
+=> 0x4006c0 <check_two>:	cmp	w22, #0x32
+(gdb) c
+Continuing.
+
+Breakpoint 1, 0x0000000000400654 in loop_two ()
+(gdb) cx/i $pc
+=> 0x400654 <loop_two>:	ldr	w21, [x20, w22, sxtw #2]
+(gdb) c
+Continuing.
+
+Breakpoint 2, 0x00000000004006c0 in check_two ()
+(gdb) cx/i $pc
+=> 0x4006c0 <check_two>:	cmp	w22, #0x32
+(gdb) c
+Continuing.
+
+Breakpoint 1, 0x0000000000400654 in loop_two ()
+(gdb) cx/i $pc
+=> 0x400654 <loop_two>:	ldr	w21, [x20, w22, sxtw #2]
+(gdb) c
+Continuing.
+
+Breakpoint 2, 0x00000000004006c0 in check_two ()
+(gdb) cx/i $pc
+=> 0x4006c0 <check_two>:	cmp	w22, #0x32
+(gdb) c
+Continuing.
+
+Breakpoint 1, 0x0000000000400654 in loop_two ()
+(gdb) cx/i $pc
+=> 0x400654 <loop_two>:	ldr	w21, [x20, w22, sxtw #2]
+(gdb) c
+Continuing.
+
+Breakpoint 2, 0x00000000004006c0 in check_two ()
+(gdb) cx/i $pc
+=> 0x4006c0 <check_two>:	cmp	w22, #0x32
+(gdb) c
+Continuing.
+
+Breakpoint 1, 0x0000000000400654 in loop_two ()
+(gdb) cx/i $pc
+=> 0x400654 <loop_two>:	ldr	w21, [x20, w22, sxtw #2]
+(gdb) c
+Continuing.
+
+Breakpoint 2, 0x00000000004006c0 in check_two ()
+(gdb) cx/i $pc
+=> 0x4006c0 <check_two>:	cmp	w22, #0x32
+(gdb) c
+Continuing.
+
+Breakpoint 1, 0x0000000000400654 in loop_two ()
+(gdb) cx/i $pc
+=> 0x400654 <loop_two>:	ldr	w21, [x20, w22, sxtw #2]
+(gdb) c
+Continuing.
+
+Breakpoint 2, 0x00000000004006c0 in check_two ()
+(gdb) cx/i $pc
+=> 0x4006c0 <check_two>:	cmp	w22, #0x32
+(gdb) c
+Continuing.
+
+Breakpoint 1, 0x0000000000400654 in loop_two ()
+(gdb) cx/i $pc
+=> 0x400654 <loop_two>:	ldr	w21, [x20, w22, sxtw #2]
+(gdb) c
+Continuing.
+
+Breakpoint 2, 0x00000000004006c0 in check_two ()
+(gdb) cx/i $pc
+=> 0x4006c0 <check_two>:	cmp	w22, #0x32
+(gdb) c
+Continuing.
+
+Breakpoint 1, 0x0000000000400654 in loop_two ()
+(gdb) [K(gdb) [K(gdb) [K(gdb) [K(gdb) [K(gdb) [K(gdb) [K(gdb) [K(gdb) cx/i $pc
+=> 0x400654 <loop_two>:	ldr	w21, [x20, w22, sxtw #2]
+(gdb) x/i $pcc[K
+Continuing.
+
+Breakpoint 2, 0x00000000004006c0 in check_two ()
+(gdb) cx/i $pc
+=> 0x4006c0 <check_two>:	cmp	w22, #0x32
+(gdb) x/i $pcc[K
+Continuing.
+
+Breakpoint 1, 0x0000000000400654 in loop_two ()
+(gdb) cx/i $pc
+=> 0x400654 <loop_two>:	ldr	w21, [x20, w22, sxtw #2]
+(gdb) x/i $pcc[K
+Continuing.
+
+Breakpoint 2, 0x00000000004006c0 in check_two ()
+(gdb) cx/i $pcc[Kx/i $pc
+=> 0x4006c0 <check_two>:	cmp	w22, #0x32
+(gdb) x/i $pcc[K
+Continuing.
+
+Breakpoint 1, 0x0000000000400654 in loop_two ()
+(gdb) cx/i $pc
+=> 0x400654 <loop_two>:	ldr	w21, [x20, w22, sxtw #2]
+(gdb) x/i $pcc[K
+Continuing.
+
+Breakpoint 2, 0x00000000004006c0 in check_two ()
+(gdb) cx/i $pc
+=> 0x4006c0 <check_two>:	cmp	w22, #0x32
+(gdb) x/i $pcc[K
+Continuing.
+
+Breakpoint 1, 0x0000000000400654 in loop_two ()
+(gdb) cx/i $pcc[Kx/i $pc
+=> 0x400654 <loop_two>:	ldr	w21, [x20, w22, sxtw #2]
+(gdb) x/i $pcc[K
+Continuing.
+
+Breakpoint 2, 0x00000000004006c0 in check_two ()
+(gdb) cx/i $pc
+=> 0x4006c0 <check_two>:	cmp	w22, #0x32
+(gdb) x/i $pcc[K
+Continuing.
+
+Breakpoint 1, 0x0000000000400654 in loop_two ()
+(gdb) cx/i $pc
+=> 0x400654 <loop_two>:	ldr	w21, [x20, w22, sxtw #2]
+(gdb) x/i $pcc[K
+Continuing.
+
+Breakpoint 2, 0x00000000004006c0 in check_two ()
+(gdb) cx/i $pc
+=> 0x4006c0 <check_two>:	cmp	w22, #0x32
+(gdb) x/i $pcc[K
+Continuing.
+
+Breakpoint 1, 0x0000000000400654 in loop_two ()
+(gdb) cx/i $pc
+=> 0x400654 <loop_two>:	ldr	w21, [x20, w22, sxtw #2]
+(gdb) x/i $pcc[K
+Continuing.
+
+Breakpoint 2, 0x00000000004006c0 in check_two ()
+(gdb) cx/i $pc
+=> 0x4006c0 <check_two>:	cmp	w22, #0x32
+(gdb) x/i $pcc[K
+Continuing.
+
+Breakpoint 1, 0x0000000000400654 in loop_two ()
+(gdb) cx/i $pc
+=> 0x400654 <loop_two>:	ldr	w21, [x20, w22, sxtw #2]
+(gdb) x/i $pcc[K
+Continuing.
+
+Breakpoint 2, 0x00000000004006c0 in check_two ()
+(gdb) cx/i $pc
+=> 0x4006c0 <check_two>:	cmp	w22, #0x32
+(gdb) x/i $pcc[K
+Continuing.
+
+Breakpoint 1, 0x0000000000400654 in loop_two ()
+(gdb) cx/i $pc
+=> 0x400654 <loop_two>:	ldr	w21, [x20, w22, sxtw #2]
+(gdb) x/i $pcc[K
+Continuing.
+
+Breakpoint 2, 0x00000000004006c0 in check_two ()
+(gdb) cx/i $pcc[Kx/i $pc
+=> 0x4006c0 <check_two>:	cmp	w22, #0x32
+(gdb) x/i $pcc[K
+Continuing.
+
+Breakpoint 1, 0x0000000000400654 in loop_two ()
+(gdb) cx/i $pc
+=> 0x400654 <loop_two>:	ldr	w21, [x20, w22, sxtw #2]
+(gdb) x/i $pcc[K
+Continuing.
+
+Breakpoint 2, 0x00000000004006c0 in check_two ()
+(gdb) cx/i $pc
+=> 0x4006c0 <check_two>:	cmp	w22, #0x32
+(gdb) x/i $pcc[K
+Continuing.
+
+Breakpoint 1, 0x0000000000400654 in loop_two ()
+(gdb) cx/i $pc
+=> 0x400654 <loop_two>:	ldr	w21, [x20, w22, sxtw #2]
+(gdb) x/i $pcc[K
+Continuing.
+
+Breakpoint 2, 0x00000000004006c0 in check_two ()
+(gdb) cx/i $pc
+=> 0x4006c0 <check_two>:	cmp	w22, #0x32
+(gdb) x/i $pcc[K
+Continuing.
+
+Breakpoint 1, 0x0000000000400654 in loop_two ()
+(gdb) cx/i $pc
+=> 0x400654 <loop_two>:	ldr	w21, [x20, w22, sxtw #2]
+(gdb) x/i $pcc[K
+Continuing.
+
+Breakpoint 2, 0x00000000004006c0 in check_two ()
+(gdb) cx/i $pc
+=> 0x4006c0 <check_two>:	cmp	w22, #0x32
+(gdb) x/i $pcc[K
+Continuing.
+
+Breakpoint 1, 0x0000000000400654 in loop_two ()
+(gdb) cx/i $pc
+=> 0x400654 <loop_two>:	ldr	w21, [x20, w22, sxtw #2]
+(gdb) x/i $pcc[K
+Continuing.
+
+Breakpoint 2, 0x00000000004006c0 in check_two ()
+(gdb) cx/i $pc
+=> 0x4006c0 <check_two>:	cmp	w22, #0x32
+(gdb) x/i $pcc[K
+Continuing.
+
+Breakpoint 1, 0x0000000000400654 in loop_two ()
+(gdb) cx/i $pc
+=> 0x400654 <loop_two>:	ldr	w21, [x20, w22, sxtw #2]
+(gdb) x/i $pcc[K
+Continuing.
+
+Breakpoint 2, 0x00000000004006c0 in check_two ()
+(gdb) cx/i $pc
+=> 0x4006c0 <check_two>:	cmp	w22, #0x32
+(gdb) x/i $pcc[K
+Continuing.
+
+Breakpoint 1, 0x0000000000400654 in loop_two ()
+(gdb) cx/i $pc
+=> 0x400654 <loop_two>:	ldr	w21, [x20, w22, sxtw #2]
+(gdb) x/i $pcc[K
+Continuing.
+
+Breakpoint 2, 0x00000000004006c0 in check_two ()
+(gdb) c
+Continuing.
+
+Breakpoint 1, 0x0000000000400654 in loop_two ()
+(gdb) c
+Continuing.
+
+Breakpoint 2, 0x00000000004006c0 in check_two ()
+(gdb) cx/i $pc
+=> 0x4006c0 <check_two>:	cmp	w22, #0x32
+(gdb) c
+Continuing.
+
+Breakpoint 1, 0x0000000000400654 in loop_two ()
+(gdb) cx/i $pc
+=> 0x400654 <loop_two>:	ldr	w21, [x20, w22, sxtw #2]
+(gdb) c
+Continuing.
+
+Breakpoint 2, 0x00000000004006c0 in check_two ()
+(gdb) cx/i $pc[K[K[K[K[K[K[Kc
+Continuing.
+
+Breakpoint 1, 0x0000000000400654 in loop_two ()
+(gdb) c
+Continuing.
+
+Breakpoint 2, 0x00000000004006c0 in check_two ()
+(gdb) c
+Continuing.
+
+Breakpoint 1, 0x0000000000400654 in loop_two ()
+(gdb) c
+Continuing.
+
+Breakpoint 2, 0x00000000004006c0 in check_two ()
+(gdb) c
+Continuing.
+
+Breakpoint 1, 0x0000000000400654 in loop_two ()
+(gdb) c
+Continuing.
+
+Breakpoint 2, 0x00000000004006c0 in check_two ()
+(gdb) 
+Continuing.
+
+Sorted Array: 
+v[0]: 5
+v[1]: 13
+v[2]: 23
+v[3]: 27
+v[4]: 37
+v[5]: 41
+v[6]: 46
+v[7]: 49
+v[8]: 50
+v[9]: 51
+v[10]: 70
+v[11]: 74
+v[12]: 81
+v[13]: 84
+v[14]: 88
+v[15]: 88
+v[16]: 90
+v[17]: 90
+v[18]: 93
+v[19]: 94
+v[20]: 99
+v[21]: 102
+v[22]: 103
+v[23]: 105
+v[24]: 115
+v[25]: 118
+v[26]: 124
+v[27]: 141
+v[28]: 154
+v[29]: 159
+v[30]: 163
+v[31]: 171
+v[32]: 171
+v[33]: 178
+v[34]: 183
+v[35]: 186
+v[36]: 194
+v[37]: 198
+v[38]: 201
+v[39]: 205
+v[40]: 212
+v[41]: 227
+v[42]: 231
+v[43]: 232
+v[44]: 233
+v[45]: 236
+v[46]: 242
+v[47]: 248
+v[48]: 251
+v[49]: 255
+[Inferior 1 (process 749) exited normally]
+(gdb) [K(gdb) [K(gdb) [K(gdb) [K(gdb) [K(gdb) [K(gdb) exit
+Undefined command: "exit".  Try "help".
+(gdb) q
+]0;vidhi.soni1@csa1:~vidhi.soni1@csa1:~$ nano script.txt
+[?1049h[22;0;0t[1;63r(B[m[4l[?7h[39;49m[?1h=[?1h=[?1h=[?25l[39;49m(B[m[H[2J[61;95H(B[0;7m[ Reading File ](B[m[61;94H(B[0;7m[ Read 593 lines ](B[m[H(B[0;7m  GNU nano 2.9.8                                                                                    script.txt                                                                                              [1;203H(B[m[62d(B[0;7m^G(B[m Get Help	 (B[0;7m^O(B[m Write Out     (B[0;7m^W(B[m Where Is	   (B[0;7m^K(B[m Cut Text[69G(B[0;7m^J(B[m Justify[86G(B[0;7m^C(B[m Cur Pos[103G(B[0;7mM-U(B[m Undo[62;120H(B[0;7mM-A(B[m Mark Text    (B[0;7mM-](B[m To Bracket   (B[0;7mM-▲(B[m Previous     (B[0;7m^B(B[m Back[62;188H(B[0;7m^◀(B[m Prev Word[63d(B[0;7m^X(B[m Exit[63;18H(B[0;7m^R(B[m Read File     (B[0;7m^\(B[m Replace	   (B[0;7m^U(B[m Uncut Text    (B[0;7m^T(B[m To Spell[86G(B[0;7m^_(B[m Go To Line    (B[0;7mM-E(B[m Redo[63;120H(B[0;7mM-6(B[m Copy Text    (B[0;7mM-W(B[m WhereIs Next (B[0;7mM-▼(B[m Next[63;171H(B[0;7m^F(B[m Forward	   (B[0;7m^▶(B[m Next Word[61d[3d[39;49m(B[mScript started on 2022-03-04 09:01:36-07:00[4d^[]0;vidhi.soni1@csa1:~^Gvidhi.soni1@csa1:~$ f\g^H^[[K^H^[[K^H^[[K^Ggdb assign3[5dGNU gdb (GDB) Fedora 8.1.1-4.fc28[6dCopyright (C) 2018 Free Software Foundation, Inc.[7dLicense GPLv3+: GNU GPL version 3 or later <http://gnu.org/licenses/gpl.html>[8dThis is free software: you are free to change and redistribute it.[9dThere is NO WARRANTY, to the extent permitted by law.  Type "show copying"[10dand "show warranty" for details.[11dThis GDB was configured as "aarch64-redhat-linux-gnu".[12dType "show configuration" for configuration details.[13dFor bug reporting instructions, please see:[14d<http://www.gnu.org/software/gdb/bugs/>.[15dFind the GDB manual and other documentation resources online at:[16d<http://www.gnu.org/software/gdb/documentation/>.[17dFor help, type "help".[18dType "apropos word" to search for commands related to "word"...[19dReading symbols from assign3...(no debugging symbols found)...done.[20d(gdb) b loop_two[21dBreakpoint 1 at 0x400654[22d(gdb) x/i $PC[23dValue can't be converted to integer.[24d(gdb) x/i $PC^H^H^[[1PC^HPC^H^H^[[1PC^HpC^H^H^[[1PC^HpC^H^[[C^G^H^[[Kc[25dNo registers.[26d(gdb) r[27dStarting program: /home/uga/vidhi.soni1/assign3[28dwarning: the debug information found in "/usr/lib/debug//usr/lib64/ld-2.27.so.debug" does not match "/lib/ld-linux-aarch64.so.1" (CRC mismatch).[30dMissing separate debuginfos, use: dnf debuginfo-install glibc-2.27-38.fc28.aarch64[31dwarning: the debug information found in "/usr/lib/debug//lib64/libc-2.27.so.debug" does not match "/lib64/libc.so.6" (CRC mismatch).[33dwarning: the debug information found in "/usr/lib/debug//usr/lib64/libc-2.27.so.debug" does not match "/lib64/libc.so.6" (CRC mismatch).[35dv[0]: 103[36dv[1]: 198[37dv[2]: 105[38dv[3]: 115[39dv[4]: 81[40dv[5]: 255[41dv[6]: 74[42dv[7]: 236[43dv[8]: 41[44dv[9]: 205[45dv[10]: 186[46dv[11]: 171[47dv[12]: 242[48dv[13]: 251[49dv[14]: 227[50dv[15]: 70[51dv[16]: 124[52dv[17]: 194[53dv[18]: 84[54dv[19]: 248[55dv[20]: 27[56dv[21]: 232[57dv[22]: 231[58dv[23]: 141[59dv[24]: 118[60dv[25]: 90[3d[?12l[?25h[?25l[5d[?12l[?25h[?25l[16d[?12l[?25h[?25l[61d[K[48d[?12l[?25h[?25l[49d[?12l[?25h[?25l[50d[?12l[?25h[?25l[51d[?12l[?25h[?25l[53d[?12l[?25h[?25l[55d[?12l[?25h[?25l[60d[?12l[?25h[?25l7[3;61r8[61d[29S[1;63r[32;1Hv[26]: 46[33dv[27]: 99[34dv[28]: 51[35dv[29]: 159[36dv[30]: 201[37dv[31]: 154[38dv[32]: 102[39dv[33]: 50[40dv[34]: 13[41dv[35]: 183[42dv[36]: 49[43dv[37]: 88[44dv[38]: 163[45dv[39]: 90[46dv[40]: 37[47dv[41]: 93[48dv[42]: 5[49dv[43]: 23[50dv[44]: 88[51dv[45]: 233[52dv[46]: 94[53dv[47]: 212[54dv[48]: 171[55dv[49]: 178[57dBreakpoint 1, 0x0000000000400654 in loop_two ()[58d(gdb) r^Hx/i $pc[59d=> 0x400654 <loop_two>: ldr     w21, [x20, w22, sxtw #2][60d(gdb) x/50d $sp[33d[?12l[?25h[?25l[40d[?12l[?25h[?25l[41d[?12l[?25h[?25l[42d[?12l[?25h[?25l[43d[?12l[?25h[?25l[44d[?12l[?25h[?25l[45d[?12l[?25h[?25l[46d[?12l[?25h[?25l[48d[?12l[?25h[?25l[49d[?12l[?25h[?25l[56d[?12l[?25h[?25l[58d[?12l[?25h[?25l[59d[?12l[?25h[?25l[60d[?12l[?25h[?25l7[3;61r8[61d[29S[1;63r[32;1H0xfffffffff0d0: -3648   65535   -1084900956     65535[33d0xfffffffff0e0: 1	65535   0	103[34d0xfffffffff0f0: 198     105     115     81[35d0xfffffffff100: 255     74	236     41[36d0xfffffffff110: 205     186     171     242[37d0xfffffffff120: 251     227     70	124[38d0xfffffffff130: 194     84	248     27[39d0xfffffffff140: 232     231     141     118[40d0xfffffffff150: 90	46	99	51[41d0xfffffffff160: 159     201     154     102[42d0xfffffffff170: 50	13	183     49[43d0xfffffffff180: 88	163     90	37[44d0xfffffffff190: 93	5[45d(gdb) x/50d $sp^H^H^H^H^H^H^H^[[2Pi $pc^H^H^H^H^H50d $sp[46d0xfffffffff0d0: -3648   65535   -1084900956     65535[47d0xfffffffff0e0: 1	65535   0	103[48d0xfffffffff0f0: 198     105     115     81[49d0xfffffffff100: 255     74	236     41[50d0xfffffffff110: 205     186     171     242[51d0xfffffffff120: 251     227     70	124[52d0xfffffffff130: 194     84	248     27[53d0xfffffffff140: 232     231     141     118[54d0xfffffffff150: 90	46	99	51[55d0xfffffffff160: 159     201     154     102[56d0xfffffffff170: 50	13	183     49[57d0xfffffffff180: 88	163     90	37[58d0xfffffffff190: 93	5[59d(gdb) x/50d $sp^H^[[K^H^[[K28[60dHistory has not yet reached $28.[32d[?12l[?25h[?25l[42d[?12l[?25h[?25l[44d[?12l[?25h[?25l[50d[?12l[?25h[?25l[3;61r[61;1H[29S[1;63r[32;1H(gdb) c[33dContinuing.[35dBreakpoint 1, 0x0000000000400654 in loop_two ()[36d(gdb) c^Hx/50d $28^H^Hsp^H^H^H^H^H^H^H^[[2Pi $pc[37d=> 0x400654 <loop_two>: ldr     w21, [x20, w22, sxtw #2][38d(gdb) c[39dContinuing.[41dBreakpoint 1, 0x0000000000400654 in loop_two ()[42d(gdb) b check_wt^H^[[K^H^[[Ktwo[43dBreakpoint 2 at 0x4006c0[44d(gdb) c[45dContinuing.[47dBreakpoint 2, 0x00000000004006c0 in check_two ()[48d(gdb) c^Hb check_two^M^[[C^[[C^[[C^[[C^[[C^[[Cc^[[K^Hx/i $pc^H^H^H^H^H^H^Hc^[[K^Hx/50d $28^H^Hsp^H^H^H^H^H^H^H^[[2Pi $pc^H^H^H^H^H^H^Hr^[[K^Hx/i $pc[49d=> 0x4006c0 <check_two>:[49;33Hcmp     w22, #0x32[50d(gdb) x/i $pc^H^H^H^H^H^H^Hc^[[K^Hx/i $pc[51d=> 0x4006c0 <check_two>:[51;33Hcmp     w22, #0x32[52d(gdb) cb t^H^[[Kcheck_wt^H^[[K^H^[[Kto^H^[[Kwo[53dUndefined command: "cb".  Try "help".[54d(gdb) c[55dContinuing.[57dBreakpoint 1, 0x0000000000400654 in loop_two ()[58d(gdb) cb check_two^M^[[C^[[C^[[C^[[C^[[C^[[C^[[5Px/i $pc[59d=> 0x400654 <loop_two>: ldr     w21, [x20, w22, sxtw #2][60d(gdb) cx/50d $sp[34d[?12l[?25h[?25l[40d[?12l[?25h[?25l[41d[?12l[?25h[?25l[42d[?12l[?25h[?25l[43d[?12l[?25h[?25l[45d[?12l[?25h[?25l[46d[?12l[?25h[?25l[48d[?12l[?25h[?25l[52d[?12l[?25h[?25l[54d[?12l[?25h[?25l[57d[?12l[?25h[?25l[60d[?12l[?25h[?25l7[3;61r8[61d[29S[1;63r[32;1HUndefined command: "cx".  Try "help".[33d(gdb) cx/50d $sp^M^[[C^[[C^[[C^[[C^[[C^[[C^[[3Px/i $pc^H^H^H^H^H^H^Hc^[[Kb check_two^M^[[C^[[C^[[C^[[C^[[C^[[C^[[5Px/i $pc^H^H^H^H^H^H^Hc^[[K^Hb check_two^M^[[C^[[C^[[C^[[C^[[C^[[Cc^[[K^Hx/i $pc^H^H^H^H^$[34;1H0xfffffffff0d0: -3648   65535   -1084900956     65535[35d0xfffffffff0e0: 4	2	115     103[36d0xfffffffff0f0: 105     115     198     81[37d0xfffffffff100: 255     74	236     41[38d0xfffffffff110: 205     186     171     242[39d0xfffffffff120: 251     227     70	124[40d0xfffffffff130: 194     84	248     27[41d0xfffffffff140: 232     231     141     118[42d0xfffffffff150: 90	46	99	51[43d0xfffffffff160: 159     201     154     102[44d0xfffffffff170: 50	13	183     49[45d0xfffffffff180: 88	163     90	37[46d0xfffffffff190: 93	5[47d(gdb) c[48dContinuing.[50dBreakpoint 2, 0x00000000004006c0 in check_two ()[51d(gdb) c^Hx/50d $sp^M^[[C^[[C^[[C^[[C^[[C^[[C^[[1@c^[[C^[[C^[[C^[[C^[[C^[[C^[[C^[[C^[[C^M^[[C^[[C^[[C^[[C^[[C^[[C^[[3Px/i $pc[52d=> 0x4006c0 <check_two>:[52;33Hcmp     w22, #0x32[53d(gdb) c[54dContinuing.[56dBreakpoint 1, 0x0000000000400654 in loop_two ()[57d(gdb) c^Hx/i $pc^H^H^H^H^H^H^Hc^[[K^Hx/i $pc[58d=> 0x400654 <loop_two>: ldr     w21, [x20, w22, sxtw #2][59d(gdb) x/i $pc^H^H^H^H^H^H^Hc^[[K^Hx/i $pc^H^H^H^H^H^H^Hc^[[K^Hx/50d $sp^M^[[C^[[C^[[C^[[C^[[C^[[C^[[1@c^[[C^[[C^[[C^[[C^[[C^[[C^[[C^[[C^[[C^M^[[C^[[C^[[C^[[C^[[C^[[C^[[1P^[[C^[[C^[[C^[[C^[[C^[[C^[[C^[[C^$[60;1H0xfffffffff0d0: -3648   65535   -1084900956     65535[32d[?12l[?25h[?25l[33d[?12l[?25h[?25l[34d[?12l[?25h[?25l[35d[?12l[?25h[?25l[37d[?12l[?25h[?25l[39d[?12l[?25h[?25l[41d[?12l[?25h[?25l[43d[?12l[?25h[?25l[49d[?12l[?25h[?25l[52d[?12l[?25h[?25l[54d[?12l[?25h[?25l[56d[?12l[?25h[?25l[58d[?12l[?25h[?25l[59d[?12l[?25h[?25l[60d[?12l[?25h[?25l7[3;61r8[61d[29S[1;63r[32;1H0xfffffffff0e0: 5	0	81	81[33d0xfffffffff0f0: 103     105     115     198[34d0xfffffffff100: 255     74	236     41[35d0xfffffffff110: 205     186     171     242[36d0xfffffffff120: 251     227     70	124[37d0xfffffffff130: 194     84	248     27[38d0xfffffffff140: 232     231     141     118[39d0xfffffffff150: 90	46	99	51[40d0xfffffffff160: 159     201     154     102[41d0xfffffffff170: 50	13	183     49[42d0xfffffffff180: 88	163     90	37[43d0xfffffffff190: 93	5[44d(gdb) c[45dContinuing.[47dBreakpoint 2, 0x00000000004006c0 in check_two ()[48d(gdb) c^Hx/50d $sp^H^H^H^H^H^H^H^[[2Pi $pc[49d=> 0x4006c0 <check_two>:[49;33Hcmp     w22, #0x32[50d(gdb) c[51dContinuing.[53dBreakpoint 1, 0x0000000000400654 in loop_two ()[54d(gdb) c^Hx/i $pc^H^H^H^H^H^H^Hc^[[K^Hx/i $pc[55d=> 0x400654 <loop_two>: ldr     w21, [x20, w22, sxtw #2][56d(gdb) x/i $pc^H^H^H^H^H^H^Hc^[[K^Hx/i $pc^H^H^H^H^H^H^Hc^[[K^Hx/50d $sp^H^H^H^H^H^H^H^[[2Pi $pc^H^H^H^H^H^H^Hc^[[K^Hx/i $pc^H^H^H^H^H^H^Hc^[[K^Hx/50d $sp[57d0xfffffffff0d0: -3648   65535   -1084900956     65535[58d0xfffffffff0e0: 6	5	255     81[59d0xfffffffff0f0: 103     105     115     198[60d0xfffffffff100: 255     74	236     41[32d[?12l[?25h[?25l[35d[?12l[?25h[?25l[36d[?12l[?25h[?25l[37d[?12l[?25h[?25l[40d[?12l[?25h[?25l[42d[?12l[?25h[?25l[44d[?12l[?25h[?25l[48d[?12l[?25h[?25l[51d[?12l[?25h[?25l[53d[?12l[?25h[?25l[54d[?12l[?25h[?25l[55d[?12l[?25h[?25l[56d[?12l[?25h[?25l[59d[?12l[?25h[?25l[60d[?12l[?25h[?25l7[3;61r8[61d[29S[1;63r[32;1H0xfffffffff110: 205     186     171     242[33d0xfffffffff120: 251     227     70	124[34d0xfffffffff130: 194     84	248     27[35d0xfffffffff140: 232     231     141     118[36d0xfffffffff150: 90	46	99	51[37d0xfffffffff160: 159     201     154     102[38d0xfffffffff170: 50	13	183     49[39d0xfffffffff180: 88	163     90	37[40d0xfffffffff190: 93	5[41d(gdb) c[42dContinuing.[44dBreakpoint 2, 0x00000000004006c0 in check_two ()[45d(gdb) c^Hx/50d $sp^H^H^H^H^H^H^H^[[2Pi $pc[46d=> 0x4006c0 <check_two>:[46;33Hcmp     w22, #0x32[47d(gdb) c[48dContinuing.[50dBreakpoint 1, 0x0000000000400654 in loop_two ()[51d(gdb) c^Hx/i $pc[52d=> 0x400654 <loop_two>: ldr     w21, [x20, w22, sxtw #2][53d(gdb) c[54dContinuing.[56dBreakpoint 2, 0x00000000004006c0 in check_two ()[57d(gdb) c^Hx/i $pc[58d=> 0x4006c0 <check_two>:[58;33Hcmp     w22, #0x32[59d(gdb) x/i $pc^H^H^H^H^H^H^Hc^[[K^Hx/i $pc^H^H^H^H^H^H^Hc^[[K^Hx/i $pc^H^H^H^H^H^H^Hc^[[K^Hx/50d $sp^H^H^H^H^H^H^H^[[2Pi $pc^H^H^H^H^H^H^Hc^[[K^Hx/i $pc^H^H^H^H^H^H^Hc^[[K^Hx/50d $sp^H^H^H^H^H^H^H^[[2Pi $$[60;1H0xfffffffff0d0: -3648   65535   -1084900956     65535[32d[?12l[?25h[?25l[38d[?12l[?25h[?25l[39d[?12l[?25h[?25l[40d[?12l[?25h[?25l[42d[?12l[?25h[?25l[45d[?12l[?25h[?25l[46d[?12l[?25h[?25l[48d[?12l[?25h[?25l[53d[?12l[?25h[?25l[54d[?12l[?25h[?25l[56d[?12l[?25h[?25l[3;61r[61;1H[29S[1;63r[32;1H0xfffffffff0e0: 8	6	236     74[33d0xfffffffff0f0: 81	103     105     115[34d0xfffffffff100: 198     236     255     41[35d0xfffffffff110: 205     186     171     242[36d0xfffffffff120: 251     227     70	124[37d0xfffffffff130: 194     84	248     27[38d0xfffffffff140: 232     231     141     118[39d0xfffffffff150: 90	46	99	51[40d0xfffffffff160: 159     201     154     102[41d0xfffffffff170: 50	13	183     49[42d0xfffffffff180: 88	163     90	37[43d0xfffffffff190: 93	5[44d(gdb) c[45dContinuing.[47dBreakpoint 1, 0x0000000000400654 in loop_two ()[48d(gdb) c^Hx/50d $sp^H^H^H^H^H^H^H^[[2Pi $pc^H^H^H^H^H^H^Hc^[[K^Hx/i $pc[49d=> 0x400654 <loop_two>: ldr     w21, [x20, w22, sxtw #2][50d(gdb) c[51dContinuing.[53dBreakpoint 2, 0x00000000004006c0 in check_two ()[54d(gdb) c^Hx/i $pc[55d=> 0x4006c0 <check_two>:[55;33Hcmp     w22, #0x32[56d(gdb) c[57dContinuing.[59dBreakpoint 1, 0x0000000000400654 in loop_two ()[60d(gdb) c^Hx/i $pc[32d[?12l[?25h[?25l[34d[?12l[?25h[?25l[39d[?12l[?25h[?25l[41d[?12l[?25h[?25l[47d[?12l[?25h[?25l[49d[?12l[?25h[?25l[53d[?12l[?25h[?25l[54d[?12l[?25h[?25l[55d[?12l[?25h[?25l[58d[?12l[?25h[?25l[59d[?12l[?25h[?25l[29;60r[29;1H[13T[1;63r[3;12H0e0: 8       6       236     74[K[4;12H0f0: 81      103     105	115[5;13H00: 198     236	255     41[6;13H10: 205     186	17	242[7;13H20: 251     227     70	124[8;13H30: 194     84      248     27[K[9;13H40: 232     231	141     118[10;13H50: 90	46 	99	51[11;13H60: 159     201     154     102[12d0xfffffffff170: 50	13	183     49[13d0xfffffffff180: 88	163     90	37[14d0xfffffffff190: 93	5[15d(gdb) c[K[16dContinuing.[K[17d[K[18dBreakpoint 1, 0x0000000000400654 in loop_two ()[19d(gdb) c^Hx/50d $sp^H^H^H^H^H^H^H^[[2Pi $pc^H^H^H^H^H^H^Hc^[[K^Hx/i $pc[20d=> 0x400654 <loop_two>: ldr     w21, [x20, w22, sxtw #2][21d(gdb) c[K[22dContinuing.[K[23d[K[24dBreakpoint 2, 0x00000000004006c0 in check_two ()[25d(gdb) c^Hx/i $pc[26d=> 0x4006c0 <check_two>:[26;33Hcmp     w22, #0x32[27d(gdb) c[K[28dContinuing.[K[30dBreakpoint 1, 0x0000000000400654 in loop_two ()[31d(gdb) c^Hx/i $pc[32d=> 0x400654 <loop_two>: ldr     w21, [x20, w22, sxtw #2][33d(gdb) c[34dContinuing.[36dBreakpoint 2, 0x00000000004006c0 in check_two ()[37d(gdb) c^Hx/i $pc[38d=> 0x4006c0 <check_two>:[38;33Hcmp     w22, #0x32[39d(gdb) c[40dContinuing.[42dBreakpoint 1, 0x0000000000400654 in loop_two ()[K[43;7Hc^Hx/i $pc^H^H^H^H^H^H^Hc^[[K^Hx/i $pc^H^H^H^H^H^H^Hc^[[K^Hx/i $pc^H^H^H^H^H^H^Hc^[[K^Hx/i $pc^H^H^H^H^H^H^Hc^[[K^Hx/50d $sp[K[45;17H10	7[45;34H05     41[46;17H74	81 	103	10[47;18H15     198	20	236[48;18H5[60;12H2[60;31Hc0 in check_two ()[32d[?12l[?25h[?25l[36d[?12l[?25h[?25l[37d[?12l[?25h[?25l[38d[?12l[?25h[?25l[41d[?12l[?25h[?25l[42d[?12l[?25h[?25l[44d[?12l[?25h[?25l[47d[?12l[?25h[?25l[48d[?12l[?25h[?25l[49d[?12l[?25h[?25l[51d[?12l[?25h[?25l[52d[?12l[?25h[?25l[54d[?12l[?25h[?25l[56d[?12l[?25h[?25l[57d[?12l[?25h[?25l[58d[?12l[?25h[?25l[59d[?12l[?25h[?25l[60d[?12l[?25h[?25l7[3;61r8[61d[29S[1;63r[32;1H(gdb) c[33dContinuing.[35dBreakpoint 1, 0x0000000000400654 in loop_two ()[36d(gdb) c^Hx/50d $sp^M^[[C^[[C^[[C^[[C^[[C^[[Cc^[[K^Hx/i $pc[37d=> 0x400654 <loop_two>: ldr     w21, [x20, w22, sxtw #2][38d(gdb) c[39dContinuing.[41dBreakpoint 2, 0x00000000004006c0 in check_two ()[42d(gdb) c^Hx/i $pc[43d=> 0x4006c0 <check_two>:[43;33Hcmp     w22, #0x32[44d(gdb) c[45dContinuing.[47dBreakpoint 1, 0x0000000000400654 in loop_two ()[48d(gdb) c^Hx/i $pc[49d=> 0x400654 <loop_two>: ldr     w21, [x20, w22, sxtw #2][50d(gdb) c[51dContinuing.[53dBreakpoint 2, 0x00000000004006c0 in check_two ()[54d(gdb) c^Hx/i $pc^H^H^H^H^H^H^Hc^[[K^Hx/i $pc[55d=> 0x4006c0 <check_two>:[55;33Hcmp     w22, #0x32[56d(gdb) c[57dContinuing.[59dBreakpoint 1, 0x0000000000400654 in loop_two ()[60d(gdb) c^Hx/i $pc[32d[?12l[?25h[?25l[33d[?12l[?25h[?25l[34d[?12l[?25h[?25l[35d[?12l[?25h[?25l[36d[?12l[?25h[?25l[38d[?12l[?25h[?25l[40d[?12l[?25h[?25l[42d[?12l[?25h[?25l[47d[?12l[?25h[?25l[51d[?12l[?25h[?25l[53d[?12l[?25h[?25l[57d[?12l[?25h[?25l[58d[?12l[?25h[?25l[59d[?12l[?25h[?25l[60d[?12l[?25h[?25l7[3;61r8[61d[29S[1;63r[32;1H=> 0x400654 <loop_two>: ldr     w21, [x20, w22, sxtw #2][33d(gdb) c[34dContinuing.[36dBreakpoint 2, 0x00000000004006c0 in check_two ()[37d(gdb) c^Hx/i $pc[38d=> 0x4006c0 <check_two>:[38;33Hcmp     w22, #0x32[39d(gdb) c[40dContinuing.[42dBreakpoint 1, 0x0000000000400654 in loop_two ()[43d(gdb) c[44dContinuing.[46dBreakpoint 2, 0x00000000004006c0 in check_two ()[47d(gdb) c^Hx/i $pc[48d=> 0x4006c0 <check_two>:[48;33Hcmp     w22, #0x32[49d(gdb) c[50dContinuing.[52dBreakpoint 1, 0x0000000000400654 in loop_two ()[53d(gdb) c^Hx/i $pc[54d=> 0x400654 <loop_two>: ldr     w21, [x20, w22, sxtw #2][55d(gdb) c[56dContinuing.[58dBreakpoint 2, 0x00000000004006c0 in check_two ()[59d(gdb) c^Hx/i $pc[60d=> 0x4006c0 <check_two>:[60;33Hcmp     w22, #0x32[32d[?12l[?25h[?25l[35d[?12l[?25h[?25l[37d[?12l[?25h[?25l[40d[?12l[?25h[?25l[41d[?12l[?25h[?25l[42d[?12l[?25h[?25l[43d[?12l[?25h[?25l[46d[?12l[?25h[?25l[7;8H[42P[9dx/i $pc^H^H^H^H^H^H^Hc^[[K^Hx/i $pc^H^H^H^H^H^H^Hc^[[K^Hx/i $pc^H^H^H^H^H^H^Hc^[[K^Hx/i $pc^H^H^H^H^H^H^Hc^[[K^Hx/i $pc^H^H^H^H^H^H^Hc^[[K^Hx/i $pc^H^H^H^H^H^H^Hc^[[K^Hx/i $pc^H^H^H^H^H^H^Hc^[[K^Hx$[10;1H0xfffffffff0d0: -3648   65535   -1084900956     65535[11d0xfffffffff0e0: 16	1	70	41[12d0xfffffffff0f0: 70      74      81      103[K[13d0xfffffffff100: 105     115     171     186[14d0xfffffffff110: 198     205     227     236[K[15d0xfffffffff120: 242     251     255     124[16d0xfffffffff130: 194     84	248     27[17d0xfffffffff140: 232     231     141     118[18d0xfffffffff150: 90      46      99      51[K[19d0xfffffffff160: 159     201     154     102[20d0xfffffffff170: 50      13      183     49[K[21d0xfffffffff180: 88	163     90	37[22d0xfffffffff190: 93	5[23d(gdb) c[24dContinuing.[K[25d[K[26dBreakpoint 2, 0x00000000004006c0 in check_two ()[K[27;8H^Hx/50d $sp^H^H^H^H^H^H^H^[[2Pi $pc[28d=> 0x4006c0 <check_two>:[28;33Hcmp     w22, #0x32[29d(gdb) c[30dContinuing.[K[31d[K[32dBreakpoint 1, 0x0000000000400654 in loop_two ()[K[33;8H^Hx/i $pc[34d=> 0x400654 <loop_two>: ldr     w21, [x20, w22, sxtw #2][35d(gdb) c[36dContinuing.[K[37d[K[38dBreakpoint 2, 0x00000000004006c0 in check_two ()[K[39;8H^Hx/i $pc[40d=> 0x4006c0 <check_two>:[40;33Hcmp     w22, #0x32[41d(gdb) c[42dContinuing.[K[43d[K[44dBreakpoint 1, 0x0000000000400654 in loop_two ()[45d(gdb) c^Hx/i $pc[46d=> 0x400654 <loop_two>: ldr     w21, [x20, w22, sxtw #2][47;8H[K[48dContinuing.[K[49d[K[50dBreakpoint 2, 0x00000000004006c0 in check_two ()[51d(gdb) c^Hx/i $pc[52d=> 0x4006c0 <check_two>:        cmp     w22, #0x32[53;8H[K[54dContinuing.[K[55d[K[56dBreakpoint 1, 0x0000000000400654 in loop_two ()[57d(gdb) c^Hx/i $pc[58d=> 0x400654 <loop_two>: ldr     w21, [x20, w22, sxtw #2][59;8H[K[60dContinuing.[K[43d[?12l[?25h[?25l[3dContinuing.[4d[K[5dBreakpoint 1, 0x0000000000400654 in loop_two ()[6d(gdb) c^Hx/i $pc[K[7d=> 0x400654 <loop_two>: ldr     w21, [x20, w22, sxtw #2][8d(gdb) c[K[9dContinuing.[K[10d[K[11dBreakpoint 2, 0x00000000004006c0 in check_two ()[12d(gdb) c^Hx/i $pc[K[13d=> 0x4006c0 <check_two>:        cmp     w22, #0x32[14d(gdb) c[K[15dContinuing.[K[16d[K[17dBreakpoint 1, 0x0000000000400654 in loop_two ()[18d(gdb) c^Hx/i $pc[K[19d=> 0x400654 <loop_two>: ldr     w21, [x20, w22, sxtw #2][20d(gdb) c[K[21dContinuing.[K[22d[K[23dBreakpoint 2, 0x00000000004006c0 in check_two ()[24d(gdb) c[K[25dContinuing.[26d[K[27dBreakpoint 1, 0x0000000000400654 in loop_two ()[28d(gdb) c^Hx/i $pc[K[29d=> 0x400654 <loop_two>: ldr     w21, [x20, w22, sxtw #2][30d(gdb) c[K[31dContinuing.[32d[K[33dBreakpoint 2, 0x00000000004006c0 in check_two ()[34d(gdb) c^Hx/i $pc[K[35d=> 0x4006c0 <check_two>:[35;33Hcmp     w22, #0x32[36d(gdb) c[K[37dContinuing.[38d[K[39dBreakpoint 1, 0x0000000000400654 in loop_two ()[40d(gdb) c^Hx/i $pc[K[41d=> 0x400654 <loop_two>: ldr     w21, [x20, w22, sxtw #2][42d(gdb) c[K[43dContinuing.[44d[K[45dBreakpoint 2, 0x00000000004006c0 in check_two ()[46d(gdb) c^Hx/i $pc[K[47d=> 0x4006c0 <check_two>:[47;33Hcmp     w22, #0x32[48d(gdb) c[K[49dContinuing.[50d[K[51dBreakpoint 1, 0x0000000000400654 in loop_two ()[52d(gdb) c^Hx/i $pc[K[53d=> 0x400654 <loop_two>: ldr     w21, [x20, w22, sxtw #2][54d(gdb) c[K[55dContinuing.[56d[K[57dBreakpoint 2, 0x00000000004006c0 in check_two ()[58d(gdb) c^Hx/i $pc[K[59d=> 0x4006c0 <check_two>:[59;33Hcmp     w22, #0x32[60d(gdb) c[K[46d[?12l[?25h[?25l[48d[?12l[?25h[?25l[52d[?12l[?25h[?25l[53d[?12l[?25h[?25l[54d[?12l[?25h[?25l[55d[?12l[?25h[?25l[56d[?12l[?25h[?25l[57d[?12l[?25h[?25l[58d[?12l[?25h[?25l[59d[?12l[?25h[?25l[60d[?12l[?25h[?25l[3d[K[4dBreakpoint 2, 0x00000000004006c0 in check_two ()[5d(gdb) c^Hx/i $pc[K[6d=> 0x4006c0 <check_two>:[6;33Hcmp     w22, #0x32[7d(gdb) c[K[8dContinuing.[9d[K[10dBreakpoint 1, 0x0000000000400654 in loop_two ()[11d(gdb) c^Hx/i $pc[K[12d=> 0x400654 <loop_two>: ldr     w21, [x20, w22, sxtw #2][13d(gdb) c[K[14dContinuing.[15d[K[16dBreakpoint 2, 0x00000000004006c0 in check_two ()[17d(gdb) c^Hx/i $pc[K[18d=> 0x4006c0 <check_two>:[18;33Hcmp     w22, #0x32[19d(gdb) c[K[20dContinuing.[21d[K[22dBreakpoint 1, 0x0000000000400654 in loop_two ()[23d(gdb) c^Hx/i $pc[K[24d=> 0x400654 <loop_two>: ldr     w21, [x20, w22, sxtw #2][25d(gdb) c[K[26dContinuing.[27d[K[28dBreakpoint 2, 0x00000000004006c0 in check_two ()[29d(gdb) c^Hx/i $pc[K[30d=> 0x4006c0 <check_two>:[30;33Hcmp     w22, #0x32[31d(gdb) c[K[32dContinuing.[33d[K[34dBreakpoint 1, 0x0000000000400654 in loop_two ()[35d(gdb) c^Hx/i $pc[K[36d=> 0x400654 <loop_two>: ldr     w21, [x20, w22, sxtw #2][37d(gdb) c[K[38dContinuing.[39d[K[40dBreakpoint 2, 0x00000000004006c0 in check_two ()[41d(gdb) c^Hx/i $pc[K[42d=> 0x4006c0 <check_two>:[42;33Hcmp     w22, #0x32[43d(gdb) c[K[44dContinuing.[45d[K[46dBreakpoint 1, 0x0000000000400654 in loop_two ()[47d(gdb) c^Hx/i $pc[K[48d=> 0x400654 <loop_two>: ldr     w21, [x20, w22, sxtw #2][49d(gdb) c[K[50dContinuing.[51d[K[52dBreakpoint 2, 0x00000000004006c0 in check_two ()[53d(gdb) c^Hx/i $pc[K[54d=> 0x4006c0 <check_two>:[54;33Hcmp     w22, #0x32[55d(gdb) c[K[56dContinuing.[57d[K[58dBreakpoint 1, 0x0000000000400654 in loop_two ()[59d(gdb) c^Hx/i $pc[K[60d=> 0x400654 <loop_two>: ldr     w21, [x20, w22, sxtw #2][32d[?12l[?25h[?25l[40d[?12l[?25h[?25l[45d[?12l[?25h[?25l[47d[?12l[?25h[?25l[51d[?12l[?25h[?25l[54d[?12l[?25h[?25l[56d[?12l[?25h[?25l[60d[?12l[?25h[?25l[3dContinuing.[4d[K[5dBreakpoint 1, 0x0000000000400654 in loop_two ()[6d(gdb) c^Hx/i $pc[K[7d=> 0x400654 <loop_two>: ldr     w21, [x20, w22, sxtw #2][8d(gdb) c[K[9dContinuing.[10d[K[11dBreakpoint 2, 0x00000000004006c0 in check_two ()[12d(gdb) c^Hx/i $pc[K[13d=> 0x4006c0 <check_two>:[13;33Hcmp     w22, #0x32[14d(gdb) c[K[15dContinuing.[16d[K[17dBreakpoint 1, 0x0000000000400654 in loop_two ()[18d(gdb) c^Hx/i $pc[K[19d=> 0x400654 <loop_two>: ldr     w21, [x20, w22, sxtw #2][20d(gdb) c[K[21dContinuing.[22d[K[23dBreakpoint 2, 0x00000000004006c0 in check_two ()[24d(gdb) c^Hx/i $pc[K[25d=> 0x4006c0 <check_two>:[25;33Hcmp     w22, #0x32[26d(gdb) c[K[27dContinuing.[28d[K[29dBreakpoint 1, 0x0000000000400654 in loop_two ()[30d(gdb) c^Hx/i $pc[K[31d=> 0x400654 <loop_two>: ldr     w21, [x20, w22, sxtw #2][32d(gdb) c[K[33dContinuing.[34d[K[35dBreakpoint 2, 0x00000000004006c0 in check_two ()[36d(gdb) c^Hx/i $pc[K[37d=> 0x4006c0 <check_two>:[37;33Hcmp     w22, #0x32[38d(gdb) c[K[39dContinuing.[40d[K[41dBreakpoint 1, 0x0000000000400654 in loop_two ()[42d(gdb) c^Hx/i $pc[K[43d=> 0x400654 <loop_two>: ldr     w21, [x20, w22, sxtw #2][44d(gdb) c[K[45dContinuing.[46d[K[47dBreakpoint 2, 0x00000000004006c0 in check_two ()[48d(gdb) c^Hx/i $pc[K[49d=> 0x4006c0 <check_two>:[49;33Hcmp     w22, #0x32[50d(gdb) c[K[51dContinuing.[52d[K[53dBreakpoint 1, 0x0000000000400654 in loop_two ()[54d(gdb) ^M^[[K(gdb) ^M^[[K(gdb) ^M^[[K(gdb) ^M^[[K(gdb) ^M^[[K(gdb) ^M^[[K(gdb) ^M^[[K(gdb) ^M^[[K(gdb) c^Hx/i $pc[55d=> 0x400654 <loop_two>: ldr     w21, [x20, w22, sxtw #2][56d(gdb) x/i $pc^H^H^H^H^H^H^Hc^[[K[57dContinuing.[58d[K[59dBreakpoint 2, 0x00000000004006c0 in check_two ()[60d(gdb) c^Hx/i $pc[K[38d[?12l[?25h[?25l[44d[?12l[?25h[?25l[46d[?12l[?25h[?25l[50d[?12l[?25h[?25l[56d[?12l[?25h[?25l[58d[?12l[?25h[?25l[3;61r[61;1H[29S[1;63r[32;1H=> 0x4006c0 <check_two>:[32;33Hcmp     w22, #0x32[33d(gdb) x/i $pc^H^H^H^H^H^H^Hc^[[K[34dContinuing.[36dBreakpoint 1, 0x0000000000400654 in loop_two ()[37d(gdb) ^G^Gc^Hx/i $pc[38d=> 0x400654 <loop_two>: ldr     w21, [x20, w22, sxtw #2][39d(gdb) x/i $pc^H^H^H^H^H^H^Hc^[[K[40dContinuing.[42dBreakpoint 2, 0x00000000004006c0 in check_two ()[43d(gdb) c^Hx/i $pc^H^H^H^H^H^H^Hc^[[K^Hx/i $pc[44d=> 0x4006c0 <check_two>:[44;33Hcmp     w22, #0x32[45d(gdb) x/i $pc^H^H^H^H^H^H^Hc^[[K[46dContinuing.[48dBreakpoint 1, 0x0000000000400654 in loop_two ()[49d(gdb) c^Hx/i $pc[50d=> 0x400654 <loop_two>: ldr     w21, [x20, w22, sxtw #2][51d(gdb) x/i $pc^H^H^H^H^H^H^Hc^[[K[52dContinuing.[54dBreakpoint 2, 0x00000000004006c0 in check_two ()[55d(gdb) ^Gc^Hx/i $pc[56d=> 0x4006c0 <check_two>:[56;33Hcmp     w22, #0x32[57d(gdb) x/i $pc^H^H^H^H^H^H^Hc^[[K[58dContinuing.[60dBreakpoint 1, 0x0000000000400654 in loop_two ()[34d[?12l[?25h[?25l[50d[?12l[?25h[?25l[52d[?12l[?25h[?25l[53d[?12l[?25h[?25l[54d[?12l[?25h[?25l[57d[?12l[?25h[?25l[59d[?12l[?25h[?25l[3;61r[61;1H[29S[1;63r[32;1H(gdb) c^Hx/i $pc^H^H^H^H^H^H^Hc^[[K^Hx/i $pc[33d=> 0x400654 <loop_two>: ldr     w21, [x20, w22, sxtw #2][34d(gdb) x/i $pc^H^H^H^H^H^H^Hc^[[K[35dContinuing.[37dBreakpoint 2, 0x00000000004006c0 in check_two ()[38d(gdb) c^Hx/i $pc[39d=> 0x4006c0 <check_two>:[39;33Hcmp     w22, #0x32[40d(gdb) x/i $pc^H^H^H^H^H^H^Hc^[[K[41dContinuing.[43dBreakpoint 1, 0x0000000000400654 in loop_two ()[44d(gdb) c^Hx/[32d[?12l[?25h[?25l[34d[?12l[?25h[?25l[36d[?12l[?25h[?25l[41d[?12l[?25h[?25l[42d[?12l[?25h[?25l[44d[?12l[?25h[?25l[45d[?12l[?25h[?25l[?12l[?25h[?25l[?12l[?25h[?25l[?12l[?25h[?25l[?12l[?25h[?25l[?12l[?25h[?25l[?12l[?25h[?25l[?12l[?25h[?25l[?12l[?25h[?25l[?12l[?25h[?25l[?12l[?25h[?25l[?12l[?25h[?25l[?12l[?25h[?25l[?12l[?25h[?25l[?12l[?25h[?25l[?12l[?25h[?25l[?12l[?25h[?25l[?12l[?25h[?25l[?12l[?25h[?25l[?12l[?25h[?25l[?12l[?25h[?25l[?12l[?25h[?25l[?12l[?25h[?25l[?12l[?25h[?25l[?12l[?25h[?25l[?12l[?25h[?25l[?12l[?25h[?25l[?12l[?25h[?25l[?12l[?25h[?25l[?12l[?25h[?25l[?12l[?25h[?25l[?12l[?25h[?25l[?12l[?25h[?25l[?12l[?25h[?25l[?12l[?25h[?25l[?12l[?25h[?25l[?12l[?25h[?25l[?12l[?25h[?25l[?12l[?25h[?25l[?12l[?25h[?25l[?12l[?25h[?25l[?12l[?25h[?25l[?12l[?25h[?25l[?12l[?25h[?25l[?12l[?25h[?25l[?12l[?25h[?25l[?12l[?25h[?25l[?12l[?25h[?25l[?12l[?25h[?25l[?12l[?25h[?25l[?12l[?25h[?25l[?12l[?25h[?25l[?12l[?25h[?25l[?12l[?25h[?25l[?12l[?25h[?25l[?12l[?25h[?25l[?12l[?25h[?25l[?12l[?25h[?25l[?12l[?25h[?25l[?12l[?25h[?25l[?12l[?25h[?25l[?12l[?25h[?25l[?12l[?25h[?25l[?12l[?25h[?25l[?12l[?25h[?25l[?12l[?25h[?25l[?12l[?25h[?25l[?12l[?25h[?25l[?12l[?25h[?25l[?12l[?25h[?25l[?12l[?25h[?25l[?12l[?25h[?25l[?12l[?25h[?25l[?12l[?25h[?25l[?12l[?25h[?25l[?12l[?25h[?25l[?12l[?25h[?25l[?12l[?25h[?25l[?12l[?25h[?25l[?12l[?25h[?25l[?12l[?25h[?25l[?12l[?25h[?25l[?12l[?25h[?25l[?12l[?25h[?25l[?12l[?25h[?25l[?12l[?25h[?25l[?12l[?25h[?25l[?12l[?25h[?25l[?12l[?25h[?25l[?12l[?25h[?25l[?12l[?25h[?25l[?12l[?25h[?25l[?12l[?25h[?25l[?12l[?25h[?25l[?12l[?25h[?25l[?12l[?25h[?25l[?12l[?25h[?25l[?12l[?25h[?25l[?12l[?25h[?25l[?12l[?25h[?25l[?12l[?25h[?25l[?12l[?25h[?25l[?12l[?25h[?25l[?12l[?25h[?25l[?12l[?25h[?25l[?12l[?25h[?25l[?12l[?25h[?25l[?12l[?25h[?25l[?12l[?25h[?25l[?12l[?25h[?25l[12d[?12l[?25h[?25l[5d[?12l[?25h[?25l[2;60r[2;1H[30T[1;63r[3;1H=> 0x400654 <loop_two>: ldr     w21, [x20, w22, sxtw #2][4d(gdb) c[5dContinuing.[7dBreakpoint 2, 0x00000000004006c0 in check_two ()[8d(gdb) c^Hx/i $pc[9d=> 0x4006c0 <check_two>:[9;33Hcmp     w22, #0x32[10d(gdb) c[11dContinuing.[13dBreakpoint 1, 0x0000000000400654 in loop_two ()[14d(gdb) c^Hx/i $pc[15d=> 0x400654 <loop_two>: ldr     w21, [x20, w22, sxtw #2][16d(gdb) c[17dContinuing.[19dBreakpoint 2, 0x00000000004006c0 in check_two ()[20d(gdb) c^Hx/i $pc[21d=> 0x4006c0 <check_two>:[21;33Hcmp     w22, #0x32[22d(gdb) c[23dContinuing.[25dBreakpoint 1, 0x0000000000400654 in loop_two ()[26d(gdb) ^M^[[K(gdb) ^M^[[K(gdb) ^M^[[K(gdb) ^M^[[K(gdb) ^M^[[K(gdb) ^M^[[K(gdb) ^M^[[K(gdb) ^M^[[K(gdb) c^Hx/i $pc[27d=> 0x400654 <loop_two>: ldr     w21, [x20, w22, sxtw #2][28d(gdb) x/i $pc^H^H^H^H^H^H^Hc^[[K[29dContinuing.[31dBreakpoint 2, 0x00000000004006c0 in check_two ()[32d(gdb) c^Hx/i $pc[23d[?12l[?25h[?25l[21d[?12l[?25h[?25l[A[?12l[?25h[?25l[A[?12l[?25h[?25l[A[?12l[?25h[?25l[A[?12l[?25h[?25l[A[?12l[?25h[?25l[A[?12l[?25h[?25l[A[?12l[?25h[?25l[A[?12l[?25h[?25l[A[?12l[?25h[?25l[A[?12l[?25h[?25l[9d[?12l[?25h[?25l[3d[?12l[?25h[?25l[2;60r[2;1H[30T[1;63r[3;1H=> 0x4006c0 <check_two>:[3;33Hcmp     w22, #0x32[4d(gdb) c[5dContinuing.[7dBreakpoint 1, 0x0000000000400654 in loop_two ()[8d(gdb) c^Hx/i $pc[9d=> 0x400654 <loop_two>: ldr     w21, [x20, w22, sxtw #2][10d(gdb) c[11dContinuing.[13dBreakpoint 2, 0x00000000004006c0 in check_two ()[14d(gdb) c^Hx/i $pc[15d=> 0x4006c0 <check_two>:[15;33Hcmp     w22, #0x32[16d(gdb) c[17dContinuing.[19dBreakpoint 1, 0x0000000000400654 in loop_two ()[20d(gdb) c^Hx/i $pc[21d=> 0x400654 <loop_two>: ldr     w21, [x20, w22, sxtw #2][22d(gdb) c[23dContinuing.[25dBreakpoint 2, 0x00000000004006c0 in check_two ()[26d(gdb) c^Hx/i $pc[27d=> 0x4006c0 <check_two>:[27;33Hcmp     w22, #0x32[28d(gdb) c[29dContinuing.[31dBreakpoint 1, 0x0000000000400654 in loop_two ()[32d(gdb) c^Hx/i $pc[?12l[?25h[?25l[29d[?12l[?25h[?25l[26d[?12l[?25h[?25l[A[?12l[?25h[?25l[23d[?12l[?25h[?25l[20d[?12l[?25h[?25l[18d[?12l[?25h[?25l[16d[?12l[?25h[?25l[A[?12l[?25h[?25l[A[?12l[?25h[?25l[12d[?12l[?25h[?25l[A[?12l[?25h[?25l[A[?12l[?25h[?25l[A[?12l[?25h[?25l[A[?12l[?25h[?25l[6d[?12l[?25h[?25l[A[?12l[?25h[?25l[A[?12l[?25h[?25l[A[?12l[?25h[?25l[3;10H54 <loop_two>: ldr     w21, [x20, w22, sxtw #2][7;12H2[7;31Hc0 in check_two ()[9;10Hc0 <check_two>:        cmp     w22, #0x32[K[13;12H1[13;31H54 in loop[1P[15;10H54 <loop_two>: ldr     w21, [x20, w22, sxtw #2][19;12H2[19;31Hc0 in check_two ()[21;10Hc0 <check_two>:        cmp     w22, #0x32[K[25;12H1[25;31H54 in loop[1P[27;10H54 <loop_two>: ldr     w21, [x20, w22, sxtw #2][31;12H2[31;31Hc0 in check_two ()[33;10Hc0 <check_two>:        cmp     w22, #0x32[K[37;12H1[37;31H54 in loop[1P[39;10H54 <loop_two>: ldr     w21, [x20, w22, sxtw #2][43;12H2[43;31Hc0 in check_two ()[45;10Hc0 <check_two>:        cmp     w22, #0x32[K[49;12H1[49;31H54 in loop[1P[51;10H54 <loop_two>: ldr     w21, [x20, w22, sxtw #2][55;12H2[55;31Hc0 in check_two ()[56d[96P[57;10Hc0 <check_two>:        cmp     w22, #0x32[K[58;7Hc[K[32d[?12l[?25h[?25l[A[?12l[?25h[?25l[29d[?12l[?25h[?25l[22d[?12l[?25h[?25l[17d[?12l[?25h[?25l[3dBreakpoint 2, 0x00000000004006c0 in check_two ()[K[4;8H^Hx/i $pc[5d=> 0x4006c0 <check_two>:[5;33Hcmp     w22, #0x32[6d(gdb) c[7dContinuing.[K[8d[K[9dBreakpoint 1, 0x0000000000400654 in loop_two ()[K[10;8H^Hx/i $pc[11d=> 0x400654 <loop_two>: ldr     w21, [x20, w22, sxtw #2][12d(gdb) c[13dContinuing.[K[14d[K[15dBreakpoint 2, 0x00000000004006c0 in check_two ()[K[16;8H^Hx/i $pc[17d=> 0x4006c0 <check_two>:[17;33Hcmp     w22, #0x32[18d(gdb) c[19dContinuing.[K[20d[K[21dBreakpoint 1, 0x0000000000400654 in loop_two ()[K[22;8H^Hx/i $pc[23d=> 0x400654 <loop_two>: ldr     w21, [x20, w22, sxtw #2][24d(gdb) c[25dContinuing.[K[26d[K[27dBreakpoint 2, 0x00000000004006c0 in check_two ()[K[31;12H1[31;31H54 in loop[1P[33;10H54 <loop_two>: ldr     w21, [x20, w22, sxtw #2][37;12H2[37;31Hc0 in check_two ()[39;10Hc0 <check_two>:        cmp     w22, #0x32[K[43;12H1[43;31H54 in loop[1P[45;10H54 <loop_two>: ldr     w21, [x20, w22, sxtw #2][49;12H2[49;31Hc0 in check_two ()[51;10Hc0 <check_two>:        cmp     w22, #0x32[K[55;12H1[55;31H54 in loop[1P[57;10H54 <loop_two>: ldr     w21, [x20, w22, sxtw #2][28d[?12l[?25h[?25l[26d[?12l[?25h[?25l[24d[?12l[?25h[?25l[14d[?12l[?25h[?25l[A[?12l[?25h[?25l[A[?12l[?25h[?25l[9d[?12l[?25h[?25l[A[?12l[?25h[?25l[6d[?12l[?25h[?25l[4d[?12l[?25h[?25l[A[?12l[?25h[?25l[3;12H1[3;31H54 in loop[1P[5;10H54 <loop_two>: ldr     w21, [x20, w22, sxtw #2][9;12H2[9;31Hc0 in check_two ()[11;10Hc0 <check_two>:        cmp     w22, #0x32[K[15;12H1[15;31H54 in loop[1P[17;10H54 <loop_two>: ldr     w21, [x20, w22, sxtw #2][21;12H2[21;31Hc0 in check_two ()[23;10Hc0 <check_two>:        cmp     w22, #0x32[K[27;12H1[27;31H54 in loop[1P[28;8H^Hx/i $pc[29d=> 0x400654 <loop_two>: ldr     w21, [x20, w22, sxtw #2][30d(gdb) c[31dContinuing.[K[32d[K[33dBreakpoint 2, 0x00000000004006c0 in check_two ()[K[34;8H^Hx/i $pc[35d=> 0x4006c0 <check_two>:[35;33Hcmp     w22, #0x32[36d(gdb) c[37dContinuing.[K[38d[K[39dBreakpoint 1, 0x0000000000400654 in loop_two ()[K[40;8H^Hx/i $pc[41d=> 0x400654 <loop_two>: ldr     w21, [x20, w22, sxtw #2][42d(gdb) c[43dContinuing.[K[44d[K[45dBreakpoint 2, 0x00000000004006c0 in check_two ()[K[46;8H^Hx/i $pc[47d=> 0x4006c0 <check_two>:[47;33Hcmp     w22, #0x32[48d(gdb) c[49dContinuing.[K[50d[K[51dBreakpoint 1, 0x0000000000400654 in loop_two ()[K[52;8H^Hx/i $pc[53d=> 0x400654 <loop_two>: ldr     w21, [x20, w22, sxtw #2][54d(gdb) c[55dContinuing.[K[56d[K[57dBreakpoint 2, 0x00000000004006c0 in check_two ()[K[31d[?12l[?25h[?25l[28d[?12l[?25h[?25l[A[?12l[?25h[?25l[A[?12l[?25h[?25l[24d[?12l[?25h[?25l[A[?12l[?25h[?25l[A[?12l[?25h[?25l[20d[?12l[?25h[?25l[14d[?12l[?25h[?25l[A[?12l[?25h[?25l[11d[?12l[?25h[?25l[8d[?12l[?25h[?25l[6d[?12l[?25h[?25l[4d[?12l[?25h[?25l[3;12H2[3;31Hc0 in check_two ()[4;12H50d $sp^H^H^H^H^H^H^H^[[2Pi $pc[5;10Hc0 <check_two>:        cmp     w22, #0x32[K[9;12H1[9;31H54 in loop[1P[11;10H54 <loop_two>: ldr     w21, [x20, w22, sxtw #2][15;12H2[15;31Hc0 in check_two ()[17;10Hc0 <check_two>:        cmp     w22, #0x32[K[21;12H1[21;31H54 in loop[1P[23;10H54 <loop_two>: ldr     w21, [x20, w22, sxtw #2][27;12H2[27;31Hc0 in check_two ()[29;10Hc0 <check_two>:        cmp     w22, #0x32[K[33;12H1[33;31H54 in loop[1P[35;10H54 <loop_two>: ldr     w21, [x20, w22, sxtw #2][39;12H2[39;31Hc0 in check_two ()[41;10Hc0 <check_two>:        cmp     w22, #0x32[K[45;12H1[45;31H54 in loop[1P[47;10H54 <loop_two>: ldr     w21, [x20, w22, sxtw #2][51;12H2[51;31Hc0 in check_two ()[53;10Hc0 <check_two>:        cmp     w22, #0x32[K[57;12H1[57;31H54 in loop[1P[58;8H^Hx/i $pc[59d=> 0x400654 <loop_two>: ldr     w21, [x20, w22, sxtw #2][60d(gdb) c[32d[?12l[?25h[?25l[30d[?12l[?25h[?25l[28d[?12l[?25h[?25l[26d[?12l[?25h[?25l[24d[?12l[?25h[?25l[A[?12l[?25h[?25l[21d[?12l[?25h[?25l[A[?12l[?25h[?25l[18d[?12l[?25h[?25l[A[?12l[?25h[?25l[15d[?12l[?25h[?25l[13d[?12l[?25h[?25l[11d[?12l[?25h[?25l[A[?12l[?25h[?25l[A[?12l[?25h[?25l[7d[?12l[?25h[?25l[A[?12l[?25h[?25l[A[?12l[?25h[?25l[A[?12l[?25h[?25l[A[?12l[?25h[?25l[2;60r[2;1H[30T[1;63r[3;1H=> 0x400654 <loop_two>: ldr     w21, [x20, w22, sxtw #2][4d(gdb) c[5dContinuing.[7dBreakpoint 2, 0x00000000004006c0 in check_two ()[8d(gdb) c^Hx/i $pc[9d=> 0x4006c0 <check_two>:[9;33Hcmp     w22, #0x32[10d(gdb) c[11dContinuing.[13dBreakpoint 1, 0x0000000000400654 in loop_two ()[14d(gdb) c^Hx/i $pc[15d=> 0x400654 <loop_two>: ldr     w21, [x20, w22, sxtw #2][16d(gdb) x/i $pc^H^H^H^H^H^H^Hc^[[K^Hx/i $pc^H^H^H^H^H^H^Hc^[[K^Hx/i $pc^H^H^H^H^H^H^Hc^[[K^Hx/i $pc^H^H^H^H^H^H^Hc^[[K^Hx/i $pc^H^H^H^H^H^H^Hc^[[K^Hx/i $pc^H^H^H^H^H^H^Hc^[[K^Hx/i $pc^H^H^H^H^H^H^Hc^[[K^Hx$[17;1H0xfffffffff0d0: -3648   65535   -1084900956     65535[18d0xfffffffff0e0: 16	1	70	41[19d0xfffffffff0f0: 70	74	81	103[20d0xfffffffff100: 105     115     171     186[21d0xfffffffff110: 198     205     227     236[22d0xfffffffff120: 242     251     255     124[23d0xfffffffff130: 194     84	248     27[24d0xfffffffff140: 232     231     141     118[25d0xfffffffff150: 90	46	99	51[26d0xfffffffff160: 159     201     154     102[27d0xfffffffff170: 50	13	183     49[28d0xfffffffff180: 88	163     90	37[29d0xfffffffff190: 93	5[30d(gdb) c[31dContinuing.[32d[?12l[?25h[?25l[A[?12l[?25h[?25l[A[?12l[?25h[?25l[A[?12l[?25h[?25l[A[?12l[?25h[?25l[25d[?12l[?25h[?25l[23d[?12l[?25h[?25l[A[?12l[?25h[?25l[A[?12l[?25h[?25l[17d[?12l[?25h[?25l[12d[?12l[?25h[?25l[A[?12l[?25h[?25l[9d[?12l[?25h[?25l[7d[?12l[?25h[?25l[5d[?12l[?25h[?25l[2;60r[2;1H[30T[1;63r[3;1HBreakpoint 2, 0x00000000004006c0 in check_two ()[4d(gdb) c^Hx/i $pc^H^H^H^H^H^H^Hc^[[K^Hx/i $pc[5d=> 0x4006c0 <check_two>:[5;33Hcmp     w22, #0x32[6d(gdb) c[7dContinuing.[9dBreakpoint 1, 0x0000000000400654 in loop_two ()[10d(gdb) c^Hx/i $pc[11d=> 0x400654 <loop_two>: ldr     w21, [x20, w22, sxtw #2][12d(gdb) c[13dContinuing.[15dBreakpoint 2, 0x00000000004006c0 in check_two ()[16d(gdb) c^Hx/i $pc[17d=> 0x4006c0 <check_two>:[17;33Hcmp     w22, #0x32[18d(gdb) c[19dContinuing.[21dBreakpoint 1, 0x0000000000400654 in loop_two ()[22d(gdb) c[23dContinuing.[25dBreakpoint 2, 0x00000000004006c0 in check_two ()[26d(gdb) c^Hx/i $pc[27d=> 0x4006c0 <check_two>:[27;33Hcmp     w22, #0x32[28d(gdb) c[29dContinuing.[31dBreakpoint 1, 0x0000000000400654 in loop_two ()[32d(gdb) c^Hx/i $pc[29d[?12l[?25h[?25l[A[?12l[?25h[?25l[3d0xfffffffff150: 90      46      99      51[K[4d0xfffffffff160: 159     201     154     102[K[5d0xfffffffff170: 50      13	183     49[K[6d0xfffffffff180: 88	163     90	37[7d0xfffffffff190: 93	5[8d(gdb) c[9dContinuing.[K[10d[K[11dBreakpoint 2, 0x00000000004006c0 in check_two ()[K[15;12H1[15;31H54 in loop[1P[16;8H^Hx/50d $sp^M^[[C^[[C^[[C^[[C^[[C^[[Cc^[[K^Hx/i $pc[17;10H54 <loop_two>: ldr     w21, [x20, w22, sxtw #2][21;12H2[21;31Hc0 in check_two ()[22;8H^Hx/i $pc[23d=> 0x4006c0 <check_two>:[23;33Hcmp     w22, #0x32[24d(gdb) c[25dContinuing.[K[26d[K[27dBreakpoint 1, 0x0000000000400654 in loop_two ()[K[28;8H^Hx/i $pc[29d=> 0x400654 <loop_two>: ldr     w21, [x20, w22, sxtw #2][30d(gdb) c[31dContinuing.[K[32d[K[33dBreakpoint 2, 0x00000000004006c0 in check_two ()[K[34;8H^Hx/i $pc^H^H^H^H^H^H^Hc^[[K^Hx/i $pc[35d=> 0x4006c0 <check_two>:[35;33Hcmp     w22, #0x32[36d(gdb) c[37dContinuing.[K[38d[K[39dBreakpoint 1, 0x0000000000400654 in loop_two ()[K[40;8H^Hx/i $pc[41d=> 0x400654 <loop_two>: ldr     w21, [x20, w22, sxtw #2][42d(gdb) c[43dContinuing.[K[44d[K[45dBreakpoint 2, 0x00000000004006c0 in check_two ()[K[46;7Hc^Hx/i $pc[K[47d=> 0x4006c0 <check_two>:        cmp     w22, #0x32[K[48d(gdb) c[K[49dContinuing.[K[50d[K[51dBreakpoint 1, 0x0000000000400654 in loop_two ()[52d(gdb) c[K[53dContinuing.[K[54d[K[55dBreakpoint 2, 0x00000000004006c0 in check_two ()[56d(gdb) c^Hx/i $pc[K[57d=> 0x4006c0 <check_two>:  	cmp     w22, #0x32[58d(gdb) c[K[59dContinuing.[K[60d[K[8d[?12l[?25h[?25l[2;60r[2;1H[30T[1;63r[3;1HContinuing.[5dBreakpoint 2, 0x00000000004006c0 in check_two ()[6d(gdb) c^Hx/i $pc[7d=> 0x4006c0 <check_two>:[7;33Hcmp     w22, #0x32[8d(gdb) c[9dContinuing.[11dBreakpoint 1, 0x0000000000400654 in loop_two ()[12d(gdb) c^Hx/i $pc[13d=> 0x400654 <loop_two>: ldr     w21, [x20, w22, sxtw #2][14d(gdb) c[15dContinuing.[17dBreakpoint 2, 0x00000000004006c0 in check_two ()[18d(gdb) c^Hx/i $pc[19d=> 0x4006c0 <check_two>:[19;33Hcmp     w22, #0x32[20d(gdb) c[21dContinuing.[23dBreakpoint 1, 0x0000000000400654 in loop_two ()[24d(gdb) c^Hx/i $pc^H^H^H^H^H^H^Hc^[[K^Hx/i $pc^H^H^H^H^H^H^Hc^[[K^Hx/i $pc^H^H^H^H^H^H^Hc^[[K^Hx/i $pc^H^H^H^H^H^H^Hc^[[K^Hx/50d $sp[25d0xfffffffff0d0: -3648   65535   -1084900956     65535[26d0xfffffffff0e0: 10	7	205     41[27d0xfffffffff0f0: 74	81	103     105[28d0xfffffffff100: 115     198     205     236[29d0xfffffffff110: 255     186     171     242[30d0xfffffffff120: 251     227     70	124[31d0xfffffffff130: 194     84	248     27[32d0xfffffffff140: 232     231     141     118[8d[?12l[?25h[?25l[6d[?12l[?25h[?25l[4d[?12l[?25h[?25l[A[?12l[?25h[?25l[3;54r[54;1H[12S[1;63r[3;1HBreakpoint 1, 0x0000000000400654 in loop_two ()[4d(gdb) c^Hx/i $pc[5d=> 0x400654 <loop_two>: ldr     w21, [x20, w22, sxtw #2][6;8H[K[7dContinuing.[K[8d[K[9dBreakpoint 2, 0x00000000004006c0 in check_two ()[10d(gdb) c^Hx/i $pc[11d=> 0x4006c0 <check_two>:        cmp     w22, #0x32[12;7Hx/i $pc^H^H^H^H^H^H^Hc^[[K^Hx/i $pc^H^H^H^H^H^H^Hc^[[K^Hx/i $pc^H^H^H^H^H^H^Hc^[[K^Hx/50d $sp^H^H^H^H^H^H^H^[[2Pi $pc^H^H^H^H^H^H^Hc^[[K^Hx/i $pc^H^H^H^H^H^H^Hc^[[K^Hx/50d $sp^H^H^H^H^H^H^H^[[2Pi $$[14;17H8 	6[14;34H36     74[15;17H81	103	105	11[16;18H98     236	25	41[K[17;18H0[29;12H1[29;31H54 in loop[1P[30;8H^Hx/50d $sp^H^H^H^H^H^H^H^[[2Pi $pc^H^H^H^H^H^H^Hc^[[K^Hx/i $pc[31d=> 0x400654 <loop_two>: ldr     w21, [x20, w22, sxtw #2][32d(gdb) c[33dContinuing.[K[34d[K[35dBreakpoint 2, 0x00000000004006c0 in check_two ()[K[36;8H^Hx/i $pc[37d=> 0x4006c0 <check_two>:[37;33Hcmp     w22, #0x32[38d(gdb) c[39dContinuing.[K[40d[K[41dBreakpoint 1, 0x0000000000400654 in loop_two ()[K[42;8H^Hx/i $pc[43d=> 0x400654 <loop_two>: ldr     w21, [x20, w22, sxtw #2][44d(gdb) c[45dContinuing.[47dBreakpoint 2, 0x00000000004006c0 in check_two ()[48d(gdb) c^Hx/i $pc[49d=> 0x4006c0 <check_two>:[49;33Hcmp     w22, #0x32[50d(gdb) c[51dContinuing.[53dBreakpoint 1, 0x0000000000400654 in loop_two ()[54d(gdb) c^Hx/i $pc^H^H^H^H^H^H^Hc^[[K^Hx/i $pc^H^H^H^H^H^H^Hc^[[K^Hx/i $pc^H^H^H^H^H^H^Hc^[[K^Hx/i $pc^H^H^H^H^H^H^Hc^[[K^Hx/50d $sp[55d0xfffffffff0d0: -3648   65535   -1084900956     65535[56d0xfffffffff0e0: 10	7	205     41[57d0xfffffffff0f0: 74      81      103     105[K[58d0xfffffffff100: 115     198     205     236[59d0xfffffffff110: 255     186     171     242[K[60d0xfffffffff120: 251     227     70	124[32d[?12l[?25h[?25l[30d[?12l[?25h[?25l[A[?12l[?25h[?25l[27d[?12l[?25h[?25l[A[?12l[?25h[?25l[24d[?12l[?25h[?25l[A[?12l[?25h[?25l[2;60r[2;1H[30T[1;63r[3;1H=> 0x4006c0 <check_two>:[3;33Hcmp     w22, #0x32[4d(gdb) c[5dContinuing.[7dBreakpoint 1, 0x0000000000400654 in loop_two ()[8d(gdb) c^Hx/i $pc^H^H^H^H^H^H^Hc^[[K^Hx/i $pc[9d=> 0x400654 <loop_two>: ldr     w21, [x20, w22, sxtw #2][10d(gdb) x/i $pc^H^H^H^H^H^H^Hc^[[K^Hx/i $pc^H^H^H^H^H^H^Hc^[[K^Hx/50d $sp^H^H^H^H^H^H^H^[[2Pi $pc^H^H^H^H^H^H^Hc^[[K^Hx/i $pc^H^H^H^H^H^H^Hc^[[K^Hx/50d $sp[11d0xfffffffff0d0: -3648   65535   -1084900956     65535[12d0xfffffffff0e0: 6	5	255     81[13d0xfffffffff0f0: 103     105     115     198[14d0xfffffffff100: 255     74	236     41[15d0xfffffffff110: 205     186     171     242[16d0xfffffffff120: 251     227     70	124[17d0xfffffffff130: 194     84	248     27[18d0xfffffffff140: 232     231     141     118[19d0xfffffffff150: 90	46	99	51[20d0xfffffffff160: 159     201     154     102[21d0xfffffffff170: 50	13	183     49[22d0xfffffffff180: 88	163     90	37[23d0xfffffffff190: 93	5[24d(gdb) c[25dContinuing.[27dBreakpoint 2, 0x00000000004006c0 in check_two ()[28d(gdb) c^Hx/50d $sp^H^H^H^H^H^H^H^[[2Pi $pc[29d=> 0x4006c0 <check_two>:[29;33Hcmp     w22, #0x32[30d(gdb) c[31dContinuing.[15d[?12l[?25h[?25l[12d[?12l[?25h[?25l[A[?12l[?25h[?25l[A[?12l[?25h[?25l[A[?12l[?25h[?25l[A[?12l[?25h[?25l[6d[?12l[?25h[?25l[A[?12l[?25h[?25l[A[?12l[?25h[?25l[A[?12l[?25h[?25l[2;60r[2;1H[30T[1;63r[3;1HContinuing.[5dBreakpoint 2, 0x00000000004006c0 in check_two ()[6d(gdb) c^Hx/50d $sp^M^[[C^[[C^[[C^[[C^[[C^[[C^[[1@c^[[C^[[C^[[C^[[C^[[C^[[C^[[C^[[C^[[C^M^[[C^[[C^[[C^[[C^[[C^[[C^[[3Px/i $pc[7d=> 0x4006c0 <check_two>:[7;33Hcmp     w22, #0x32[8d(gdb) c[9dContinuing.[11dBreakpoint 1, 0x0000000000400654 in loop_two ()[12d(gdb) c^Hx/i $pc^H^H^H^H^H^H^Hc^[[K^Hx/i $pc[13d=> 0x400654 <loop_two>: ldr     w21, [x20, w22, sxtw #2][14d(gdb) x/i $pc^H^H^H^H^H^H^Hc^[[K^Hx/i $pc^H^H^H^H^H^H^Hc^[[K^Hx/50d $sp^M^[[C^[[C^[[C^[[C^[[C^[[C^[[1@c^[[C^[[C^[[C^[[C^[[C^[[C^[[C^[[C^[[C^M^[[C^[[C^[[C^[[C^[[C^[[C^[[1P^[[C^[[C^[[C^[[C^[[C^[[C^[[C^[[C^$[15;1H0xfffffffff0d0: -3648   65535   -1084900956     65535[16d0xfffffffff0e0: 5	0	81	81[17d0xfffffffff0f0: 103     105     115     198[18d0xfffffffff100: 255     74	236     41[19d0xfffffffff110: 205     186     171     242[20d0xfffffffff120: 251     227     70	124[21d0xfffffffff130: 194     84	248     27[22d0xfffffffff140: 232     231     141     118[23d0xfffffffff150: 90	46	99	51[24d0xfffffffff160: 159     201     154     102[25d0xfffffffff170: 50	13	183     49[26d0xfffffffff180: 88	163     90	37[27d0xfffffffff190: 93	5[28d(gdb) c[29dContinuing.[31dBreakpoint 2, 0x00000000004006c0 in check_two ()[32d(gdb) c^Hx/50d $sp^H^H^H^H^H^H^H^[[2Pi $pc[A[?12l[?25h[?25l[24d[?12l[?25h[?25l[2;60r[2;1H[30T[1;63r[3;1HBreakpoint 2, 0x00000000004006c0 in check_two ()[4d(gdb) c^Hb check_two^M^[[C^[[C^[[C^[[C^[[C^[[Cc^[[K^Hx/i $pc^H^H^H^H^H^H^Hc^[[K^Hx/50d $28^H^Hsp^H^H^H^H^H^H^H^[[2Pi $pc^H^H^H^H^H^H^Hr^[[K^Hx/i $pc[5d=> 0x4006c0 <check_two>:[5;33Hcmp     w22, #0x32[6d(gdb) x/i $pc^H^H^H^H^H^H^Hc^[[K^Hx/i $pc[7d=> 0x4006c0 <check_two>:[7;33Hcmp     w22, #0x32[8d(gdb) cb t^H^[[Kcheck_wt^H^[[K^H^[[Kto^H^[[Kwo[9dUndefined command: "cb".  Try "help".[10d(gdb) c[11dContinuing.[13dBreakpoint 1, 0x0000000000400654 in loop_two ()[14d(gdb) cb check_two^M^[[C^[[C^[[C^[[C^[[C^[[C^[[5Px/i $pc[15d=> 0x400654 <loop_two>: ldr     w21, [x20, w22, sxtw #2][16d(gdb) cx/50d $sp[17dUndefined command: "cx".  Try "help".[18d(gdb) cx/50d $sp^M^[[C^[[C^[[C^[[C^[[C^[[C^[[3Px/i $pc^H^H^H^H^H^H^Hc^[[Kb check_two^M^[[C^[[C^[[C^[[C^[[C^[[C^[[5Px/i $pc^H^H^H^H^H^H^Hc^[[K^Hb check_two^M^[[C^[[C^[[C^[[C^[[C^[[Cc^[[K^Hx/i $pc^H^H^H^H^$[19;1H0xfffffffff0d0: -3648   65535   -1084900956     65535[20d0xfffffffff0e0: 4	2	115     103[21d0xfffffffff0f0: 105     115     198     81[22d0xfffffffff100: 255     74	236     41[23d0xfffffffff110: 205     186     171     242[24d0xfffffffff120: 251     227     70	124[25d0xfffffffff130: 194     84	248     27[26d0xfffffffff140: 232     231     141     118[27d0xfffffffff150: 90	46	99	51[28d0xfffffffff160: 159     201     154     102[29d0xfffffffff170: 50	13	183     49[30d0xfffffffff180: 88	163     90	37[31d0xfffffffff190: 93	5[32d(gdb) c[4d[?12l[?25h[?25l[2;60r[2;1H[30T[1;63r[3;1H0xfffffffff0d0: -3648   65535   -1084900956     65535[4d0xfffffffff0e0: 1	65535   0	103[5d0xfffffffff0f0: 198     105     115     81[6d0xfffffffff100: 255     74	236     41[7d0xfffffffff110: 205     186     171     242[8d0xfffffffff120: 251     227     70	124[9d0xfffffffff130: 194     84	248     27[10d0xfffffffff140: 232     231     141     118[11d0xfffffffff150: 90	46	99	51[12d0xfffffffff160: 159     201     154     102[13d0xfffffffff170: 50	13	183     49[14d0xfffffffff180: 88	163     90	37[15d0xfffffffff190: 93	5[16d(gdb) x/50d $sp^H^[[K^H^[[K28[17dHistory has not yet reached $28.[18d(gdb) c[19dContinuing.[21dBreakpoint 1, 0x0000000000400654 in loop_two ()[22d(gdb) c^Hx/50d $28^H^Hsp^H^H^H^H^H^H^H^[[2Pi $pc[23d=> 0x400654 <loop_two>: ldr     w21, [x20, w22, sxtw #2][24d(gdb) c[25dContinuing.[27dBreakpoint 1, 0x0000000000400654 in loop_two ()[28d(gdb) b check_wt^H^[[K^H^[[Ktwo[29dBreakpoint 2 at 0x4006c0[30d(gdb) c[31dContinuing.[17d[?12l[?25h[?25l[A[?12l[?25h[?25l[A[?12l[?25h[?25l[13d[?12l[?25h[?25l[11d[?12l[?25h[?25l[A[?12l[?25h[?25l[A[?12l[?25h[?25l[6d[?12l[?25h[?25l[4d[?12l[?25h[?25l[A[?12l[?25h[?25l[2;60r[2;1H[30T[1;63r[3;1Hv[39]: 90[4dv[40]: 37[5dv[41]: 93[6dv[42]: 5[7dv[43]: 23[8dv[44]: 88[9dv[45]: 233[10dv[46]: 94[11dv[47]: 212[12dv[48]: 171[13dv[49]: 178[15dBreakpoint 1, 0x0000000000400654 in loop_two ()[16d(gdb) r^Hx/i $pc[17d=> 0x400654 <loop_two>: ldr     w21, [x20, w22, sxtw #2][18d(gdb) x/50d $sp[19d0xfffffffff0d0: -3648   65535   -1084900956     65535[20d0xfffffffff0e0: 1	65535   0	103[21d0xfffffffff0f0: 198     105     115     81[22d0xfffffffff100: 255     74	236     41[23d0xfffffffff110: 205     186     171     242[24d0xfffffffff120: 251     227     70	124[25d0xfffffffff130: 194     84	248     27[26d0xfffffffff140: 232     231     141     118[27d0xfffffffff150: 90	46	99	51[28d0xfffffffff160: 159     201     154     102[29d0xfffffffff170: 50	13	183     49[30d0xfffffffff180: 88	163     90	37[31d0xfffffffff190: 93	5[32d(gdb) x/50d $sp^H^H^H^H^H^H^H^[[2Pi $pc^H^H^H^H^H50d $sp[?12l[?25h[?25l[A[?12l[?25h[?25l[29d[?12l[?25h[?25l[26d[?12l[?25h[?25l[A[?12l[?25h[?25l[A[?12l[?25h[?25l[22d[?12l[?25h[?25l[20d[?12l[?25h[?25l[18d[?12l[?25h[?25l[A[?12l[?25h[?25l[A[?12l[?25h[?25l[A[?12l[?25h[?25l[A[?12l[?25h[?25l[A[?12l[?25h[?25l[A[?12l[?25h[?25l[A[?12l[?25h[?25l[9d[?12l[?25h[?25l[A[?12l[?25h[?25l[A[?12l[?25h[?25l[A[?12l[?25h[?25l[A[?12l[?25h[?25l[3d[?12l[?25h[?25l[2;60r[2;1H[30T[1;63r[3;1Hv[9]: 205[4dv[10]: 186[5dv[11]: 171[6dv[12]: 242[7dv[13]: 251[8dv[14]: 227[9dv[15]: 70[10dv[16]: 124[11dv[17]: 194[12dv[18]: 84[13dv[19]: 248[14dv[20]: 27[15dv[21]: 232[16dv[22]: 231[17dv[23]: 141[18dv[24]: 118[19dv[25]: 90[20dv[26]: 46[21dv[27]: 99[22dv[28]: 51[23dv[29]: 159[24dv[30]: 201[25dv[31]: 154[26dv[32]: 102[27dv[33]: 50[28dv[34]: 13[29dv[35]: 183[30dv[36]: 49[31dv[37]: 88[32dv[38]: 163[?12l[?25h[?25l[A[?12l[?25h[?25l[A[?12l[?25h[?25l[28d[?12l[?25h[?25l[24d[?12l[?25h[?25l[A[?12l[?25h[?25l[A[?12l[?25h[?25l[A[?12l[?25h[?25l[A[?12l[?25h[?25l[18d[?12l[?25h[?25l[10d[?12l[?25h[?25l[A[?12l[?25h[?25l[A[?12l[?25h[?25l[A[?12l[?25h[?25l[A[?12l[?25h[?25l[A[?12l[?25h[?25l[3d[?12l[?25h[?25l[2;60r[2;1H[30T[1;63r[3;1H<http://www.gnu.org/software/gdb/bugs/>.[4dFind the GDB manual and other documentation resources online at:[5d<http://www.gnu.org/software/gdb/documentation/>.[6dFor help, type "help".[7dType "apropos word" to search for commands related to "word"...[8dReading symbols from assign3...(no debugging symbols found)...done.[9d(gdb) b loop_two[10dBreakpoint 1 at 0x400654[11d(gdb) x/i $PC[12dValue can't be converted to integer.[13d(gdb) x/i $PC^H^H^[[1PC^HPC^H^H^[[1PC^HpC^H^H^[[1PC^HpC^H^[[C^G^H^[[Kc[14dNo registers.[15d(gdb) r[16dStarting program: /home/uga/vidhi.soni1/assign3[17dwarning: the debug information found in "/usr/lib/debug//usr/lib64/ld-2.27.so.debug" does not match "/lib/ld-linux-aarch64.so.1" (CRC mismatch).[19dMissing separate debuginfos, use: dnf debuginfo-install glibc-2.27-38.fc28.aarch64[20dwarning: the debug information found in "/usr/lib/debug//lib64/libc-2.27.so.debug" does not match "/lib64/libc.so.6" (CRC mismatch).[22dwarning: the debug information found in "/usr/lib/debug//usr/lib64/libc-2.27.so.debug" does not match "/lib64/libc.so.6" (CRC mismatch).[24dv[0]: 103[25dv[1]: 198[26dv[2]: 105[27dv[3]: 115[28dv[4]: 81[29dv[5]: 255[30dv[6]: 74[31dv[7]: 236[32dv[8]: 41[A[?12l[?25h[?25l[A[?12l[?25h[?25l[A[?12l[?25h[?25l[26d[?12l[?25h[?25l[24d[?12l[?25h[?25l[20d[?12l[?25h[?25l[16d[?12l[?25h[?25l[10d[?12l[?25h[?25l[8d[?12l[?25h[?25l[6d[?12l[?25h[?25l[3d[?12l[?25h[?25l[2;60r[2;1H[11T[1;63r[3;1HScript started on 2022-03-04 09:01:36-07:00[4d^[]0;vidhi.soni1@csa1:~^Gvidhi.soni1@csa1:~$ f\g^H^[[K^H^[[K^H^[[K^Ggdb assign3[5dGNU gdb (GDB) Fedora 8.1.1-4.fc28[6dCopyright (C) 2018 Free Software Foundation, Inc.[7dLicense GPLv3+: GNU GPL version 3 or later <http://gnu.org/licenses/gpl.html>[8dThis is free software: you are free to change and redistribute it.[9dThere is NO WARRANTY, to the extent permitted by law.  Type "show copying"[10dand "show warranty" for details.[11dThis GDB was configured as "aarch64-redhat-linux-gnu".[12dType "show configuration" for configuration details.[13dFor bug reporting instructions, please see:[A[?12l[?25h[?25l[6d[?12l[?25h[?25l[3d[?12l[?25h[?25l[?12l[?25h[?25l[?12l[?25h[?25l[?12l[?25h[?25l[?12l[?25h[?25l[?12l[?25h[?25l[?12l[?25h[?25l[?12l[?25h[?25l[?12l[?25h[?25l[?12l[?25h[?25l[?12l[?25h[?25l[?12l[?25h[?25l[?12l[?25h[?25l[?12l[?25h[?25l[?12l[?25h[?25l[?12l[?25h[?25l[?12l[?25h[?25l[?12l[?25h[?25l[?12l[?25h[?25l[?12l[?25h[?25l[?12l[?25h[?25l[?12l[?25h[?25l[?12l[?25h[?25l[?12l[?25h[?25l[?12l[?25h[?25l[?12l[?25h[?25l[?12l[?25h[?25l[?12l[?25h[?25l[?12l[?25h[?25l[?12l[?25h[?25l[?12l[?25h[?25l[?12l[?25h[?25l[?12l[?25h[?25l[?12l[?25h[?25l[?12l[?25h[?25l[?12l[?25h[?25l[?12l[?25h[?25l[?12l[?25h[?25l[5d[?12l[?25h[?25l[21d[?12l[?25h[?25l[23d[?12l[?25h[?25l[27d[?12l[?25h[?25l[29d[?12l[?25h[?25l[30d[?12l[?25h[?25l[31d[?12l[?25h[?25l[34d[?12l[?25h[?25l[36d[?12l[?25h[?25l[40d[?12l[?25h[?25l[41d[?12l[?25h[?25l[42d[?12l[?25h[?25l[43d[?12l[?25h[?25l[44d[?12l[?25h[?25l[45d[?12l[?25h[?25l[47d[?12l[?25h[?25l[48d[?12l[?25h[?25l[49d[?12l[?25h[?25l[51d[?12l[?25h[?25l[52d[?12l[?25h[?25l[54d[?12l[?25h[?25l[57d[?12l[?25h[?25l[58d[?12l[?25h[?25l[60d[?12l[?25h[?25l7[3;61r8[61d[29S[1;63r[32;1Hv[26]: 46[33dv[27]: 99[34dv[28]: 51[35dv[29]: 159[36dv[30]: 201[37dv[31]: 154[38dv[32]: 102[39dv[33]: 50[40dv[34]: 13[41dv[35]: 183[42dv[36]: 49[43dv[37]: 88[44dv[38]: 163[45dv[39]: 90[46dv[40]: 37[47dv[41]: 93[48dv[42]: 5[49dv[43]: 23[50dv[44]: 88[51dv[45]: 233[52dv[46]: 94[53dv[47]: 212[54dv[48]: 171[55dv[49]: 178[57dBreakpoint 1, 0x0000000000400654 in loop_two ()[58d(gdb) r^Hx/i $pc[59d=> 0x400654 <loop_two>: ldr     w21, [x20, w22, sxtw #2][60d(gdb) x/50d $sp[34d[?12l[?25h[?25l[36d[?12l[?25h[?25l[45d[?12l[?25h[?25l[47d[?12l[?25h[?25l[51d[?12l[?25h[?25l[52d[?12l[?25h[?25l[54d[?12l[?25h[?25l[3;61r[61;1H[29S[1;63r[32;1H0xfffffffff0d0: -3648   65535   -1084900956     65535[33d0xfffffffff0e0: 1	65535   0	103[34d0xfffffffff0f0: 198     105     115     81[35d0xfffffffff100: 255     74	236     41[36d0xfffffffff110: 205     186     171     242[37d0xfffffffff120: 251     227     70	124[38d0xfffffffff130: 194     84	248     27[39d0xfffffffff140: 232     231     141     118[40d0xfffffffff150: 90	46	99	51[41d0xfffffffff160: 159     201     154     102[42d0xfffffffff170: 50	13	183     49[43d0xfffffffff180: 88	163     90	37[44d0xfffffffff190: 93	5[45d(gdb) x/50d $sp^H^H^H^H^H^H^H^[[2Pi $pc^H^H^H^H^H50d $sp[46d0xfffffffff0d0: -3648   65535   -1084900956     65535[47d0xfffffffff0e0: 1	65535   0	103[48d0xfffffffff0f0: 198     105     115     81[49d0xfffffffff100: 255     74	236     41[50d0xfffffffff110: 205     186     171     242[51d0xfffffffff120: 251     227     70	124[52d0xfffffffff130: 194     84	248     27[53d0xfffffffff140: 232     231     141     118[54d0xfffffffff150: 90	46	99	51[55d0xfffffffff160: 159     201     154     102[56d0xfffffffff170: 50	13	183     49[57d0xfffffffff180: 88	163     90	37[58d0xfffffffff190: 93	5[59d(gdb) x/50d $sp^H^[[K^H^[[K28[60dHistory has not yet reached $28.[32d[?12l[?25h[?25l[47d[?12l[?25h[?25l[52d[?12l[?25h[?25l[57d[?12l[?25h[?25l[58d[?12l[?25h[?25l[60d[?12l[?25h[?25l7[3;61r8[61d[29S[1;63r[32;1H(gdb) c[33dContinuing.[35dBreakpoint 1, 0x0000000000400654 in loop_two ()[36d(gdb) c^Hx/50d $28^H^Hsp^H^H^H^H^H^H^H^[[2Pi $pc[37d=> 0x400654 <loop_two>: ldr     w21, [x20, w22, sxtw #2][38d(gdb) c[39dContinuing.[41dBreakpoint 1, 0x0000000000400654 in loop_two ()[42d(gdb) b check_wt^H^[[K^H^[[Ktwo[43dBreakpoint 2 at 0x4006c0[44d(gdb) c[45dContinuing.[47dBreakpoint 2, 0x00000000004006c0 in check_two ()[48d(gdb) c^Hb check_two^M^[[C^[[C^[[C^[[C^[[C^[[Cc^[[K^Hx/i $pc^H^H^H^H^H^H^Hc^[[K^Hx/50d $28^H^Hsp^H^H^H^H^H^H^H^[[2Pi $pc^H^H^H^H^H^H^Hr^[[K^Hx/i $pc[49d=> 0x4006c0 <check_two>:[49;33Hcmp     w22, #0x32[50d(gdb) x/i $pc^H^H^H^H^H^H^Hc^[[K^Hx/i $pc[51d=> 0x4006c0 <check_two>:[51;33Hcmp     w22, #0x32[52d(gdb) cb t^H^[[Kcheck_wt^H^[[K^H^[[Kto^H^[[Kwo[53dUndefined command: "cb".  Try "help".[54d(gdb) c[55dContinuing.[57dBreakpoint 1, 0x0000000000400654 in loop_two ()[58d(gdb) cb check_two^M^[[C^[[C^[[C^[[C^[[C^[[C^[[5Px/i $pc[59d=> 0x400654 <loop_two>: ldr     w21, [x20, w22, sxtw #2][60d(gdb) cx/50d $sp[38d[?12l[?25h[?25l[60d[?12l[?25h[?25l7[3;61r8[61d[29S[1;63r[32;1HUndefined command: "cx".  Try "help".[33d(gdb) cx/50d $sp^M^[[C^[[C^[[C^[[C^[[C^[[C^[[3Px/i $pc^H^H^H^H^H^H^Hc^[[Kb check_two^M^[[C^[[C^[[C^[[C^[[C^[[C^[[5Px/i $pc^H^H^H^H^H^H^Hc^[[K^Hb check_two^M^[[C^[[C^[[C^[[C^[[C^[[Cc^[[K^Hx/i $pc^H^H^H^H^$[34;1H0xfffffffff0d0: -3648   65535   -1084900956     65535[35d0xfffffffff0e0: 4	2	115     103[36d0xfffffffff0f0: 105     115     198     81[37d0xfffffffff100: 255     74	236     41[38d0xfffffffff110: 205     186     171     242[39d0xfffffffff120: 251     227     70	124[40d0xfffffffff130: 194     84	248     27[41d0xfffffffff140: 232     231     141     118[42d0xfffffffff150: 90	46	99	51[43d0xfffffffff160: 159     201     154     102[44d0xfffffffff170: 50	13	183     49[45d0xfffffffff180: 88	163     90	37[46d0xfffffffff190: 93	5[47d(gdb) c[48dContinuing.[50dBreakpoint 2, 0x00000000004006c0 in check_two ()[51d(gdb) c^Hx/50d $sp^M^[[C^[[C^[[C^[[C^[[C^[[C^[[1@c^[[C^[[C^[[C^[[C^[[C^[[C^[[C^[[C^[[C^M^[[C^[[C^[[C^[[C^[[C^[[C^[[3Px/i $pc[52d=> 0x4006c0 <check_two>:[52;33Hcmp     w22, #0x32[53d(gdb) c[54dContinuing.[56dBreakpoint 1, 0x0000000000400654 in loop_two ()[57d(gdb) c^Hx/i $pc^H^H^H^H^H^H^Hc^[[K^Hx/i $pc[58d=> 0x400654 <loop_two>: ldr     w21, [x20, w22, sxtw #2][59d(gdb) x/i $pc^H^H^H^H^H^H^Hc^[[K^Hx/i $pc^H^H^H^H^H^H^Hc^[[K^Hx/50d $sp^M^[[C^[[C^[[C^[[C^[[C^[[C^[[1@c^[[C^[[C^[[C^[[C^[[C^[[C^[[C^[[C^[[C^M^[[C^[[C^[[C^[[C^[[C^[[C^[[1P^[[C^[[C^[[C^[[C^[[C^[[C^[[C^[[C^$[60;1H0xfffffffff0d0: -3648   65535   -1084900956     65535[33d[?12l[?25h[?25l[45d[?12l[?25h[?25l[46d[?12l[?25h[?25l[47d[?12l[?25h[?25l[48d[?12l[?25h[?25l[50d[?12l[?25h[?25l[54d[?12l[?25h[?25l[59d[?12l[?25h[?25l[3;61r[61;1H[29S[1;63r[32;1H0xfffffffff0e0: 5	0	81	81[33d0xfffffffff0f0: 103     105     115     198[34d0xfffffffff100: 255     74	236     41[35d0xfffffffff110: 205     186     171     242[36d0xfffffffff120: 251     227     70	124[37d0xfffffffff130: 194     84	248     27[38d0xfffffffff140: 232     231     141     118[39d0xfffffffff150: 90	46	99	51[40d0xfffffffff160: 159     201     154     102[41d0xfffffffff170: 50	13	183     49[42d0xfffffffff180: 88	163     90	37[43d0xfffffffff190: 93	5[44d(gdb) c[45dContinuing.[47dBreakpoint 2, 0x00000000004006c0 in check_two ()[48d(gdb) c^Hx/50d $sp^H^H^H^H^H^H^H^[[2Pi $pc[49d=> 0x4006c0 <check_two>:[49;33Hcmp     w22, #0x32[50d(gdb) c[51dContinuing.[53dBreakpoint 1, 0x0000000000400654 in loop_two ()[54d(gdb) c^Hx/i $pc^H^H^H^H^H^H^Hc^[[K^Hx/i $pc[55d=> 0x400654 <loop_two>: ldr     w21, [x20, w22, sxtw #2][56d(gdb) x/i $pc^H^H^H^H^H^H^Hc^[[K^Hx/i $pc^H^H^H^H^H^H^Hc^[[K^Hx/50d $sp^H^H^H^H^H^H^H^[[2Pi $pc^H^H^H^H^H^H^Hc^[[K^Hx/i $pc^H^H^H^H^H^H^Hc^[[K^Hx/50d $sp[57d0xfffffffff0d0: -3648   65535   -1084900956     65535[58d0xfffffffff0e0: 6	5	255     81[59d0xfffffffff0f0: 103     105     115     198[60d0xfffffffff100: 255     74	236     41[32d[?12l[?25h[?25l[43d[?12l[?25h[?25l[45d[?12l[?25h[?25l[53d[?12l[?25h[?25l[55d[?12l[?25h[?25l[57d[?12l[?25h[?25l[3;61r[61;1H[29S[1;63r[32;1H0xfffffffff110: 205     186     171     242[33d0xfffffffff120: 251     227     70	124[34d0xfffffffff130: 194     84	248     27[35d0xfffffffff140: 232     231     141     118[36d0xfffffffff150: 90	46	99	51[37d0xfffffffff160: 159     201     154     102[38d0xfffffffff170: 50	13	183     49[39d0xfffffffff180: 88	163     90	37[40d0xfffffffff190: 93	5[41d(gdb) c[42dContinuing.[44dBreakpoint 2, 0x00000000004006c0 in check_two ()[45d(gdb) c^Hx/50d $sp^H^H^H^H^H^H^H^[[2Pi $pc[46d=> 0x4006c0 <check_two>:[46;33Hcmp     w22, #0x32[47d(gdb) c[48dContinuing.[50dBreakpoint 1, 0x0000000000400654 in loop_two ()[51d(gdb) c^Hx/i $pc[52d=> 0x400654 <loop_two>: ldr     w21, [x20, w22, sxtw #2][53d(gdb) c[54dContinuing.[56dBreakpoint 2, 0x00000000004006c0 in check_two ()[57d(gdb) c^Hx/i $pc[58d=> 0x4006c0 <check_two>:[58;33Hcmp     w22, #0x32[59d(gdb) x/i $pc^H^H^H^H^H^H^Hc^[[K^Hx/i $pc^H^H^H^H^H^H^Hc^[[K^Hx/i $pc^H^H^H^H^H^H^Hc^[[K^Hx/50d $sp^H^H^H^H^H^H^H^[[2Pi $pc^H^H^H^H^H^H^Hc^[[K^Hx/i $pc^H^H^H^H^H^H^Hc^[[K^Hx/50d $sp^H^H^H^H^H^H^H^[[2Pi $$[60;1H0xfffffffff0d0: -3648   65535   -1084900956     65535[34d[?12l[?25h[?25l[38d[?12l[?25h[?25l[39d[?12l[?25h[?25l[40d[?12l[?25h[?25l[42d[?12l[?25h[?25l[45d[?12l[?25h[?25l[49d[?12l[?25h[?25l[51d[?12l[?25h[?25l[55d[?12l[?25h[?25l[60d[?12l[?25h[?25l7[3;61r8[61d[29S[1;63r[32;1H0xfffffffff0e0: 8	6	236     74[33d0xfffffffff0f0: 81	103     105     115[34d0xfffffffff100: 198     236     255     41[35d0xfffffffff110: 205     186     171     242[36d0xfffffffff120: 251     227     70	124[37d0xfffffffff130: 194     84	248     27[38d0xfffffffff140: 232     231     141     118[39d0xfffffffff150: 90	46	99	51[40d0xfffffffff160: 159     201     154     102[41d0xfffffffff170: 50	13	183     49[42d0xfffffffff180: 88	163     90	37[43d0xfffffffff190: 93	5[44d(gdb) c[45dContinuing.[47dBreakpoint 1, 0x0000000000400654 in loop_two ()[48d(gdb) c^Hx/50d $sp^H^H^H^H^H^H^H^[[2Pi $pc^H^H^H^H^H^H^Hc^[[K^Hx/i $pc[49d=> 0x400654 <loop_two>: ldr     w21, [x20, w22, sxtw #2][50d(gdb) c[51dContinuing.[53dBreakpoint 2, 0x00000000004006c0 in check_two ()[54d(gdb) c^Hx/i $pc[55d=> 0x4006c0 <check_two>:[55;33Hcmp     w22, #0x32[56d(gdb) c[57dContinuing.[59dBreakpoint 1, 0x0000000000400654 in loop_two ()[60d(gdb) c^Hx/i $pc[32d[?12l[?25h[?25l[41d[?12l[?25h[?25l[42d[?12l[?25h[?25l[43d[?12l[?25h[?25l[44d[?12l[?25h[?25l[45d[?12l[?25h[?25l[47d[?12l[?25h[?25l[48d[?12l[?25h[?25l[50d[?12l[?25h[?25l[51d[?12l[?25h[?25l[53d[?12l[?25h[?25l[55d[?12l[?25h[?25l[57d[?12l[?25h[?25l[58d[?12l[?25h[?25l[59d[?12l[?25h[?25l[29;60r[29;1H[13T[1;63r[3;12H0e0: 8       6       236     74[K[4;12H0f0: 81      103     105	115[5;13H00: 198     236	255     41[6;13H10: 205     186	17	242[7;13H20: 251     227     70	124[8;13H30: 194     84      248     27[K[9;13H40: 232     231	141     118[10;13H50: 90	46 	99	51[11;13H60: 159     201     154     102[12d0xfffffffff170: 50	13	183     49[13d0xfffffffff180: 88	163     90	37[14d0xfffffffff190: 93	5[15d(gdb) c[K[16dContinuing.[K[17d[K[18dBreakpoint 1, 0x0000000000400654 in loop_two ()[19d(gdb) c^Hx/50d $sp^H^H^H^H^H^H^H^[[2Pi $pc^H^H^H^H^H^H^Hc^[[K^Hx/i $pc[20d=> 0x400654 <loop_two>: ldr     w21, [x20, w22, sxtw #2][21d(gdb) c[K[22dContinuing.[K[23d[K[24dBreakpoint 2, 0x00000000004006c0 in check_two ()[25d(gdb) c^Hx/i $pc[26d=> 0x4006c0 <check_two>:[26;33Hcmp     w22, #0x32[27d(gdb) c[K[28dContinuing.[K[30dBreakpoint 1, 0x0000000000400654 in loop_two ()[31d(gdb) c^Hx/i $pc[32d=> 0x400654 <loop_two>: ldr     w21, [x20, w22, sxtw #2][33d(gdb) c[34dContinuing.[36dBreakpoint 2, 0x00000000004006c0 in check_two ()[37d(gdb) c^Hx/i $pc[38d=> 0x4006c0 <check_two>:[38;33Hcmp     w22, #0x32[39d(gdb) c[40dContinuing.[42dBreakpoint 1, 0x0000000000400654 in loop_two ()[K[43;7Hc^Hx/i $pc^H^H^H^H^H^H^Hc^[[K^Hx/i $pc^H^H^H^H^H^H^Hc^[[K^Hx/i $pc^H^H^H^H^H^H^Hc^[[K^Hx/i $pc^H^H^H^H^H^H^Hc^[[K^Hx/50d $sp[K[45;17H10	7[45;34H05     41[46;17H74	81 	103	10[47;18H15     198	20	236[48;18H5[60;12H2[60;31Hc0 in check_two ()[32d[?12l[?25h[?25l[34d[?12l[?25h[?25l[37d[?12l[?25h[?25l[41d[?12l[?25h[?25l[43d[?12l[?25h[?25l[46d[?12l[?25h[?25l[49d[?12l[?25h[?25l[53d[?12l[?25h[?25l[56d[?12l[?25h[?25l[59d[?12l[?25h[?25l[3;61r[61;1H[29S[1;63r[32;1H(gdb) c[33dContinuing.[35dBreakpoint 1, 0x0000000000400654 in loop_two ()[36d(gdb) c^Hx/50d $sp^M^[[C^[[C^[[C^[[C^[[C^[[Cc^[[K^Hx/i $pc[37d=> 0x400654 <loop_two>: ldr     w21, [x20, w22, sxtw #2][38d(gdb) c[39dContinuing.[41dBreakpoint 2, 0x00000000004006c0 in check_two ()[42d(gdb) c^Hx/i $pc[43d=> 0x4006c0 <check_two>:[43;33Hcmp     w22, #0x32[44d(gdb) c[45dContinuing.[47dBreakpoint 1, 0x0000000000400654 in loop_two ()[48d(gdb) c^Hx/i $pc[49d=> 0x400654 <loop_two>: ldr     w21, [x20, w22, sxtw #2][50d(gdb) c[51dContinuing.[53dBreakpoint 2, 0x00000000004006c0 in check_two ()[54d(gdb) c^Hx/i $pc^H^H^H^H^H^H^Hc^[[K^Hx/i $pc[55d=> 0x4006c0 <check_two>:[55;33Hcmp     w22, #0x32[56d(gdb) c[57dContinuing.[59dBreakpoint 1, 0x0000000000400654 in loop_two ()[60d(gdb) c^Hx/i $pc[35d[?12l[?25h[?25l[39d[?12l[?25h[?25l[42d[?12l[?25h[?25l[44d[?12l[?25h[?25l[45d[?12l[?25h[?25l[54d[?12l[?25h[?25l[57d[?12l[?25h[?25l[14;8H[K[15dContinuing.[K[16d[K[17dBreakpoint 2, 0x00000000004006c0 in check_two ()[18d(gdb) c^Hx/i $pc[K[19d=> 0x4006c0 <check_two>:        cmp     w22, #0x32[20d(gdb) c[K[21dContinuing.[K[22d[K[23dBreakpoint 1, 0x0000000000400654 in loop_two ()[24d(gdb) c^Hx/i $pc[K[25d=> 0x400654 <loop_two>: ldr     w21, [x20, w22, sxtw #2][26d(gdb) c[K[27dContinuing.[K[28d[K[29dBreakpoint 2, 0x00000000004006c0 in check_two ()[30d(gdb) c^Hx/i $pc[31d=> 0x4006c0 <check_two>:        cmp     w22, #0x32[36;8H[42P[38dx/i $pc^H^H^H^H^H^H^Hc^[[K^Hx/i $pc^H^H^H^H^H^H^Hc^[[K^Hx/i $pc^H^H^H^H^H^H^Hc^[[K^Hx/i $pc^H^H^H^H^H^H^Hc^[[K^Hx/i $pc^H^H^H^H^H^H^Hc^[[K^Hx/i $pc^H^H^H^H^H^H^Hc^[[K^Hx/i $pc^H^H^H^H^H^H^Hc^[[K^Hx$[39;1H0xfffffffff0d0: -3648   65535   -1084900956     65535[40d0xfffffffff0e0: 16	1	70	41[41d0xfffffffff0f0: 70      74      81      103[K[42d0xfffffffff100: 105     115     171     186[43d0xfffffffff110: 198     205     227     236[K[44d0xfffffffff120: 242     251     255     124[45d0xfffffffff130: 194     84	248     27[46d0xfffffffff140: 232     231     141     118[47d0xfffffffff150: 90      46      99      51[K[48d0xfffffffff160: 159     201     154     102[49d0xfffffffff170: 50      13      183     49[K[50d0xfffffffff180: 88	163     90	37[51d0xfffffffff190: 93	5[52d(gdb) c[53dContinuing.[K[54d[K[55dBreakpoint 2, 0x00000000004006c0 in check_two ()[K[56;8H^Hx/50d $sp^H^H^H^H^H^H^H^[[2Pi $pc[57d=> 0x4006c0 <check_two>:[57;33Hcmp     w22, #0x32[58d(gdb) c[59dContinuing.[K[60d[K[41d[?12l[?25h[?25l[3dContinuing.[K[4d[K[5dBreakpoint 1, 0x0000000000400654 in loop_two ()[6d(gdb) c^Hx/i $pc[7d=> 0x400654 <loop_two>: ldr     w21, [x20, w22, sxtw #2][8;8H[K[9dContinuing.[K[10d[K[11dBreakpoint 2, 0x00000000004006c0 in check_two ()[12d(gdb) c^Hx/i $pc[13d=> 0x4006c0 <check_two>:        cmp     w22, #0x32[17;12H1[17;31H54 in loop[1P[19;10H54 <loop_two>: ldr     w21, [x20, w22, sxtw #2][23;12H2[23;31Hc0 in check_two ()[24;8H[K[25dContinuing.[K[26d[K[27dBreakpoint 1, 0x0000000000400654 in loop_two ()[28d(gdb) c^Hx/i $pc[29d=> 0x400654 <loop_two>: ldr     w21, [x20, w22, sxtw #2][30;8H[K[31dContinuing.[K[32d[K[33dBreakpoint 2, 0x00000000004006c0 in check_two ()[34d(gdb) c^Hx/i $pc[35d=> 0x4006c0 <check_two>:        cmp     w22, #0x32[36;8H[K[37dContinuing.[K[38d[K[39dBreakpoint 1, 0x0000000000400654 in loop_two ()[K[40d(gdb) c^Hx/i $pc[K[41d=> 0x400654 <loop_two>: ldr     w21, [x20, w22, sxtw #2][42d(gdb) c[K[43dContinuing.[K[44d[K[45dBreakpoint 2, 0x00000000004006c0 in check_two ()[46d(gdb) c^Hx/i $pc[K[47d=> 0x4006c0 <check_two>:  	cmp     w22, #0x32[48d(gdb) c[K[49dContinuing.[K[50d[K[51dBreakpoint 1, 0x0000000000400654 in loop_two ()[52;8H^Hx/i $pc[53d=> 0x400654 <loop_two>: ldr     w21, [x20, w22, sxtw #2][54d(gdb) c[55dContinuing.[K[56d[K[57dBreakpoint 2, 0x00000000004006c0 in check_two ()[K[58;8H^Hx/i $pc[59d=> 0x4006c0 <check_two>:[59;33Hcmp     w22, #0x32[60d(gdb) c[?12l[?25h[?25l[3d[K[4dBreakpoint 2, 0x00000000004006c0 in check_two ()[5d(gdb) c^Hx/i $pc[K[6d=> 0x4006c0 <check_two>:[6;33Hcmp     w22, #0x32[7d(gdb) c[K[8dContinuing.[9d[K[10dBreakpoint 1, 0x0000000000400654 in loop_two ()[11d(gdb) c^Hx/i $pc[K[12d=> 0x400654 <loop_two>: ldr     w21, [x20, w22, sxtw #2][13d(gdb) c[K[14dContinuing.[15d[K[16dBreakpoint 2, 0x00000000004006c0 in check_two ()[17d(gdb) c^Hx/i $pc[K[18d=> 0x4006c0 <check_two>:[18;33Hcmp     w22, #0x32[19d(gdb) c[K[20dContinuing.[21d[K[22dBreakpoint 1, 0x0000000000400654 in loop_two ()[23d(gdb) c^Hx/i $pc[K[24d=> 0x400654 <loop_two>: ldr     w21, [x20, w22, sxtw #2][25d(gdb) c[K[26dContinuing.[27d[K[28dBreakpoint 2, 0x00000000004006c0 in check_two ()[29d(gdb) c^Hx/i $pc[K[30d=> 0x4006c0 <check_two>:[30;33Hcmp     w22, #0x32[31d(gdb) c[K[32dContinuing.[33d[K[34dBreakpoint 1, 0x0000000000400654 in loop_two ()[35d(gdb) c^Hx/i $pc[K[36d=> 0x400654 <loop_two>: ldr     w21, [x20, w22, sxtw #2][37d(gdb) c[K[38dContinuing.[39d[K[40dBreakpoint 2, 0x00000000004006c0 in check_two ()[41d(gdb) c^Hx/i $pc[K[42d=> 0x4006c0 <check_two>:[42;33Hcmp     w22, #0x32[43d(gdb) c[K[44dContinuing.[45d[K[46dBreakpoint 1, 0x0000000000400654 in loop_two ()[47d(gdb) c^Hx/i $pc[K[48d=> 0x400654 <loop_two>: ldr     w21, [x20, w22, sxtw #2][49d(gdb) c[K[50dContinuing.[51d[K[52dBreakpoint 2, 0x00000000004006c0 in check_two ()[53d(gdb) c^Hx/i $pc[K[54d=> 0x4006c0 <check_two>:[54;33Hcmp     w22, #0x32[55d(gdb) c[K[56dContinuing.[57d[K[58dBreakpoint 1, 0x0000000000400654 in loop_two ()[59d(gdb) c^Hx/i $pc[K[60d=> 0x400654 <loop_two>: ldr     w21, [x20, w22, sxtw #2][33d[?12l[?25h[?25l[34d[?12l[?25h[?25l[35d[?12l[?25h[?25l[36d[?12l[?25h[?25l[37d[?12l[?25h[?25l[38d[?12l[?25h[?25l[39d[?12l[?25h[?25l[40d[?12l[?25h[?25l[41d[?12l[?25h[?25l[42d[?12l[?25h[?25l[3dContinuing.[4d[K[5dBreakpoint 1, 0x0000000000400654 in loop_two ()[6d(gdb) c^Hx/i $pc[K[7d=> 0x400654 <loop_two>: ldr     w21, [x20, w22, sxtw #2][8d(gdb) c[K[9dContinuing.[10d[K[11dBreakpoint 2, 0x00000000004006c0 in check_two ()[12d(gdb) c^Hx/i $pc[K[13d=> 0x4006c0 <check_two>:[13;33Hcmp     w22, #0x32[14d(gdb) c[K[15dContinuing.[16d[K[17dBreakpoint 1, 0x0000000000400654 in loop_two ()[18d(gdb) c^Hx/i $pc[K[19d=> 0x400654 <loop_two>: ldr     w21, [x20, w22, sxtw #2][20d(gdb) c[K[21dContinuing.[22d[K[23dBreakpoint 2, 0x00000000004006c0 in check_two ()[24d(gdb) c^Hx/i $pc[K[25d=> 0x4006c0 <check_two>:[25;33Hcmp     w22, #0x32[26d(gdb) c[K[27dContinuing.[28d[K[29dBreakpoint 1, 0x0000000000400654 in loop_two ()[30d(gdb) c^Hx/i $pc[K[31d=> 0x400654 <loop_two>: ldr     w21, [x20, w22, sxtw #2][32d(gdb) c[K[33dContinuing.[34d[K[35dBreakpoint 2, 0x00000000004006c0 in check_two ()[36d(gdb) c^Hx/i $pc[K[37d=> 0x4006c0 <check_two>:[37;33Hcmp     w22, #0x32[38d(gdb) c[K[39dContinuing.[40d[K[41dBreakpoint 1, 0x0000000000400654 in loop_two ()[42d(gdb) c^Hx/i $pc[K[43d=> 0x400654 <loop_two>: ldr     w21, [x20, w22, sxtw #2][44d(gdb) c[K[45dContinuing.[46d[K[47dBreakpoint 2, 0x00000000004006c0 in check_two ()[48d(gdb) c^Hx/i $pc[K[49d=> 0x4006c0 <check_two>:[49;33Hcmp     w22, #0x32[50d(gdb) c[K[51dContinuing.[52d[K[53dBreakpoint 1, 0x0000000000400654 in loop_two ()[54d(gdb) ^M^[[K(gdb) ^M^[[K(gdb) ^M^[[K(gdb) ^M^[[K(gdb) ^M^[[K(gdb) ^M^[[K(gdb) ^M^[[K(gdb) ^M^[[K(gdb) c^Hx/i $pc[55d=> 0x400654 <loop_two>: ldr     w21, [x20, w22, sxtw #2][56d(gdb) x/i $pc^H^H^H^H^H^H^Hc^[[K[57dContinuing.[58d[K[59dBreakpoint 2, 0x00000000004006c0 in check_two ()[60d(gdb) c^Hx/i $pc[K[50d[?12l[?25h[?25l[54d[?12l[?25h[?25l[56d[?12l[?25h[?25l[3;61r[61;1H[29S[1;63r[32;1H=> 0x4006c0 <check_two>:[32;33Hcmp     w22, #0x32[33d(gdb) x/i $pc^H^H^H^H^H^H^Hc^[[K[34dContinuing.[36dBreakpoint 1, 0x0000000000400654 in loop_two ()[37d(gdb) ^G^Gc^Hx/i $pc[38d=> 0x400654 <loop_two>: ldr     w21, [x20, w22, sxtw #2][39d(gdb) x/i $pc^H^H^H^H^H^H^Hc^[[K[40dContinuing.[42dBreakpoint 2, 0x00000000004006c0 in check_two ()[43d(gdb) c^Hx/i $pc^H^H^H^H^H^H^Hc^[[K^Hx/i $pc[44d=> 0x4006c0 <check_two>:[44;33Hcmp     w22, #0x32[45d(gdb) x/i $pc^H^H^H^H^H^H^Hc^[[K[46dContinuing.[48dBreakpoint 1, 0x0000000000400654 in loop_two ()[49d(gdb) c^Hx/i $pc[50d=> 0x400654 <loop_two>: ldr     w21, [x20, w22, sxtw #2][51d(gdb) x/i $pc^H^H^H^H^H^H^Hc^[[K[52dContinuing.[54dBreakpoint 2, 0x00000000004006c0 in check_two ()[55d(gdb) ^Gc^Hx/i $pc[56d=> 0x4006c0 <check_two>:[56;33Hcmp     w22, #0x32[57d(gdb) x/i $pc^H^H^H^H^H^H^Hc^[[K[58dContinuing.[60dBreakpoint 1, 0x0000000000400654 in loop_two ()[32d[?12l[?25h[?25l[34d[?12l[?25h[?25l[36d[?12l[?25h[?25l[37d[?12l[?25h[?25l[38d[?12l[?25h[?25l[39d[?12l[?25h[?25l[40d[?12l[?25h[?25l[41d[?12l[?25h[?25l[43d[?12l[?25h[?25l[45d[?12l[?25h[?25l[46d[?12l[?25h[?25l[49d[?12l[?25h[?25l[51d[?12l[?25h[?25l[55d[?12l[?25h[?25l[60d[?12l[?25h[?25l7[3;61r8[61d[29S[1;63r[32;1H(gdb) c^Hx/i $pc^H^H^H^H^H^H^Hc^[[K^Hx/i $pc[33d=> 0x400654 <loop_two>: ldr     w21, [x20, w22, sxtw #2][34d(gdb) x/i $pc^H^H^H^H^H^H^Hc^[[K[35dContinuing.[37dBreakpoint 2, 0x00000000004006c0 in check_two ()[38d(gdb) c^Hx/i $pc[39d=> 0x4006c0 <check_two>:[39;33Hcmp     w22, #0x32[40d(gdb) x/i $pc^H^H^H^H^H^H^Hc^[[K[41dContinuing.[43dBreakpoint 1, 0x0000000000400654 in loop_two ()[44d(gdb) c^Hx/[33d[?12l[?25h[?25l[44d[?12l[?25h[?25l[45d[?12l[?25h[?25l[?12l[?25h[?25l[?12l[?25h[?25l[?12l[?25h[?25l[?12l[?25h[?25l[?12l[?25h[?25l[?12l[?25h[?25l[?12l[?25h[?25l[?12l[?25h[?25l[?12l[?25h[?25l[?12l[?25h[?25l[?12l[?25h[?25l[?12l[?25h[?25l[?12l[?25h[?25l[?12l[?25h[?25l[?12l[?25h[?25l[?12l[?25h[?25l[?12l[?25h[?25l[?12l[?25h[?25l[?12l[?25h[?25l[?12l[?25h[?25l[?12l[?25h[?25l[?12l[?25h[?25l[?12l[?25h[?25l[?12l[?25h[?25l[?12l[?25h[?25l[?12l[?25h[?25l[?12l[?25h[?25l[?12l[?25h[?25l[?12l[?25h[?25l[?12l[?25h[?25l[?12l[?25h[?25l[?12l[?25h[?25l[?12l[?25h[?25l[?12l[?25h[?25l[?12l[?25h[?25l[?12l[?25h[?25l[?12l[?25h[?25l[?12l[?25h[?25l[?12l[?25h[?25l[?12l[?25h[?25l[?12l[?25h[?25l[?12l[?25h[?25l[?12l[?25h[?25l[?12l[?25h[?25l[?12l[?25h[?25l[?12l[?25h[?25l[?12l[?25h[?25l[?12l[?25h[?25l[?12l[?25h[?25l[?12l[?25h[?25l[?12l[?25h[?25l[?12l[?25h[?25l[?12l[?25h[?25l[?12l[?25h[?25l[?12l[?25h[?25l[?12l[?25h[?25l[?12l[?25h[?25l[?12l[?25h[?25l[?12l[?25h[?25l[?12l[?25h[?25l[?12l[?25h[?25l[?12l[?25h[?25l[?12l[?25h[?25l[?12l[?25h[?25l[?12l[?25h[?25l[?12l[?25h[?25l[?12l[?25h[?25l[?12l[?25h[?25l[?12l[?25h[?25l[?12l[?25h[?25l[?12l[?25h[?25l[?12l[?25h[?25l[?12l[?25h[?25l[?12l[?25h[?25l[?12l[?25h[?25l[?12l[?25h[?25l[?12l[?25h[?25l[?12l[?25h[?25l[?12l[?25h[?25l[?12l[?25h[?25l[?12l[?25h[?25l[?12l[?25h[?25l[?12l[?25h[?25l[?12l[?25h[?25l[?12l[?25h[?25l[?12l[?25h[?25l[?12l[?25h[?25l[?12l[?25h[?25l[?12l[?25h[?25l[?12l[?25h[?25l[?12l[?25h[?25l[?12l[?25h[?25l[?12l[?25h[?25l[?12l[?25h[?25l[?12l[?25h[?25l[?12l[?25h[?25l[?12l[?25h[?25l[?12l[?25h[?25l[?12l[?25h[?25l[?12l[?25h[?25l[?12l[?25h[?25l[?12l[?25h[?25l[?12l[?25h[?25l[?12l[?25h[?25l[?12l[?25h[?25l[?12l[?25h[?25l[?12l[?25h[?25l[?12l[?25h[?25l[?12l[?25h[?25l[?12l[?25h[?25l[?12l[?25h[?25l[?12l[?25h[?25l[?12l[?25h[?25l[?12l[?25h[?25l[?12l[?25h[?25l[?12l[?25h[?25l[?12l[?25h[?25l[?12l[?25h[?25l[?12l[?25h[?25l[?12l[?25h[?25l[?12l[?25h[?25l[?12l[?25h[?25l[?12l[?25h[?25l[?12l[?25h[?25l[?12l[?25h[?25l[?12l[?25h[?25l[?12l[?25h[?25l[?12l[?25h[?25l[?12l[?25h[?25l[?12l[?25h[?25l[?12l[?25h[?25l[?12l[?25h[?25l[?12l[?25h[?25l[?12l[?25h[?25l[?12l[?25h[?25l[?12l[?25h[?25l[?12l[?25h[?25l[?12l[?25h[?25l[?12l[?25h[?25l[?12l[?25h[?25l[?12l[?25h[?25l[?12l[?25h[?25l[?12l[?25h[?25l[?12l[?25h[?25l[?12l[?25h[?25l[?12l[?25h[?25l[?12l[?25h[?25l[?12l[?25h[?25l[?12l[?25h[?25l[?12l[?25h[?25l[?12l[?25h[?25l[?12l[?25h[?25l[?12l[?25h[?25l[?12l[?25h[?25l[?12l[?25h[?25l[?12l[?25h[?25l[?12l[?25h[?25l[?12l[?25h[?25l[?12l[?25h[?25l[?12l[?25h[?25l[?12l[?25h[?25l[?12l[?25h[?25l[?12l[?25h[?25l[?12l[?25h[?25l[?12l[?25h[?25l[?12l[?25h[?25l[?12l[?25h[?25l[?12l[?25h[?25l[?12l[?25h[?25l[?12l[?25h[?25l[?12l[?25h[?25l[?12l[?25h[?25l[?12l[?25h[?25l[?12l[?25h[?25l[?12l[?25h[?25l[?12l[?25h[?25l[?12l[?25h[?25l[?12l[?25h[?25l[?12l[?25h[?25l[?12l[?25h[?25l[?12l[?25h[?25l[?12l[?25h[?25l[?12l[?25h[?25l[?12l[?25h[?25l[?12l[?25h[?25l[?12l[?25h[?25l[?12l[?25h[?25l[?12l[?25h[?25l[A[?12l[?25h[?25l[A[?12l[?25h[?25l[A[?12l[?25h[?25l[A[?12l[?25h[?25l[A[?12l[?25h[?25l[A[?12l[?25h[?25l[A[?12l[?25h[?25l[A[?12l[?25h[?25l[A[?12l[?25h[?25l[A[?12l[?25h[?25l[A[?12l[?25h[?25l[32d[?12l[?25h[?25l[A[?12l[?25h[?25l[29d[?12l[?25h[?25l[A[?12l[?25h[?25l[A[?12l[?25h[?25l[A[?12l[?25h[?25l[A[?12l[?25h[?25l[A[?12l[?25h[?25l[22d[?12l[?25h[?25l[A[?12l[?25h[?25l[A[?12l[?25h[?25l[A[?12l[?25h[?25l[A[?12l[?25h[?25l[A[?12l[?25h[?25l[A[?12l[?25h[?25l[A[?12l[?25h[?25l[A[?12l[?25h[?25l[A[?12l[?25h[?25l[11d[?12l[?25h[?25l[A[?12l[?25h[?25l[A[?12l[?25h[?25l[A[?12l[?25h[?25l[A[?12l[?25h[?25l[A[?12l[?25h[?25l[A[?12l[?25h[?25l[3d[?12l[?25h[?25l[2;60r[2;1H[30T[1;63r[3;1H=> 0x400654 <loop_two>: ldr     w21, [x20, w22, sxtw #2][4d(gdb) c[5dContinuing.[7dBreakpoint 2, 0x00000000004006c0 in check_two ()[8d(gdb) c^Hx/i $pc[9d=> 0x4006c0 <check_two>:[9;33Hcmp     w22, #0x32[10d(gdb) c[11dContinuing.[13dBreakpoint 1, 0x0000000000400654 in loop_two ()[14d(gdb) c^Hx/i $pc[15d=> 0x400654 <loop_two>: ldr     w21, [x20, w22, sxtw #2][16d(gdb) c[17dContinuing.[19dBreakpoint 2, 0x00000000004006c0 in check_two ()[20d(gdb) c^Hx/i $pc[21d=> 0x4006c0 <check_two>:[21;33Hcmp     w22, #0x32[22d(gdb) c[23dContinuing.[25dBreakpoint 1, 0x0000000000400654 in loop_two ()[26d(gdb) ^M^[[K(gdb) ^M^[[K(gdb) ^M^[[K(gdb) ^M^[[K(gdb) ^M^[[K(gdb) ^M^[[K(gdb) ^M^[[K(gdb) ^M^[[K(gdb) c^Hx/i $pc[27d=> 0x400654 <loop_two>: ldr     w21, [x20, w22, sxtw #2][28d(gdb) x/i $pc^H^H^H^H^H^H^Hc^[[K[29dContinuing.[31dBreakpoint 2, 0x00000000004006c0 in check_two ()[32d(gdb) c^Hx/i $pc[A[?12l[?25h[?25l[29d[?12l[?25h[?25l[14d[?12l[?25h[?25l[A[?12l[?25h[?25l[A[?12l[?25h[?25l[A[?12l[?25h[?25l[9d[?12l[?25h[?25l[7d[?12l[?25h[?25l[5d[?12l[?25h[?25l[3d[?12l[?25h[?25l[2;60r[2;1H[30T[1;63r[3;1H=> 0x4006c0 <check_two>:[3;33Hcmp     w22, #0x32[4d(gdb) c[5dContinuing.[7dBreakpoint 1, 0x0000000000400654 in loop_two ()[8d(gdb) c^Hx/i $pc[9d=> 0x400654 <loop_two>: ldr     w21, [x20, w22, sxtw #2][10d(gdb) c[11dContinuing.[13dBreakpoint 2, 0x00000000004006c0 in check_two ()[14d(gdb) c^Hx/i $pc[15d=> 0x4006c0 <check_two>:[15;33Hcmp     w22, #0x32[16d(gdb) c[17dContinuing.[19dBreakpoint 1, 0x0000000000400654 in loop_two ()[20d(gdb) c^Hx/i $pc[21d=> 0x400654 <loop_two>: ldr     w21, [x20, w22, sxtw #2][22d(gdb) c[23dContinuing.[25dBreakpoint 2, 0x00000000004006c0 in check_two ()[26d(gdb) c^Hx/i $pc[27d=> 0x4006c0 <check_two>:[27;33Hcmp     w22, #0x32[28d(gdb) c[29dContinuing.[31dBreakpoint 1, 0x0000000000400654 in loop_two ()[32d(gdb) c^Hx/i $pc[A[?12l[?25h[?25l[27d[?12l[?25h[?25l[22d[?12l[?25h[?25l[20d[?12l[?25h[?25l[17d[?12l[?25h[?25l[15d[?12l[?25h[?25l[13d[?12l[?25h[?25l[11d[?12l[?25h[?25l[9d[?12l[?25h[?25l[A[?12l[?25h[?25l[A[?12l[?25h[?25l[5d[?12l[?25h[?25l[A[?12l[?25h[?25l[A[?12l[?25h[?25l[3;10H54 <loop_two>: ldr     w21, [x20, w22, sxtw #2][7;12H2[7;31Hc0 in check_two ()[9;10Hc0 <check_two>:        cmp     w22, #0x32[K[13;12H1[13;31H54 in loop[1P[15;10H54 <loop_two>: ldr     w21, [x20, w22, sxtw #2][19;12H2[19;31Hc0 in check_two ()[21;10Hc0 <check_two>:        cmp     w22, #0x32[K[25;12H1[25;31H54 in loop[1P[27;10H54 <loop_two>: ldr     w21, [x20, w22, sxtw #2][31;12H2[31;31Hc0 in check_two ()[33;10Hc0 <check_two>:        cmp     w22, #0x32[K[37;12H1[37;31H54 in loop[1P[39;10H54 <loop_two>: ldr     w21, [x20, w22, sxtw #2][43;12H2[43;31Hc0 in check_two ()[45;10Hc0 <check_two>:        cmp     w22, #0x32[K[49;12H1[49;31H54 in loop[1P[51;10H54 <loop_two>: ldr     w21, [x20, w22, sxtw #2][55;12H2[55;31Hc0 in check_two ()[56d[96P[57;10Hc0 <check_two>:        cmp     w22, #0x32[K[58;7Hc[K[31d[?12l[?25h[?25l[A[?12l[?25h[?25l[A[?12l[?25h[?25l[27d[?12l[?25h[?25l[A[?12l[?25h[?25l[A[?12l[?25h[?25l[A[?12l[?25h[?25l[22d[?12l[?25h[?25l[20d[?12l[?25h[?25l[A[?12l[?25h[?25l[A[?12l[?25h[?25l[16d[?12l[?25h[?25l[14d[?12l[?25h[?25l[9d[?12l[?25h[?25l[7d[?12l[?25h[?25l[A[?12l[?25h[?25l[4d[?12l[?25h[?25l[ABreakpoint 2, 0x00000000004006c0 in check_two ()[K[4;8H^Hx/i $pc[5d=> 0x4006c0 <check_two>:[5;33Hcmp     w22, #0x32[6d(gdb) c[7dContinuing.[K[8d[K[9dBreakpoint 1, 0x0000000000400654 in loop_two ()[K[10;8H^Hx/i $pc[11d=> 0x400654 <loop_two>: ldr     w21, [x20, w22, sxtw #2][12d(gdb) c[13dContinuing.[K[14d[K[15dBreakpoint 2, 0x00000000004006c0 in check_two ()[K[16;8H^Hx/i $pc[17d=> 0x4006c0 <check_two>:[17;33Hcmp     w22, #0x32[18d(gdb) c[19dContinuing.[K[20d[K[21dBreakpoint 1, 0x0000000000400654 in loop_two ()[K[22;8H^Hx/i $pc[23d=> 0x400654 <loop_two>: ldr     w21, [x20, w22, sxtw #2][24d(gdb) c[25dContinuing.[K[26d[K[27dBreakpoint 2, 0x00000000004006c0 in check_two ()[K[31;12H1[31;31H54 in loop[1P[33;10H54 <loop_two>: ldr     w21, [x20, w22, sxtw #2][37;12H2[37;31Hc0 in check_two ()[39;10Hc0 <check_two>:        cmp     w22, #0x32[K[43;12H1[43;31H54 in loop[1P[45;10H54 <loop_two>: ldr     w21, [x20, w22, sxtw #2][49;12H2[49;31Hc0 in check_two ()[51;10Hc0 <check_two>:        cmp     w22, #0x32[K[55;12H1[55;31H54 in loop[1P[57;10H54 <loop_two>: ldr     w21, [x20, w22, sxtw #2][32d[?12l[?25h[?25l[30d[?12l[?25h[?25l[28d[?12l[?25h[?25l[A[?12l[?25h[?25l[19d[?12l[?25h[?25l[A[?12l[?25h[?25l[A[?12l[?25h[?25l[13d[?12l[?25h[?25l[A[?12l[?25h[?25l[A[?12l[?25h[?25l[A[?12l[?25h[?25l[A[?12l[?25h[?25l[A[?12l[?25h[?25l[A[?12l[?25h[?25l[A[?12l[?25h[?25l[4d[?12l[?25h[?25l[3;12H1[3;31H54 in loop[1P[5;10H54 <loop_two>: ldr     w21, [x20, w22, sxtw #2][9;12H2[9;31Hc0 in check_two ()[11;10Hc0 <check_two>:        cmp     w22, #0x32[K[15;12H1[15;31H54 in loop[1P[17;10H54 <loop_two>: ldr     w21, [x20, w22, sxtw #2][21;12H2[21;31Hc0 in check_two ()[23;10Hc0 <check_two>:        cmp     w22, #0x32[K[27;12H1[27;31H54 in loop[1P[28;8H^Hx/i $pc[29d=> 0x400654 <loop_two>: ldr     w21, [x20, w22, sxtw #2][30d(gdb) c[31dContinuing.[K[32d[K[33dBreakpoint 2, 0x00000000004006c0 in check_two ()[K[34;8H^Hx/i $pc[35d=> 0x4006c0 <check_two>:[35;33Hcmp     w22, #0x32[36d(gdb) c[37dContinuing.[K[38d[K[39dBreakpoint 1, 0x0000000000400654 in loop_two ()[K[40;8H^Hx/i $pc[41d=> 0x400654 <loop_two>: ldr     w21, [x20, w22, sxtw #2][42d(gdb) c[43dContinuing.[K[44d[K[45dBreakpoint 2, 0x00000000004006c0 in check_two ()[K[46;8H^Hx/i $pc[47d=> 0x4006c0 <check_two>:[47;33Hcmp     w22, #0x32[48d(gdb) c[49dContinuing.[K[50d[K[51dBreakpoint 1, 0x0000000000400654 in loop_two ()[K[52;8H^Hx/i $pc[53d=> 0x400654 <loop_two>: ldr     w21, [x20, w22, sxtw #2][54d(gdb) c[55dContinuing.[K[56d[K[57dBreakpoint 2, 0x00000000004006c0 in check_two ()[K[32d[?12l[?25h[?25l[30d[?12l[?25h[?25l[25d[?12l[?25h[?25l[23d[?12l[?25h[?25l[A[?12l[?25h[?25l[A[?12l[?25h[?25l[A[?12l[?25h[?25l[A[?12l[?25h[?25l[17d[?12l[?25h[?25l[15d[?12l[?25h[?25l[13d[?12l[?25h[?25l[A[?12l[?25h[?25l[A[?12l[?25h[?25l[A[?12l[?25h[?25l[8d[?12l[?25h[?25l[A[?12l[?25h[?25l[A[?12l[?25h[?25l[A[?12l[?25h[?25l[A[?12l[?25h[?25l[3;12H2[3;31Hc0 in check_two ()[4;12H50d $sp^H^H^H^H^H^H^H^[[2Pi $pc[5;10Hc0 <check_two>:        cmp     w22, #0x32[K[9;12H1[9;31H54 in loop[1P[11;10H54 <loop_two>: ldr     w21, [x20, w22, sxtw #2][15;12H2[15;31Hc0 in check_two ()[17;10Hc0 <check_two>:        cmp     w22, #0x32[K[21;12H1[21;31H54 in loop[1P[23;10H54 <loop_two>: ldr     w21, [x20, w22, sxtw #2][27;12H2[27;31Hc0 in check_two ()[29;10Hc0 <check_two>:        cmp     w22, #0x32[K[33;12H1[33;31H54 in loop[1P[35;10H54 <loop_two>: ldr     w21, [x20, w22, sxtw #2][39;12H2[39;31Hc0 in check_two ()[41;10Hc0 <check_two>:        cmp     w22, #0x32[K[45;12H1[45;31H54 in loop[1P[47;10H54 <loop_two>: ldr     w21, [x20, w22, sxtw #2][51;12H2[51;31Hc0 in check_two ()[53;10Hc0 <check_two>:        cmp     w22, #0x32[K[57;12H1[57;31H54 in loop[1P[58;8H^Hx/i $pc[59d=> 0x400654 <loop_two>: ldr     w21, [x20, w22, sxtw #2][60d(gdb) c[32d[?12l[?25h[?25l[18d[?12l[?25h[?25l[16d[?12l[?25h[?25l[14d[?12l[?25h[?25l[12d[?12l[?25h[?25l[A[?12l[?25h[?25l[A[?12l[?25h[?25l[A[?12l[?25h[?25l[A[?12l[?25h[?25l[A[?12l[?25h[?25l[A[?12l[?25h[?25l[A[?12l[?25h[?25l[A[?12l[?25h[?25l[A[?12l[?25h[?25l[2;60r[2;1H[30T[1;63r[3;1H=> 0x400654 <loop_two>: ldr     w21, [x20, w22, sxtw #2][4d(gdb) c[5dContinuing.[7dBreakpoint 2, 0x00000000004006c0 in check_two ()[8d(gdb) c^Hx/i $pc[9d=> 0x4006c0 <check_two>:[9;33Hcmp     w22, #0x32[10d(gdb) c[11dContinuing.[13dBreakpoint 1, 0x0000000000400654 in loop_two ()[14d(gdb) c^Hx/i $pc[15d=> 0x400654 <loop_two>: ldr     w21, [x20, w22, sxtw #2][16d(gdb) x/i $pc^H^H^H^H^H^H^Hc^[[K^Hx/i $pc^H^H^H^H^H^H^Hc^[[K^Hx/i $pc^H^H^H^H^H^H^Hc^[[K^Hx/i $pc^H^H^H^H^H^H^Hc^[[K^Hx/i $pc^H^H^H^H^H^H^Hc^[[K^Hx/i $pc^H^H^H^H^H^H^Hc^[[K^Hx/i $pc^H^H^H^H^H^H^Hc^[[K^Hx$[17;1H0xfffffffff0d0: -3648   65535   -1084900956     65535[18d0xfffffffff0e0: 16	1	70	41[19d0xfffffffff0f0: 70	74	81	103[20d0xfffffffff100: 105     115     171     186[21d0xfffffffff110: 198     205     227     236[22d0xfffffffff120: 242     251     255     124[23d0xfffffffff130: 194     84	248     27[24d0xfffffffff140: 232     231     141     118[25d0xfffffffff150: 90	46	99	51[26d0xfffffffff160: 159     201     154     102[27d0xfffffffff170: 50	13	183     49[28d0xfffffffff180: 88	163     90	37[29d0xfffffffff190: 93	5[30d(gdb) c[31dContinuing.[32d[?12l[?25h[?25l[30d[?12l[?25h[?25l[28d[?12l[?25h[?25l[26d[?12l[?25h[?25l[24d[?12l[?25h[?25l[22d[?12l[?25h[?25l[A[?12l[?25h[?25l[A[?12l[?25h[?25l[18d[?12l[?25h[?25l[16d[?12l[?25h[?25l[13d[?12l[?25h[?25l[A[?12l[?25h[?25l[A[?12l[?25h[?25l[9d[?12l[?25h[?25l[A[?12l[?25h[?25l[A[?12l[?25h[?25l[5d[?12l[?25h[?25l[3d[?12l[?25h[?25l[2;60r[2;1H[30T[1;63r[3;1HBreakpoint 2, 0x00000000004006c0 in check_two ()[4d(gdb) c^Hx/i $pc^H^H^H^H^H^H^Hc^[[K^Hx/i $pc[5d=> 0x4006c0 <check_two>:[5;33Hcmp     w22, #0x32[6d(gdb) c[7dContinuing.[9dBreakpoint 1, 0x0000000000400654 in loop_two ()[10d(gdb) c^Hx/i $pc[11d=> 0x400654 <loop_two>: ldr     w21, [x20, w22, sxtw #2][12d(gdb) c[13dContinuing.[15dBreakpoint 2, 0x00000000004006c0 in check_two ()[16d(gdb) c^Hx/i $pc[17d=> 0x4006c0 <check_two>:[17;33Hcmp     w22, #0x32[18d(gdb) c[19dContinuing.[21dBreakpoint 1, 0x0000000000400654 in loop_two ()[22d(gdb) c[23dContinuing.[25dBreakpoint 2, 0x00000000004006c0 in check_two ()[26d(gdb) c^Hx/i $pc[27d=> 0x4006c0 <check_two>:[27;33Hcmp     w22, #0x32[28d(gdb) c[29dContinuing.[31dBreakpoint 1, 0x0000000000400654 in loop_two ()[32d(gdb) c^Hx/i $pc[?12l[?25h[?25l[30d[?12l[?25h[?25l[18d[?12l[?25h[?25l[14d[?12l[?25h[?25l[8d[?12l[?25h[?25l[5d[?12l[?25h[?25l[3d0xfffffffff150: 90      46      99      51[K[4d0xfffffffff160: 159     201     154     102[K[5d0xfffffffff170: 50      13	183     49[K[6d0xfffffffff180: 88	163     90	37[7d0xfffffffff190: 93	5[8d(gdb) c[9dContinuing.[K[10d[K[11dBreakpoint 2, 0x00000000004006c0 in check_two ()[K[15;12H1[15;31H54 in loop[1P[16;8H^Hx/50d $sp^M^[[C^[[C^[[C^[[C^[[C^[[Cc^[[K^Hx/i $pc[17;10H54 <loop_two>: ldr     w21, [x20, w22, sxtw #2][21;12H2[21;31Hc0 in check_two ()[22;8H^Hx/i $pc[23d=> 0x4006c0 <check_two>:[23;33Hcmp     w22, #0x32[24d(gdb) c[25dContinuing.[K[26d[K[27dBreakpoint 1, 0x0000000000400654 in loop_two ()[K[28;8H^Hx/i $pc[29d=> 0x400654 <loop_two>: ldr     w21, [x20, w22, sxtw #2][30d(gdb) c[31dContinuing.[K[32d[K[33dBreakpoint 2, 0x00000000004006c0 in check_two ()[K[34;8H^Hx/i $pc^H^H^H^H^H^H^Hc^[[K^Hx/i $pc[35d=> 0x4006c0 <check_two>:[35;33Hcmp     w22, #0x32[36d(gdb) c[37dContinuing.[K[38d[K[39dBreakpoint 1, 0x0000000000400654 in loop_two ()[K[40;8H^Hx/i $pc[41d=> 0x400654 <loop_two>: ldr     w21, [x20, w22, sxtw #2][42d(gdb) c[43dContinuing.[K[44d[K[45dBreakpoint 2, 0x00000000004006c0 in check_two ()[K[46;7Hc^Hx/i $pc[K[47d=> 0x4006c0 <check_two>:        cmp     w22, #0x32[K[48d(gdb) c[K[49dContinuing.[K[50d[K[51dBreakpoint 1, 0x0000000000400654 in loop_two ()[52d(gdb) c[K[53dContinuing.[K[54d[K[55dBreakpoint 2, 0x00000000004006c0 in check_two ()[56d(gdb) c^Hx/i $pc[K[57d=> 0x4006c0 <check_two>:  	cmp     w22, #0x32[58d(gdb) c[K[59dContinuing.[K[60d[K[12d[?12l[?25h[?25l[10d[?12l[?25h[?25l[8d[?12l[?25h[?25l[A[?12l[?25h[?25l[A[?12l[?25h[?25l[4d[?12l[?25h[?25l[2;60r[2;1H[30T[1;63r[3;1HContinuing.[5dBreakpoint 2, 0x00000000004006c0 in check_two ()[6d(gdb) c^Hx/i $pc[7d=> 0x4006c0 <check_two>:[7;33Hcmp     w22, #0x32[8d(gdb) c[9dContinuing.[11dBreakpoint 1, 0x0000000000400654 in loop_two ()[12d(gdb) c^Hx/i $pc[13d=> 0x400654 <loop_two>: ldr     w21, [x20, w22, sxtw #2][14d(gdb) c[15dContinuing.[17dBreakpoint 2, 0x00000000004006c0 in check_two ()[18d(gdb) c^Hx/i $pc[19d=> 0x4006c0 <check_two>:[19;33Hcmp     w22, #0x32[20d(gdb) c[21dContinuing.[23dBreakpoint 1, 0x0000000000400654 in loop_two ()[24d(gdb) c^Hx/i $pc^H^H^H^H^H^H^Hc^[[K^Hx/i $pc^H^H^H^H^H^H^Hc^[[K^Hx/i $pc^H^H^H^H^H^H^Hc^[[K^Hx/i $pc^H^H^H^H^H^H^Hc^[[K^Hx/50d $sp[25d0xfffffffff0d0: -3648   65535   -1084900956     65535[26d0xfffffffff0e0: 10	7	205     41[27d0xfffffffff0f0: 74	81	103     105[28d0xfffffffff100: 115     198     205     236[29d0xfffffffff110: 255     186     171     242[30d0xfffffffff120: 251     227     70	124[31d0xfffffffff130: 194     84	248     27[32d0xfffffffff140: 232     231     141     118[30d[?12l[?25h[?25l[A[?12l[?25h[?25l[A[?12l[?25h[?25l[A[?12l[?25h[?25l[A[?12l[?25h[?25l[A[?12l[?25h[?25l[A[?12l[?25h[?25l[A[?12l[?25h[?25l[A[?12l[?25h[?25l[20d[?12l[?25h[?25l[A[?12l[?25h[?25l[A[?12l[?25h[?25l[16d[?12l[?25h[?25l[A[?12l[?25h[?25l[A[?12l[?25h[?25l[12d[?12l[?25h[?25l[A[?12l[?25h[?25l[A[?12l[?25h[?25l[A[?12l[?25h[?25l[A[?12l[?25h[?25l[6d[?12l[?25h[?25l[A[?12l[?25h[?25l[A[?12l[?25h[?25l[3;54r[54;1H[12S[1;63r[3;1HBreakpoint 1, 0x0000000000400654 in loop_two ()[4d(gdb) c^Hx/i $pc[5d=> 0x400654 <loop_two>: ldr     w21, [x20, w22, sxtw #2][6;8H[K[7dContinuing.[K[8d[K[9dBreakpoint 2, 0x00000000004006c0 in check_two ()[10d(gdb) c^Hx/i $pc[11d=> 0x4006c0 <check_two>:        cmp     w22, #0x32[12;7Hx/i $pc^H^H^H^H^H^H^Hc^[[K^Hx/i $pc^H^H^H^H^H^H^Hc^[[K^Hx/i $pc^H^H^H^H^H^H^Hc^[[K^Hx/50d $sp^H^H^H^H^H^H^H^[[2Pi $pc^H^H^H^H^H^H^Hc^[[K^Hx/i $pc^H^H^H^H^H^H^Hc^[[K^Hx/50d $sp^H^H^H^H^H^H^H^[[2Pi $$[14;17H8 	6[14;34H36     74[15;17H81	103	105	11[16;18H98     236	25	41[K[17;18H0[29;12H1[29;31H54 in loop[1P[30;8H^Hx/50d $sp^H^H^H^H^H^H^H^[[2Pi $pc^H^H^H^H^H^H^Hc^[[K^Hx/i $pc[31d=> 0x400654 <loop_two>: ldr     w21, [x20, w22, sxtw #2][32d(gdb) c[33dContinuing.[K[34d[K[35dBreakpoint 2, 0x00000000004006c0 in check_two ()[K[36;8H^Hx/i $pc[37d=> 0x4006c0 <check_two>:[37;33Hcmp     w22, #0x32[38d(gdb) c[39dContinuing.[K[40d[K[41dBreakpoint 1, 0x0000000000400654 in loop_two ()[K[42;8H^Hx/i $pc[43d=> 0x400654 <loop_two>: ldr     w21, [x20, w22, sxtw #2][44d(gdb) c[45dContinuing.[47dBreakpoint 2, 0x00000000004006c0 in check_two ()[48d(gdb) c^Hx/i $pc[49d=> 0x4006c0 <check_two>:[49;33Hcmp     w22, #0x32[50d(gdb) c[51dContinuing.[53dBreakpoint 1, 0x0000000000400654 in loop_two ()[54d(gdb) c^Hx/i $pc^H^H^H^H^H^H^Hc^[[K^Hx/i $pc^H^H^H^H^H^H^Hc^[[K^Hx/i $pc^H^H^H^H^H^H^Hc^[[K^Hx/i $pc^H^H^H^H^H^H^Hc^[[K^Hx/50d $sp[55d0xfffffffff0d0: -3648   65535   -1084900956     65535[56d0xfffffffff0e0: 10	7	205     41[57d0xfffffffff0f0: 74      81      103     105[K[58d0xfffffffff100: 115     198     205     236[59d0xfffffffff110: 255     186     171     242[K[60d0xfffffffff120: 251     227     70	124[32d[?12l[?25h[?25l[A[?12l[?25h[?25l[A[?12l[?25h[?25l[A[?12l[?25h[?25l[A[?12l[?25h[?25l[A[?12l[?25h[?25l[A[?12l[?25h[?25l[A[?12l[?25h[?25l[23d[?12l[?25h[?25l[21d[?12l[?25h[?25l[18d[?12l[?25h[?25l[16d[?12l[?25h[?25l[A[?12l[?25h[?25l[A[?12l[?25h[?25l[A[?12l[?25h[?25l[A[?12l[?25h[?25l[A[?12l[?25h[?25l[A[?12l[?25h[?25l[A[?12l[?25h[?25l[A[?12l[?25h[?25l[A[?12l[?25h[?25l[5d[?12l[?25h[?25l[2;60r[2;1H[30T[1;63r[3;1H=> 0x4006c0 <check_two>:[3;33Hcmp     w22, #0x32[4d(gdb) c[5dContinuing.[7dBreakpoint 1, 0x0000000000400654 in loop_two ()[8d(gdb) c^Hx/i $pc^H^H^H^H^H^H^Hc^[[K^Hx/i $pc[9d=> 0x400654 <loop_two>: ldr     w21, [x20, w22, sxtw #2][10d(gdb) x/i $pc^H^H^H^H^H^H^Hc^[[K^Hx/i $pc^H^H^H^H^H^H^Hc^[[K^Hx/50d $sp^H^H^H^H^H^H^H^[[2Pi $pc^H^H^H^H^H^H^Hc^[[K^Hx/i $pc^H^H^H^H^H^H^Hc^[[K^Hx/50d $sp[11d0xfffffffff0d0: -3648   65535   -1084900956     65535[12d0xfffffffff0e0: 6	5	255     81[13d0xfffffffff0f0: 103     105     115     198[14d0xfffffffff100: 255     74	236     41[15d0xfffffffff110: 205     186     171     242[16d0xfffffffff120: 251     227     70	124[17d0xfffffffff130: 194     84	248     27[18d0xfffffffff140: 232     231     141     118[19d0xfffffffff150: 90	46	99	51[20d0xfffffffff160: 159     201     154     102[21d0xfffffffff170: 50	13	183     49[22d0xfffffffff180: 88	163     90	37[23d0xfffffffff190: 93	5[24d(gdb) c[25dContinuing.[27dBreakpoint 2, 0x00000000004006c0 in check_two ()[28d(gdb) c^Hx/50d $sp^H^H^H^H^H^H^H^[[2Pi $pc[29d=> 0x4006c0 <check_two>:[29;33Hcmp     w22, #0x32[30d(gdb) c[31dContinuing.[32d[?12l[?25h[?25l[29d[?12l[?25h[?25l[27d[?12l[?25h[?25l[22d[?12l[?25h[?25l[A[?12l[?25h[?25l[19d[?12l[?25h[?25l[15d[?12l[?25h[?25l[13d[?12l[?25h[?25l[11d[?12l[?25h[?25l[5d[?12l[?25h[?25l[A[?12l[?25h[?25l[A[?12l[?25h[?25l[2;60r[2;1H[30T[1;63r[3;1HContinuing.[5dBreakpoint 2, 0x00000000004006c0 in check_two ()[6d(gdb) c^Hx/50d $sp^M^[[C^[[C^[[C^[[C^[[C^[[C^[[1@c^[[C^[[C^[[C^[[C^[[C^[[C^[[C^[[C^[[C^M^[[C^[[C^[[C^[[C^[[C^[[C^[[3Px/i $pc[7d=> 0x4006c0 <check_two>:[7;33Hcmp     w22, #0x32[8d(gdb) c[9dContinuing.[11dBreakpoint 1, 0x0000000000400654 in loop_two ()[12d(gdb) c^Hx/i $pc^H^H^H^H^H^H^Hc^[[K^Hx/i $pc[13d=> 0x400654 <loop_two>: ldr     w21, [x20, w22, sxtw #2][14d(gdb) x/i $pc^H^H^H^H^H^H^Hc^[[K^Hx/i $pc^H^H^H^H^H^H^Hc^[[K^Hx/50d $sp^M^[[C^[[C^[[C^[[C^[[C^[[C^[[1@c^[[C^[[C^[[C^[[C^[[C^[[C^[[C^[[C^[[C^M^[[C^[[C^[[C^[[C^[[C^[[C^[[1P^[[C^[[C^[[C^[[C^[[C^[[C^[[C^[[C^$[15;1H0xfffffffff0d0: -3648   65535   -1084900956     65535[16d0xfffffffff0e0: 5	0	81	81[17d0xfffffffff0f0: 103     105     115     198[18d0xfffffffff100: 255     74	236     41[19d0xfffffffff110: 205     186     171     242[20d0xfffffffff120: 251     227     70	124[21d0xfffffffff130: 194     84	248     27[22d0xfffffffff140: 232     231     141     118[23d0xfffffffff150: 90	46	99	51[24d0xfffffffff160: 159     201     154     102[25d0xfffffffff170: 50	13	183     49[26d0xfffffffff180: 88	163     90	37[27d0xfffffffff190: 93	5[28d(gdb) c[29dContinuing.[31dBreakpoint 2, 0x00000000004006c0 in check_two ()[32d(gdb) c^Hx/50d $sp^H^H^H^H^H^H^H^[[2Pi $pc[A[?12l[?25h[?25l[28d[?12l[?25h[?25l[A[?12l[?25h[?25l[A[?12l[?25h[?25l[A[?12l[?25h[?25l[A[?12l[?25h[?25l[A[?12l[?25h[?25l[A[?12l[?25h[?25l[A[?12l[?25h[?25l[19d[?12l[?25h[?25l[15d[?12l[?25h[?25l[A[?12l[?25h[?25l[A[?12l[?25h[?25l[11d[?12l[?25h[?25l[8d[?12l[?25h[?25l[6d[?12l[?25h[?25l[4d[?12l[?25h[?25l[2;60r[2;1H[30T[1;63r[3;1HBreakpoint 2, 0x00000000004006c0 in check_two ()[4d(gdb) c^Hb check_two^M^[[C^[[C^[[C^[[C^[[C^[[Cc^[[K^Hx/i $pc^H^H^H^H^H^H^Hc^[[K^Hx/50d $28^H^Hsp^H^H^H^H^H^H^H^[[2Pi $pc^H^H^H^H^H^H^Hr^[[K^Hx/i $pc[5d=> 0x4006c0 <check_two>:[5;33Hcmp     w22, #0x32[6d(gdb) x/i $pc^H^H^H^H^H^H^Hc^[[K^Hx/i $pc[7d=> 0x4006c0 <check_two>:[7;33Hcmp     w22, #0x32[8d(gdb) cb t^H^[[Kcheck_wt^H^[[K^H^[[Kto^H^[[Kwo[9dUndefined command: "cb".  Try "help".[10d(gdb) c[11dContinuing.[13dBreakpoint 1, 0x0000000000400654 in loop_two ()[14d(gdb) cb check_two^M^[[C^[[C^[[C^[[C^[[C^[[C^[[5Px/i $pc[15d=> 0x400654 <loop_two>: ldr     w21, [x20, w22, sxtw #2][16d(gdb) cx/50d $sp[17dUndefined command: "cx".  Try "help".[18d(gdb) cx/50d $sp^M^[[C^[[C^[[C^[[C^[[C^[[C^[[3Px/i $pc^H^H^H^H^H^H^Hc^[[Kb check_two^M^[[C^[[C^[[C^[[C^[[C^[[C^[[5Px/i $pc^H^H^H^H^H^H^Hc^[[K^Hb check_two^M^[[C^[[C^[[C^[[C^[[C^[[Cc^[[K^Hx/i $pc^H^H^H^H^$[19;1H0xfffffffff0d0: -3648   65535   -1084900956     65535[20d0xfffffffff0e0: 4	2	115     103[21d0xfffffffff0f0: 105     115     198     81[22d0xfffffffff100: 255     74	236     41[23d0xfffffffff110: 205     186     171     242[24d0xfffffffff120: 251     227     70	124[25d0xfffffffff130: 194     84	248     27[26d0xfffffffff140: 232     231     141     118[27d0xfffffffff150: 90	46	99	51[28d0xfffffffff160: 159     201     154     102[29d0xfffffffff170: 50	13	183     49[30d0xfffffffff180: 88	163     90	37[31d0xfffffffff190: 93	5[32d(gdb) c[?12l[?25h[?25l[A[?12l[?25h[?25l[A[?12l[?25h[?25l[28d[?12l[?25h[?25l[26d[?12l[?25h[?25l[24d[?12l[?25h[?25l[16d[?12l[?25h[?25l[14d[?12l[?25h[?25l[12d[?12l[?25h[?25l[10d[?12l[?25h[?25l[8d[?12l[?25h[?25l[6d[?12l[?25h[?25l[4d[?12l[?25h[?25l[2;60r[2;1H[30T[1;63r[3;1H0xfffffffff0d0: -3648   65535   -1084900956     65535[4d0xfffffffff0e0: 1	65535   0	103[5d0xfffffffff0f0: 198     105     115     81[6d0xfffffffff100: 255     74	236     41[7d0xfffffffff110: 205     186     171     242[8d0xfffffffff120: 251     227     70	124[9d0xfffffffff130: 194     84	248     27[10d0xfffffffff140: 232     231     141     118[11d0xfffffffff150: 90	46	99	51[12d0xfffffffff160: 159     201     154     102[13d0xfffffffff170: 50	13	183     49[14d0xfffffffff180: 88	163     90	37[15d0xfffffffff190: 93	5[16d(gdb) x/50d $sp^H^[[K^H^[[K28[17dHistory has not yet reached $28.[18d(gdb) c[19dContinuing.[21dBreakpoint 1, 0x0000000000400654 in loop_two ()[22d(gdb) c^Hx/50d $28^H^Hsp^H^H^H^H^H^H^H^[[2Pi $pc[23d=> 0x400654 <loop_two>: ldr     w21, [x20, w22, sxtw #2][24d(gdb) c[25dContinuing.[27dBreakpoint 1, 0x0000000000400654 in loop_two ()[28d(gdb) b check_wt^H^[[K^H^[[Ktwo[29dBreakpoint 2 at 0x4006c0[30d(gdb) c[31dContinuing.[32d[?12l[?25h[?25l[30d[?12l[?25h[?25l[28d[?12l[?25h[?25l[24d[?12l[?25h[?25l[21d[?12l[?25h[?25l[2;60r[2;1H[30T[1;63r[3;1Hv[39]: 90[4dv[40]: 37[5dv[41]: 93[6dv[42]: 5[7dv[43]: 23[8dv[44]: 88[9dv[45]: 233[10dv[46]: 94[11dv[47]: 212[12dv[48]: 171[13dv[49]: 178[15dBreakpoint 1, 0x0000000000400654 in loop_two ()[16d(gdb) r^Hx/i $pc[17d=> 0x400654 <loop_two>: ldr     w21, [x20, w22, sxtw #2][18d(gdb) x/50d $sp[19d0xfffffffff0d0: -3648   65535   -1084900956     65535[20d0xfffffffff0e0: 1	65535   0	103[21d0xfffffffff0f0: 198     105     115     81[22d0xfffffffff100: 255     74	236     41[23d0xfffffffff110: 205     186     171     242[24d0xfffffffff120: 251     227     70	124[25d0xfffffffff130: 194     84	248     27[26d0xfffffffff140: 232     231     141     118[27d0xfffffffff150: 90	46	99	51[28d0xfffffffff160: 159     201     154     102[29d0xfffffffff170: 50	13	183     49[30d0xfffffffff180: 88	163     90	37[31d0xfffffffff190: 93	5[32d(gdb) x/50d $sp^H^H^H^H^H^H^H^[[2Pi $pc^H^H^H^H^H50d $sp[?12l[?25h[?25l[A[?12l[?25h[?25l[A[?12l[?25h[?25l[A[?12l[?25h[?25l[A[?12l[?25h[?25l[A[?12l[?25h[?25l[A[?12l[?25h[?25l[A[?12l[?25h[?25l[A[?12l[?25h[?25l[22d[?12l[?25h[?25l[A[?12l[?25h[?25l[A[?12l[?25h[?25l[18d[?12l[?25h[?25l[16d[?12l[?25h[?25l[2;60r[2;1H[30T[1;63r[3;1Hv[9]: 205[4dv[10]: 186[5dv[11]: 171[6dv[12]: 242[7dv[13]: 251[8dv[14]: 227[9dv[15]: 70[10dv[16]: 124[11dv[17]: 194[12dv[18]: 84[13dv[19]: 248[14dv[20]: 27[15dv[21]: 232[16dv[22]: 231[17dv[23]: 141[18dv[24]: 118[19dv[25]: 90[20dv[26]: 46[21dv[27]: 99[22dv[28]: 51[23dv[29]: 159[24dv[30]: 201[25dv[31]: 154[26dv[32]: 102[27dv[33]: 50[28dv[34]: 13[29dv[35]: 183[30dv[36]: 49[31dv[37]: 88[32dv[38]: 163[19d[?12l[?25h[?25l[15d[?12l[?25h[?25l[13d[?12l[?25h[?25l[11d[?12l[?25h[?25l[7d[?12l[?25h[?25l[5d[?12l[?25h[?25l[3d[?12l[?25h[?25l[2;60r[2;1H[30T[1;63r[3;1H<http://www.gnu.org/software/gdb/bugs/>.[4dFind the GDB manual and other documentation resources online at:[5d<http://www.gnu.org/software/gdb/documentation/>.[6dFor help, type "help".[7dType "apropos word" to search for commands related to "word"...[8dReading symbols from assign3...(no debugging symbols found)...done.[9d(gdb) b loop_two[10dBreakpoint 1 at 0x400654[11d(gdb) x/i $PC[12dValue can't be converted to integer.[13d(gdb) x/i $PC^H^H^[[1PC^HPC^H^H^[[1PC^HpC^H^H^[[1PC^HpC^H^[[C^G^H^[[Kc[14dNo registers.[15d(gdb) r[16dStarting program: /home/uga/vidhi.soni1/assign3[17dwarning: the debug information found in "/usr/lib/debug//usr/lib64/ld-2.27.so.debug" does not match "/lib/ld-linux-aarch64.so.1" (CRC mismatch).[19dMissing separate debuginfos, use: dnf debuginfo-install glibc-2.27-38.fc28.aarch64[20dwarning: the debug information found in "/usr/lib/debug//lib64/libc-2.27.so.debug" does not match "/lib64/libc.so.6" (CRC mismatch).[22dwarning: the debug information found in "/usr/lib/debug//usr/lib64/libc-2.27.so.debug" does not match "/lib64/libc.so.6" (CRC mismatch).[24dv[0]: 103[25dv[1]: 198[26dv[2]: 105[27dv[3]: 115[28dv[4]: 81[29dv[5]: 255[30dv[6]: 74[31dv[7]: 236[32dv[8]: 41[A[?12l[?25h[?25l[25d[?12l[?25h[?25l[23d[?12l[?25h[?25l[21d[?12l[?25h[?25l[19d[?12l[?25h[?25l[17d[?12l[?25h[?25l[15d[?12l[?25h[?25l[13d[?12l[?25h[?25l[A[?12l[?25h[?25l[A[?12l[?25h[?25l[9d[?12l[?25h[?25l[A[?12l[?25h[?25l[A[?12l[?25h[?25l[A[?12l[?25h[?25l[4d[?12l[?25h[?25l[A[?12l[?25h[?25l[2;60r[2;1H[11T[1;63r[3;1HScript started on 2022-03-04 09:01:36-07:00[4d^[]0;vidhi.soni1@csa1:~^Gvidhi.soni1@csa1:~$ f\g^H^[[K^H^[[K^H^[[K^Ggdb assign3[5dGNU gdb (GDB) Fedora 8.1.1-4.fc28[6dCopyright (C) 2018 Free Software Foundation, Inc.[7dLicense GPLv3+: GNU GPL version 3 or later <http://gnu.org/licenses/gpl.html>[8dThis is free software: you are free to change and redistribute it.[9dThere is NO WARRANTY, to the extent permitted by law.  Type "show copying"[10dand "show warranty" for details.[11dThis GDB was configured as "aarch64-redhat-linux-gnu".[12dType "show configuration" for configuration details.[13dFor bug reporting instructions, please see:[A[?12l[?25h[?25l[10d[?12l[?25h[?25l[A[?12l[?25h[?25l[A[?12l[?25h[?25l[6d[?12l[?25h[?25l[3d[?12l[?25h[?25l[?12l[?25h[?25l[?12l[?25h[?25l[?12l[?25h[?25l[?12l[?25h[?25l[?12l[?25h[?25l[?12l[?25h[?25l[?12l[?25h[?25l[?12l[?25h[?25l[?12l[?25h[?25l[?12l[?25h[?25l[?12l[?25h[?25l[?12l[?25h[?25l[?12l[?25h[?25l[?12l[?25h[?25l[?12l[?25h[?25l[?12l[?25h[?25l[?12l[?25h[?25l[?12l[?25h[?25l[?12l[?25h[?25l[?12l[?25h[?25l[?12l[?25h[?25l[?12l[?25h[?25l[?12l[?25h[?25l[?12l[?25h[?25l[?12l[?25h[?25l[5d[?12l[?25h[?25l[6d[?12l[?25h[?25l[7d[?12l[?25h[?25l[8d[?12l[?25h[?25l[10d[?12l[?25h[?25l[12d[?12l[?25h[?25l[13d[?12l[?25h[?25l[14d[?12l[?25h[?25l[16d[?12l[?25h[?25l[17d[?12l[?25h[?25l[18d[?12l[?25h[?25l[20d[?12l[?25h[?25l[21d[?12l[?25h[?25l[22d[?12l[?25h[?25l[23d[?12l[?25h[?25l[25d[?12l[?25h[?25l[28d[?12l[?25h[?25l[31d[?12l[?25h[?25l[34d[?12l[?25h[?25l[40d[?12l[?25h[?25l[42d[?12l[?25h[?25l[52d[?12l[?25h[?25l[54d[?12l[?25h[?25l[56d[?12l[?25h[?25l[60d[?12l[?25h[?25l7[3;61r8[61d[29S[1;63r[32;1Hv[26]: 46[33dv[27]: 99[34dv[28]: 51[35dv[29]: 159[36dv[30]: 201[37dv[31]: 154[38dv[32]: 102[39dv[33]: 50[40dv[34]: 13[41dv[35]: 183[42dv[36]: 49[43dv[37]: 88[44dv[38]: 163[45dv[39]: 90[46dv[40]: 37[47dv[41]: 93[48dv[42]: 5[49dv[43]: 23[50dv[44]: 88[51dv[45]: 233[52dv[46]: 94[53dv[47]: 212[54dv[48]: 171[55dv[49]: 178[57dBreakpoint 1, 0x0000000000400654 in loop_two ()[58d(gdb) r^Hx/i $pc[59d=> 0x400654 <loop_two>: ldr     w21, [x20, w22, sxtw #2][60d(gdb) x/50d $sp[32d[?12l[?25h[?25l[44d[?12l[?25h[?25l[47d[?12l[?25h[?25l[48d[?12l[?25h[?25l[49d[?12l[?25h[?25l[50d[?12l[?25h[?25l[51d[?12l[?25h[?25l[52d[?12l[?25h[?25l[53d[?12l[?25h[?25l[55d[?12l[?25h[?25l[3;61r[61;1H[29S[1;63r[32;1H0xfffffffff0d0: -3648   65535   -1084900956     65535[33d0xfffffffff0e0: 1	65535   0	103[34d0xfffffffff0f0: 198     105     115     81[35d0xfffffffff100: 255     74	236     41[36d0xfffffffff110: 205     186     171     242[37d0xfffffffff120: 251     227     70	124[38d0xfffffffff130: 194     84	248     27[39d0xfffffffff140: 232     231     141     118[40d0xfffffffff150: 90	46	99	51[41d0xfffffffff160: 159     201     154     102[42d0xfffffffff170: 50	13	183     49[43d0xfffffffff180: 88	163     90	37[44d0xfffffffff190: 93	5[45d(gdb) x/50d $sp^H^H^H^H^H^H^H^[[2Pi $pc^H^H^H^H^H50d $sp[46d0xfffffffff0d0: -3648   65535   -1084900956     65535[47d0xfffffffff0e0: 1	65535   0	103[48d0xfffffffff0f0: 198     105     115     81[49d0xfffffffff100: 255     74	236     41[50d0xfffffffff110: 205     186     171     242[51d0xfffffffff120: 251     227     70	124[52d0xfffffffff130: 194     84	248     27[53d0xfffffffff140: 232     231     141     118[54d0xfffffffff150: 90	46	99	51[55d0xfffffffff160: 159     201     154     102[56d0xfffffffff170: 50	13	183     49[57d0xfffffffff180: 88	163     90	37[58d0xfffffffff190: 93	5[59d(gdb) x/50d $sp^H^[[K^H^[[K28[60dHistory has not yet reached $28.[34d[?12l[?25h[?25l[36d[?12l[?25h[?25l[40d[?12l[?25h[?25l[44d[?12l[?25h[?25l[49d[?12l[?25h[?25l[51d[?12l[?25h[?25l[57d[?12l[?25h[?25l[3;61r[61;1H[29S[1;63r[32;1H(gdb) c[33dContinuing.[35dBreakpoint 1, 0x0000000000400654 in loop_two ()[36d(gdb) c^Hx/50d $28^H^Hsp^H^H^H^H^H^H^H^[[2Pi $pc[37d=> 0x400654 <loop_two>: ldr     w21, [x20, w22, sxtw #2][38d(gdb) c[39dContinuing.[41dBreakpoint 1, 0x0000000000400654 in loop_two ()[42d(gdb) b check_wt^H^[[K^H^[[Ktwo[43dBreakpoint 2 at 0x4006c0[44d(gdb) c[45dContinuing.[47dBreakpoint 2, 0x00000000004006c0 in check_two ()[48d(gdb) c^Hb check_two^M^[[C^[[C^[[C^[[C^[[C^[[Cc^[[K^Hx/i $pc^H^H^H^H^H^H^Hc^[[K^Hx/50d $28^H^Hsp^H^H^H^H^H^H^H^[[2Pi $pc^H^H^H^H^H^H^Hr^[[K^Hx/i $pc[49d=> 0x4006c0 <check_two>:[49;33Hcmp     w22, #0x32[50d(gdb) x/i $pc^H^H^H^H^H^H^Hc^[[K^Hx/i $pc[51d=> 0x4006c0 <check_two>:[51;33Hcmp     w22, #0x32[52d(gdb) cb t^H^[[Kcheck_wt^H^[[K^H^[[Kto^H^[[Kwo[53dUndefined command: "cb".  Try "help".[54d(gdb) c[55dContinuing.[57dBreakpoint 1, 0x0000000000400654 in loop_two ()[58d(gdb) cb check_two^M^[[C^[[C^[[C^[[C^[[C^[[C^[[5Px/i $pc[59d=> 0x400654 <loop_two>: ldr     w21, [x20, w22, sxtw #2][60d(gdb) cx/50d $sp[34d[?12l[?25h[?25l[47d[?12l[?25h[?25l[49d[?12l[?25h[?25l[57d[?12l[?25h[?25l[3;13He0: 5       0       81      81[K[4;13Hf0: 103     105     115	198[5;12H100: 255     74      236     4[6;13H10: 20	186     171     242[7;13H20: 251     227     70      124[8;13H30: 194     84      248     27[K[9;13H40: 232     231     141     118[10;13H50: 90      46      99      51[K[11;13H60: 159     201     154     102[12;13H70: 50      13 	183     49[K[13;13H80: 88	163     90      37[14;13H90: 93	5[K[15d(gdb) c[K[16dContinuing.[K[17d[K[18dBreakpoint 2, 0x00000000004006c0 in check_two ()[19d(gdb) c^Hx/50d $sp^H^H^H^H^H^H^H^[[2Pi $pc[20d=> 0x4006c0 <check_two>:  	cmp     w22, #0x32[21d(gdb) c[K[22dContinuing.[K[23d[K[24dBreakpoint 1, 0x0000000000400654 in loop_two ()[25d(gdb) c^Hx/i $pc^H^H^H^H^H^H^Hc^[[K^Hx/i $pc[26d=> 0x400654 <loop_two>: ldr     w21, [x20, w22, sxtw #2][27d(gdb) x/i $pc^H^H^H^H^H^H^Hc^[[K^Hx/i $pc^H^H^H^H^H^H^Hc^[[K^Hx/50d $sp^H^H^H^H^H^H^H^[[2Pi $pc^H^H^H^H^H^H^Hc^[[K^Hx/i $pc^H^H^H^H^H^H^Hc^[[K^Hx/50d $sp[28;12H0d0: -3648   65535   -1084900956     65535[29;12H0e0: 6 [29;33H255     81[30d0xfffffffff0f0: 103     105     115     198[31d0xfffffffff100: 255     74      236     41[32d0xfffffffff110: 205     186     171     242[33d0xfffffffff120: 251     227     70	124[34d0xfffffffff130: 194     84	248     27[35d0xfffffffff140: 232     231     141     118[K[36d0xfffffffff150: 90      46      99      51[K[37d0xfffffffff160: 159     201     154     102[K[38d0xfffffffff170: 50	13	183     49[39d0xfffffffff180: 88	163     90	37[40d0xfffffffff190: 93	5[41d(gdb) c[K[42dContinuing.[K[43d[K[44dBreakpoint 2, 0x00000000004006c0 in check_two ()[45d(gdb) c^Hx/50d $sp^H^H^H^H^H^H^H^[[2Pi $pc[46d=> 0x4006c0 <check_two>:[46;33Hcmp     w22, #0x32[47d(gdb) c[K[48dContinuing.[K[49d[K[50dBreakpoint 1, 0x0000000000400654 in loop_two ()[51d(gdb) c^Hx/i $pc[K[52d=> 0x400654 <loop_two>: ldr     w21, [x20, w22, sxtw #2][53d(gdb) c[K[54dContinuing.[55d[K[56dBreakpoint 2, 0x00000000004006c0 in check_two ()[57d(gdb) c^Hx/i $pc[K[58d=> 0x4006c0 <check_two>:        cmp     w22, #0x32[K[59d(gdb) x/i $pc^H^H^H^H^H^H^Hc^[[K^Hx/i $pc^H^H^H^H^H^H^Hc^[[K^Hx/i $pc^H^H^H^H^H^H^Hc^[[K^Hx/50d $sp^H^H^H^H^H^H^H^[[2Pi $pc^H^H^H^H^H^H^Hc^[[K^Hx/i $pc^H^H^H^H^H^H^Hc^[[K^Hx/50d $sp^H^H^H^H^H^H^H^[[2Pi $$[60;1H0xfffffffff0d0: -3648   65535   -1084900956     65535[37d[?12l[?25h[?25l[38d[?12l[?25h[?25l[40d[?12l[?25h[?25l[42d[?12l[?25h[?25l[46d[?12l[?25h[?25l[47d[?12l[?25h[?25l[48d[?12l[?25h[?25l[50d[?12l[?25h[?25l[52d[?12l[?25h[?25l[54d[?12l[?25h[?25l[55d[?12l[?25h[?25l[57d[?12l[?25h[?25l[3;61r[61;1H[29S[1;63r[32;1H0xfffffffff0e0: 8	6	236     74[33d0xfffffffff0f0: 81	103     105     115[34d0xfffffffff100: 198     236     255     41[35d0xfffffffff110: 205     186     171     242[36d0xfffffffff120: 251     227     70	124[37d0xfffffffff130: 194     84	248     27[38d0xfffffffff140: 232     231     141     118[39d0xfffffffff150: 90	46	99	51[40d0xfffffffff160: 159     201     154     102[41d0xfffffffff170: 50	13	183     49[42d0xfffffffff180: 88	163     90	37[43d0xfffffffff190: 93	5[44d(gdb) c[45dContinuing.[47dBreakpoint 1, 0x0000000000400654 in loop_two ()[48d(gdb) c^Hx/50d $sp^H^H^H^H^H^H^H^[[2Pi $pc^H^H^H^H^H^H^Hc^[[K^Hx/i $pc[49d=> 0x400654 <loop_two>: ldr     w21, [x20, w22, sxtw #2][50d(gdb) c[51dContinuing.[53dBreakpoint 2, 0x00000000004006c0 in check_two ()[54d(gdb) c^Hx/i $pc[55d=> 0x4006c0 <check_two>:[55;33Hcmp     w22, #0x32[56d(gdb) c[57dContinuing.[59dBreakpoint 1, 0x0000000000400654 in loop_two ()[60d(gdb) c^Hx/i $pc[41d[?12l[?25h[?25l[43d[?12l[?25h[?25l[44d[?12l[?25h[?25l[45d[?12l[?25h[?25l[46d[?12l[?25h[?25l[47d[?12l[?25h[?25l[48d[?12l[?25h[?25l[49d[?12l[?25h[?25l[50d[?12l[?25h[?25l[52d[?12l[?25h[?25l[53d[?12l[?25h[?25l[55d[?12l[?25h[?25l[56d[?12l[?25h[?25l[57d[?12l[?25h[?25l[58d[?12l[?25h[?25l[59d[?12l[?25h[?25l[60d[?12l[?25h[?25l[29;60r[29;1H[13T[1;63r[3;12H0e0: 8       6       236     74[K[4;12H0f0: 81      103     105	115[5;13H00: 198     236	255     41[6;13H10: 205     186	17	242[7;13H20: 251     227     70	124[8;13H30: 194     84      248     27[K[9;13H40: 232     231	141     118[10;13H50: 90	46 	99	51[11;13H60: 159     201     154     102[12d0xfffffffff170: 50	13	183     49[13d0xfffffffff180: 88	163     90	37[14d0xfffffffff190: 93	5[15d(gdb) c[K[16dContinuing.[K[17d[K[18dBreakpoint 1, 0x0000000000400654 in loop_two ()[19d(gdb) c^Hx/50d $sp^H^H^H^H^H^H^H^[[2Pi $pc^H^H^H^H^H^H^Hc^[[K^Hx/i $pc[20d=> 0x400654 <loop_two>: ldr     w21, [x20, w22, sxtw #2][21d(gdb) c[K[22dContinuing.[K[23d[K[24dBreakpoint 2, 0x00000000004006c0 in check_two ()[25d(gdb) c^Hx/i $pc[26d=> 0x4006c0 <check_two>:[26;33Hcmp     w22, #0x32[27d(gdb) c[K[28dContinuing.[K[30dBreakpoint 1, 0x0000000000400654 in loop_two ()[31d(gdb) c^Hx/i $pc[32d=> 0x400654 <loop_two>: ldr     w21, [x20, w22, sxtw #2][33d(gdb) c[34dContinuing.[36dBreakpoint 2, 0x00000000004006c0 in check_two ()[37d(gdb) c^Hx/i $pc[38d=> 0x4006c0 <check_two>:[38;33Hcmp     w22, #0x32[39d(gdb) c[40dContinuing.[42dBreakpoint 1, 0x0000000000400654 in loop_two ()[K[43;7Hc^Hx/i $pc^H^H^H^H^H^H^Hc^[[K^Hx/i $pc^H^H^H^H^H^H^Hc^[[K^Hx/i $pc^H^H^H^H^H^H^Hc^[[K^Hx/i $pc^H^H^H^H^H^H^Hc^[[K^Hx/50d $sp[K[45;17H10	7[45;34H05     41[46;17H74	81 	103	10[47;18H15     198	20	236[48;18H5[60;12H2[60;31Hc0 in check_two ()[33d[?12l[?25h[?25l[37d[?12l[?25h[?25l[39d[?12l[?25h[?25l[41d[?12l[?25h[?25l[42d[?12l[?25h[?25l[44d[?12l[?25h[?25l[48d[?12l[?25h[?25l[52d[?12l[?25h[?25l[54d[?12l[?25h[?25l[55d[?12l[?25h[?25l[56d[?12l[?25h[?25l[57d[?12l[?25h[?25l[58d[?12l[?25h[?25l[59d[?12l[?25h[?25l[60d[?12l[?25h[?25l7[3;61r8[61d[29S[1;63r[32;1H(gdb) c[33dContinuing.[35dBreakpoint 1, 0x0000000000400654 in loop_two ()[36d(gdb) c^Hx/50d $sp^M^[[C^[[C^[[C^[[C^[[C^[[Cc^[[K^Hx/i $pc[37d=> 0x400654 <loop_two>: ldr     w21, [x20, w22, sxtw #2][38d(gdb) c[39dContinuing.[41dBreakpoint 2, 0x00000000004006c0 in check_two ()[42d(gdb) c^Hx/i $pc[43d=> 0x4006c0 <check_two>:[43;33Hcmp     w22, #0x32[44d(gdb) c[45dContinuing.[47dBreakpoint 1, 0x0000000000400654 in loop_two ()[48d(gdb) c^Hx/i $pc[49d=> 0x400654 <loop_two>: ldr     w21, [x20, w22, sxtw #2][50d(gdb) c[51dContinuing.[53dBreakpoint 2, 0x00000000004006c0 in check_two ()[54d(gdb) c^Hx/i $pc^H^H^H^H^H^H^Hc^[[K^Hx/i $pc[55d=> 0x4006c0 <check_two>:[55;33Hcmp     w22, #0x32[56d(gdb) c[57dContinuing.[59dBreakpoint 1, 0x0000000000400654 in loop_two ()[60d(gdb) c^Hx/i $pc[32d[?12l[?25h[?25l[33d[?12l[?25h[?25l[34d[?12l[?25h[?25l[35d[?12l[?25h[?25l[36d[?12l[?25h[?25l[37d[?12l[?25h[?25l[38d[?12l[?25h[?25l[39d[?12l[?25h[?25l[40d[?12l[?25h[?25l[41d[?12l[?25h[?25l[42d[?12l[?25h[?25l[43d[?12l[?25h[?25l[45d[?12l[?25h[?25l[46d[?12l[?25h[?25l[47d[?12l[?25h[?25l[49d[?12l[?25h[?25l[51d[?12l[?25h[?25l[53d[?12l[?25h[?25l[55d[?12l[?25h[?25l[56d[?12l[?25h[?25l[57d[?12l[?25h[?25l[58d[?12l[?25h[?25l[60d[?12l[?25h[?25l7[3;61r8[61d[29S[1;63r[32;1H=> 0x400654 <loop_two>: ldr     w21, [x20, w22, sxtw #2][33d(gdb) c[34dContinuing.[36dBreakpoint 2, 0x00000000004006c0 in check_two ()[37d(gdb) c^Hx/i $pc[38d=> 0x4006c0 <check_two>:[38;33Hcmp     w22, #0x32[39d(gdb) c[40dContinuing.[42dBreakpoint 1, 0x0000000000400654 in loop_two ()[43d(gdb) c[44dContinuing.[46dBreakpoint 2, 0x00000000004006c0 in check_two ()[47d(gdb) c^Hx/i $pc[48d=> 0x4006c0 <check_two>:[48;33Hcmp     w22, #0x32[49d(gdb) c[50dContinuing.[52dBreakpoint 1, 0x0000000000400654 in loop_two ()[53d(gdb) c^Hx/i $pc[54d=> 0x400654 <loop_two>: ldr     w21, [x20, w22, sxtw #2][55d(gdb) c[56dContinuing.[58dBreakpoint 2, 0x00000000004006c0 in check_two ()[59d(gdb) c^Hx/i $pc[60d=> 0x4006c0 <check_two>:[60;33Hcmp     w22, #0x32[32d[?12l[?25h[?25l[34d[?12l[?25h[?25l[36d[?12l[?25h[?25l[38d[?12l[?25h[?25l[41d[?12l[?25h[?25l[42d[?12l[?25h[?25l[43d[?12l[?25h[?25l[46d[?12l[?25h[?25l[47d[?12l[?25h[?25l[48d[?12l[?25h[?25l[49d[?12l[?25h[?25l[50d[?12l[?25h[?25l[52d[?12l[?25h[?25l[57d[?12l[?25h[?25l[59d[?12l[?25h[?25l[60d[?12l[?25h[?25l[3d=> 0x400654 <loop_two>: ldr     w21, [x20, w22, sxtw #2][4d(gdb) c[K[5dContinuing.[6d[K[7dBreakpoint 2, 0x00000000004006c0 in check_two ()[K[8d(gdb) c^Hx/i $pc[K[9d=> 0x4006c0 <check_two>:[9;33Hcmp     w22, #0x32[10d(gdb) c[K[11dContinuing.[12d[K[13dBreakpoint 1, 0x0000000000400654 in loop_two ()[14d(gdb) c[K[15dContinuing.[16d[K[17dBreakpoint 2, 0x00000000004006c0 in check_two ()[18d(gdb) c^Hx/i $pc[K[19d=> 0x4006c0 <check_two>:[19;33Hcmp     w22, #0x32[20d(gdb) c[K[21dContinuing.[22d[K[23dBreakpoint 1, 0x0000000000400654 in loop_two ()[24d(gdb) c^Hx/i $pc[K[25d=> 0x400654 <loop_two>: ldr     w21, [x20, w22, sxtw #2][26d(gdb) c[K[27dContinuing.[28d[K[29dBreakpoint 2, 0x00000000004006c0 in check_two ()[30d(gdb) c^Hx/i $pc[K[31d=> 0x4006c0 <check_two>:[31;33Hcmp     w22, #0x32[32d(gdb) c[K[33dContinuing.[34d[K[35dBreakpoint 1, 0x0000000000400654 in loop_two ()[36d(gdb) c^Hx/i $pc[K[37d=> 0x400654 <loop_two>: ldr     w21, [x20, w22, sxtw #2][38d(gdb) x/i $pc^H^H^H^H^H^H^Hc^[[K^Hx/i $pc^H^H^H^H^H^H^Hc^[[K^Hx/i $pc^H^H^H^H^H^H^Hc^[[K^Hx/i $pc^H^H^H^H^H^H^Hc^[[K^Hx/i $pc^H^H^H^H^H^H^Hc^[[K^Hx/i $pc^H^H^H^H^H^H^Hc^[[K^Hx/i $pc^H^H^H^H^H^H^Hc^[[K^Hx$[39;1H0xfffffffff0d0: -3648   65535   -1084900956     65535[40d0xfffffffff0e0: 16	1	70	41[41d0xfffffffff0f0: 70	74	81	103[42d0xfffffffff100: 105     115     171     186[K[43d0xfffffffff110: 198     205     227     236[44d0xfffffffff120: 242     251     255     124[45d0xfffffffff130: 194     84	248     27[46d0xfffffffff140: 232     231     141     118[K[47d0xfffffffff150: 90	46	99	51[48d0xfffffffff160: 159     201     154     102[K[49d0xfffffffff170: 50	13	183     49[50d0xfffffffff180: 88	163     90	37[51d0xfffffffff190: 93	5[52d(gdb) c[K[53dContinuing.[K[54d[K[55dBreakpoint 2, 0x00000000004006c0 in check_two ()[56d(gdb) c^Hx/50d $sp^H^H^H^H^H^H^H^[[2Pi $pc[57d=> 0x4006c0 <check_two>:[57;33Hcmp     w22, #0x32[58d(gdb) c[K[59dContinuing.[K[60d[K[33d[?12l[?25h[?25l[34d[?12l[?25h[?25l[36d[?12l[?25h[?25l[38d[?12l[?25h[?25l[39d[?12l[?25h[?25l[40d[?12l[?25h[?25l[41d[?12l[?25h[?25l[42d[?12l[?25h[?25l[44d[?12l[?25h[?25l[45d[?12l[?25h[?25l[47d[?12l[?25h[?25l[48d[?12l[?25h[?25l[50d[?12l[?25h[?25l[55d[?12l[?25h[?25l[56d[?12l[?25h[?25l[57d[?12l[?25h[?25l[58d[?12l[?25h[?25l[59d[?12l[?25h[?25l[2;61r[61;1H[29S[1;63r[2;1H[K[32dBreakpoint 1, 0x0000000000400654 in loop_two ()[33d(gdb) c^Hx/i $pc[34d=> 0x400654 <loop_two>: ldr     w21, [x20, w22, sxtw #2][35d(gdb) c[36dContinuing.[38dBreakpoint 2, 0x00000000004006c0 in check_two ()[39d(gdb) c^Hx/i $pc[40d=> 0x4006c0 <check_two>:[40;33Hcmp     w22, #0x32[41d(gdb) c[42dContinuing.[44dBreakpoint 1, 0x0000000000400654 in loop_two ()[45d(gdb) c^Hx/i $pc[46d=> 0x400654 <loop_two>: ldr     w21, [x20, w22, sxtw #2][47d(gdb) c[48dContinuing.[50dBreakpoint 2, 0x00000000004006c0 in check_two ()[51d(gdb) c^Hx/i $pc[52d=> 0x4006c0 <check_two>:[52;33Hcmp     w22, #0x32[53d(gdb) c[54dContinuing.[56dBreakpoint 1, 0x0000000000400654 in loop_two ()[57d(gdb) c^Hx/i $pc[58d=> 0x400654 <loop_two>: ldr     w21, [x20, w22, sxtw #2][59d(gdb) c[60dContinuing.[32d[?12l[?25h[?25l[40d[?12l[?25h[?25l[41d[?12l[?25h[?25l[42d[?12l[?25h[?25l[43d[?12l[?25h[?25l[44d[?12l[?25h[?25l[46d[?12l[?25h[?25l[3dBreakpoint 1, 0x0000000000400654 in loop_two ()[4d(gdb) c^Hx/i $pc[5d=> 0x400654 <loop_two>: ldr     w21, [x20, w22, sxtw #2][6d(gdb) c[K[7dContinuing.[K[8d[K[9dBreakpoint 2, 0x00000000004006c0 in check_two ()[K[10d(gdb) c^Hx/i $pc[K[11d=> 0x4006c0 <check_two>: 	cmp     w22, #0x32[12d(gdb) c[K[13dContinuing.[K[14d[K[15dBreakpoint 1, 0x0000000000400654 in loop_two ()[16d(gdb) c^Hx/i $pc[K[17d=> 0x400654 <loop_two>: ldr     w21, [x20, w22, sxtw #2][18d(gdb) c[K[19dContinuing.[K[20d[K[21dBreakpoint 2, 0x00000000004006c0 in check_two ()[22d(gdb) c^Hx/i $pc[K[23d=> 0x4006c0 <check_two>:[23;33Hcmp     w22, #0x32[24d(gdb) c[K[25dContinuing.[26d[K[27dBreakpoint 1, 0x0000000000400654 in loop_two ()[28d(gdb) c^Hx/i $pc[K[29d=> 0x400654 <loop_two>: ldr     w21, [x20, w22, sxtw #2][30d(gdb) c[K[31dContinuing.[32d[K[33dBreakpoint 2, 0x00000000004006c0 in check_two ()[34d(gdb) c^Hx/i $pc[K[35d=> 0x4006c0 <check_two>:[35;33Hcmp     w22, #0x32[36d(gdb) c[K[37dContinuing.[38d[K[39dBreakpoint 1, 0x0000000000400654 in loop_two ()[40d(gdb) c^Hx/i $pc[K[41d=> 0x400654 <loop_two>: ldr     w21, [x20, w22, sxtw #2][42d(gdb) c[K[43dContinuing.[44d[K[45dBreakpoint 2, 0x00000000004006c0 in check_two ()[46d(gdb) c^Hx/i $pc[K[47d=> 0x4006c0 <check_two>:[47;33Hcmp     w22, #0x32[48d(gdb) c[K[49dContinuing.[50d[K[51dBreakpoint 1, 0x0000000000400654 in loop_two ()[52d(gdb) c^Hx/i $pc[K[53d=> 0x400654 <loop_two>: ldr     w21, [x20, w22, sxtw #2][54d(gdb) c[K[55dContinuing.[56d[K[57dBreakpoint 2, 0x00000000004006c0 in check_two ()[58d(gdb) c^Hx/i $pc[K[59d=> 0x4006c0 <check_two>:[59;33Hcmp     w22, #0x32[60d(gdb) c[K[32d[?12l[?25h[?25l[34d[?12l[?25h[?25l[36d[?12l[?25h[?25l[37d[?12l[?25h[?25l[39d[?12l[?25h[?25l[41d[?12l[?25h[?25l[42d[?12l[?25h[?25l[44d[?12l[?25h[?25l[45d[?12l[?25h[?25l[46d[?12l[?25h[?25l[47d[?12l[?25h[?25l[49d[?12l[?25h[?25l[50d[?12l[?25h[?25l[51d[?12l[?25h[?25l[52d[?12l[?25h[?25l[53d[?12l[?25h[?25l[55d[?12l[?25h[?25l[56d[?12l[?25h[?25l[57d[?12l[?25h[?25l[58d[?12l[?25h[?25l[60d[?12l[?25h[?25l[3d[K[4dBreakpoint 2, 0x00000000004006c0 in check_two ()[5d(gdb) c^Hx/i $pc[K[6d=> 0x4006c0 <check_two>:[6;33Hcmp     w22, #0x32[7d(gdb) c[K[8dContinuing.[9d[K[10dBreakpoint 1, 0x0000000000400654 in loop_two ()[11d(gdb) c^Hx/i $pc[K[12d=> 0x400654 <loop_two>: ldr     w21, [x20, w22, sxtw #2][13d(gdb) c[K[14dContinuing.[15d[K[16dBreakpoint 2, 0x00000000004006c0 in check_two ()[17d(gdb) c^Hx/i $pc[K[18d=> 0x4006c0 <check_two>:[18;33Hcmp     w22, #0x32[19d(gdb) c[K[20dContinuing.[21d[K[22dBreakpoint 1, 0x0000000000400654 in loop_two ()[23d(gdb) c^Hx/i $pc[K[24d=> 0x400654 <loop_two>: ldr     w21, [x20, w22, sxtw #2][25d(gdb) c[K[26dContinuing.[27d[K[28dBreakpoint 2, 0x00000000004006c0 in check_two ()[29d(gdb) c^Hx/i $pc[K[30d=> 0x4006c0 <check_two>:[30;33Hcmp     w22, #0x32[31d(gdb) c[K[32dContinuing.[33d[K[34dBreakpoint 1, 0x0000000000400654 in loop_two ()[35d(gdb) c^Hx/i $pc[K[36d=> 0x400654 <loop_two>: ldr     w21, [x20, w22, sxtw #2][37d(gdb) c[K[38dContinuing.[39d[K[40dBreakpoint 2, 0x00000000004006c0 in check_two ()[41d(gdb) c^Hx/i $pc[K[42d=> 0x4006c0 <check_two>:[42;33Hcmp     w22, #0x32[43d(gdb) c[K[44dContinuing.[45d[K[46dBreakpoint 1, 0x0000000000400654 in loop_two ()[47d(gdb) c^Hx/i $pc[K[48d=> 0x400654 <loop_two>: ldr     w21, [x20, w22, sxtw #2][49d(gdb) c[K[50dContinuing.[51d[K[52dBreakpoint 2, 0x00000000004006c0 in check_two ()[53d(gdb) c[K[54dContinuing.[55d[K[56dBreakpoint 1, 0x0000000000400654 in loop_two ()[57d(gdb) c^Hx/i $pc[K[58d=> 0x400654 <loop_two>: ldr     w21, [x20, w22, sxtw #2][59d(gdb) c[K[60dContinuing.[32d[?12l[?25h[?25l[38d[?12l[?25h[?25l[39d[?12l[?25h[?25l[40d[?12l[?25h[?25l[41d[?12l[?25h[?25l[43d[?12l[?25h[?25l[44d[?12l[?25h[?25l[46d[?12l[?25h[?25l[47d[?12l[?25h[?25l[49d[?12l[?25h[?25l[50d[?12l[?25h[?25l[51d[?12l[?25h[?25l[52d[?12l[?25h[?25l[53d[?12l[?25h[?25l[54d[?12l[?25h[?25l[55d[?12l[?25h[?25l[57d[?12l[?25h[?25l[59d[?12l[?25h[?25l[60d[?12l[?25h[?25l[3dContinuing.[4d[K[5dBreakpoint 1, 0x0000000000400654 in loop_two ()[6d(gdb) c^Hx/i $pc[K[7d=> 0x400654 <loop_two>: ldr     w21, [x20, w22, sxtw #2][8d(gdb) c[K[9dContinuing.[10d[K[11dBreakpoint 2, 0x00000000004006c0 in check_two ()[12d(gdb) c^Hx/i $pc[K[13d=> 0x4006c0 <check_two>:[13;33Hcmp     w22, #0x32[14d(gdb) c[K[15dContinuing.[16d[K[17dBreakpoint 1, 0x0000000000400654 in loop_two ()[18d(gdb) c^Hx/i $pc[K[19d=> 0x400654 <loop_two>: ldr     w21, [x20, w22, sxtw #2][20d(gdb) c[K[21dContinuing.[22d[K[23dBreakpoint 2, 0x00000000004006c0 in check_two ()[24d(gdb) c[K[25dContinuing.[26d[K[27dBreakpoint 1, 0x0000000000400654 in loop_two ()[28d(gdb) c^Hx/i $pc[K[29d=> 0x400654 <loop_two>: ldr     w21, [x20, w22, sxtw #2][30d(gdb) c[K[31dContinuing.[32d[K[33dBreakpoint 2, 0x00000000004006c0 in check_two ()[34d(gdb) c^Hx/i $pc[K[35d=> 0x4006c0 <check_two>:[35;33Hcmp     w22, #0x32[36d(gdb) c[K[37dContinuing.[38d[K[39dBreakpoint 1, 0x0000000000400654 in loop_two ()[40d(gdb) c^Hx/i $pc[K[41d=> 0x400654 <loop_two>: ldr     w21, [x20, w22, sxtw #2][42d(gdb) c[K[43dContinuing.[44d[K[45dBreakpoint 2, 0x00000000004006c0 in check_two ()[46d(gdb) c^Hx/i $pc[K[47d=> 0x4006c0 <check_two>:[47;33Hcmp     w22, #0x32[48d(gdb) c[K[49dContinuing.[50d[K[51dBreakpoint 1, 0x0000000000400654 in loop_two ()[52d(gdb) c^Hx/i $pc[K[53d=> 0x400654 <loop_two>: ldr     w21, [x20, w22, sxtw #2][54d(gdb) c[K[55dContinuing.[56d[K[57dBreakpoint 2, 0x00000000004006c0 in check_two ()[58d(gdb) c^Hx/i $pc[K[59d=> 0x4006c0 <check_two>:[59;33Hcmp     w22, #0x32[60d(gdb) c[K[34d[?12l[?25h[?25l[41d[?12l[?25h[?25l[43d[?12l[?25h[?25l[44d[?12l[?25h[?25l[47d[?12l[?25h[?25l[49d[?12l[?25h[?25l[52d[?12l[?25h[?25l[53d[?12l[?25h[?25l[55d[?12l[?25h[?25l[56d[?12l[?25h[?25l[57d[?12l[?25h[?25l[58d[?12l[?25h[?25l[59d[?12l[?25h[?25l[3d[K[4dBreakpoint 2, 0x00000000004006c0 in check_two ()[5d(gdb) c^Hx/i $pc[K[6d=> 0x4006c0 <check_two>:[6;33Hcmp     w22, #0x32[7d(gdb) c[K[8dContinuing.[9d[K[10dBreakpoint 1, 0x0000000000400654 in loop_two ()[11d(gdb) c^Hx/i $pc[K[12d=> 0x400654 <loop_two>: ldr     w21, [x20, w22, sxtw #2][13d(gdb) c[K[14dContinuing.[15d[K[16dBreakpoint 2, 0x00000000004006c0 in check_two ()[17d(gdb) c^Hx/i $pc[K[18d=> 0x4006c0 <check_two>:[18;33Hcmp     w22, #0x32[19d(gdb) c[K[20dContinuing.[21d[K[22dBreakpoint 1, 0x0000000000400654 in loop_two ()[23d(gdb) c^Hx/i $pc[K[24d=> 0x400654 <loop_two>: ldr     w21, [x20, w22, sxtw #2][25d(gdb) c[K[26dContinuing.[27d[K[28dBreakpoint 2, 0x00000000004006c0 in check_two ()[29d(gdb) c^Hx/i $pc[K[30d=> 0x4006c0 <check_two>:[30;33Hcmp     w22, #0x32[31d(gdb) c[K[32dContinuing.[33d[K[34dBreakpoint 1, 0x0000000000400654 in loop_two ()[35d(gdb) c^Hx/i $pc[K[36d=> 0x400654 <loop_two>: ldr     w21, [x20, w22, sxtw #2][37d(gdb) c[K[38dContinuing.[39d[K[40dBreakpoint 2, 0x00000000004006c0 in check_two ()[41d(gdb) c^Hx/i $pc[K[42d=> 0x4006c0 <check_two>:[42;33Hcmp     w22, #0x32[43d(gdb) c[K[44dContinuing.[45d[K[46dBreakpoint 1, 0x0000000000400654 in loop_two ()[47d(gdb) c^Hx/i $pc[K[48d=> 0x400654 <loop_two>: ldr     w21, [x20, w22, sxtw #2][49d(gdb) c[K[50dContinuing.[51d[K[52dBreakpoint 2, 0x00000000004006c0 in check_two ()[53d(gdb) c^Hx/i $pc[K[54d=> 0x4006c0 <check_two>:[54;33Hcmp     w22, #0x32[55d(gdb) c[K[56dContinuing.[57d[K[58dBreakpoint 1, 0x0000000000400654 in loop_two ()[59d(gdb) c^Hx/i $pc[K[60d=> 0x400654 <loop_two>: ldr     w21, [x20, w22, sxtw #2][32d[?12l[?25h[?25l[34d[?12l[?25h[?25l[36d[?12l[?25h[?25l[39d[?12l[?25h[?25l[40d[?12l[?25h[?25l[41d[?12l[?25h[?25l[42d[?12l[?25h[?25l[43d[?12l[?25h[?25l[44d[?12l[?25h[?25l[45d[?12l[?25h[?25l[47d[?12l[?25h[?25l[48d[?12l[?25h[?25l[49d[?12l[?25h[?25l[52d[?12l[?25h[?25l[54d[?12l[?25h[?25l[57d[?12l[?25h[?25l[58d[?12l[?25h[?25l[59d[?12l[?25h[?25l[3dContinuing.[4d[K[5dBreakpoint 1, 0x0000000000400654 in loop_two ()[6d(gdb) c^Hx/i $pc[K[7d=> 0x400654 <loop_two>: ldr     w21, [x20, w22, sxtw #2][8d(gdb) c[K[9dContinuing.[10d[K[11dBreakpoint 2, 0x00000000004006c0 in check_two ()[12d(gdb) c^Hx/i $pc[K[13d=> 0x4006c0 <check_two>:[13;33Hcmp     w22, #0x32[14d(gdb) c[K[15dContinuing.[16d[K[17dBreakpoint 1, 0x0000000000400654 in loop_two ()[18d(gdb) c^Hx/i $pc[K[19d=> 0x400654 <loop_two>: ldr     w21, [x20, w22, sxtw #2][20d(gdb) c[K[21dContinuing.[22d[K[23dBreakpoint 2, 0x00000000004006c0 in check_two ()[24d(gdb) c^Hx/i $pc[K[25d=> 0x4006c0 <check_two>:[25;33Hcmp     w22, #0x32[26d(gdb) c[K[27dContinuing.[28d[K[29dBreakpoint 1, 0x0000000000400654 in loop_two ()[30d(gdb) c^Hx/i $pc[K[31d=> 0x400654 <loop_two>: ldr     w21, [x20, w22, sxtw #2][32d(gdb) c[K[33dContinuing.[34d[K[35dBreakpoint 2, 0x00000000004006c0 in check_two ()[36d(gdb) c^Hx/i $pc[K[37d=> 0x4006c0 <check_two>:[37;33Hcmp     w22, #0x32[38d(gdb) c[K[39dContinuing.[40d[K[41dBreakpoint 1, 0x0000000000400654 in loop_two ()[42d(gdb) c^Hx/i $pc[K[43d=> 0x400654 <loop_two>: ldr     w21, [x20, w22, sxtw #2][44d(gdb) c[K[45dContinuing.[46d[K[47dBreakpoint 2, 0x00000000004006c0 in check_two ()[48d(gdb) c^Hx/i $pc[K[49d=> 0x4006c0 <check_two>:[49;33Hcmp     w22, #0x32[50d(gdb) c[K[51dContinuing.[52d[K[53dBreakpoint 1, 0x0000000000400654 in loop_two ()[54d(gdb) ^M^[[K(gdb) ^M^[[K(gdb) ^M^[[K(gdb) ^M^[[K(gdb) ^M^[[K(gdb) ^M^[[K(gdb) ^M^[[K(gdb) ^M^[[K(gdb) c^Hx/i $pc[55d=> 0x400654 <loop_two>: ldr     w21, [x20, w22, sxtw #2][56d(gdb) x/i $pc^H^H^H^H^H^H^Hc^[[K[57dContinuing.[58d[K[59dBreakpoint 2, 0x00000000004006c0 in check_two ()[60d(gdb) c^Hx/i $pc[K[32d[?12l[?25h[?25l[36d[?12l[?25h[?25l[37d[?12l[?25h[?25l[38d[?12l[?25h[?25l[39d[?12l[?25h[?25l[41d[?12l[?25h[?25l[42d[?12l[?25h[?25l[44d[?12l[?25h[?25l[45d[?12l[?25h[?25l[46d[?12l[?25h[?25l[47d[?12l[?25h[?25l[48d[?12l[?25h[?25l[49d[?12l[?25h[?25l[51d[?12l[?25h[?25l[52d[?12l[?25h[?25l[53d[?12l[?25h[?25l[54d[?12l[?25h[?25l[55d[?12l[?25h[?25l[56d[?12l[?25h[?25l[58d[?12l[?25h[?25l[59d[?12l[?25h[?25l[60d[?12l[?25h[?25l7[3;61r8[61d[29

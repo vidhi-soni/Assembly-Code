@@ -1,0 +1,173 @@
+Script started on 2022-02-01 09:08:08-07:00
+]0;vidhi.soni1@csa1:~vidhi.soni1@csa1:~$ nano script2.txt1.txtq[Kscp -v /assign1a.s vidhi.soni1@arm.cpsc.ucalgary.ca:/home/sksoni/Downloads 
+script1.txtgcc assign1a.s -o assign1a
+]0;vidhi.soni1@csa1:~vidhi.soni1@csa1:~$ gdb assign1a
+GNU gdb (GDB) Fedora 8.1.1-4.fc28
+Copyright (C) 2018 Free Software Foundation, Inc.
+License GPLv3+: GNU GPL version 3 or later <http://gnu.org/licenses/gpl.html>
+This is free software: you are free to change and redistribute it.
+There is NO WARRANTY, to the extent permitted by law.  Type "show copying"
+and "show warranty" for details.
+This GDB was configured as "aarch64-redhat-linux-gnu".
+Type "show configuration" for configuration details.
+For bug reporting instructions, please see:
+<http://www.gnu.org/software/gdb/bugs/>.
+Find the GDB manual and other documentation resources online at:
+<http://www.gnu.org/software/gdb/documentation/>.
+For help, type "help".
+Type "apropos word" to search for commands related to "word"...
+Reading symbols from assign1a...(no debugging symbols found)...done.
+(gdb) b main
+Breakpoint 1 at 0x4005d8
+(gdb) r
+Starting program: /home/uga/vidhi.soni1/assign1a /Users/sksoni
+warning: the debug information found in "/usr/lib/debug//usr/lib64/ld-2.27.so.debug" does not match "/lib/ld-linux-aarch64.so.1" (CRC mismatch).
+
+Missing separate debuginfos, use: dnf debuginfo-install glibc-2.27-38.fc28.aarch64
+warning: the debug information found in "/usr/lib/debug//lib64/libc-2.27.so.debug" does not match "/lib64/libc.so.6" (CRC mismatch).
+
+warning: the debug information found in "/usr/lib/debug//usr/lib64/libc-2.27.so.debug" does not match "/lib64/libc.so.6" (CRC mismatch).
+
+
+Breakpoint 1, 0x00000000004005d8 in main ()
+(gdb) display/i $pc
+1: x/i $pc
+=> 0x4005d8 <main+20>:	mov	x22, #0xfffffffffffffff6    	// #-10
+(gdb) ni
+0x00000000004005dc in loop_test ()
+1: x/i $pc
+=> 0x4005dc <loop_test>:	cmp	x22, #0xa
+(gdb) ni
+0x00000000004005e0 in loop_test ()
+1: x/i $pc
+=> 0x4005e0 <loop_test+4>:	b.gt	0x40065c <done>
+(gdb) nidisplay/i $pc[C[C[C[C[C[Cr[Kb main[K[K[K[K[K[Kni
+0x00000000004005e4 in loop_test ()
+1: x/i $pc
+=> 0x4005e4 <loop_test+8>:	mov	x20, #0x0                   	// #0
+(gdb) ni
+0x00000000004005e8 in loop_test ()
+1: x/i $pc
+=> 0x4005e8 <loop_test+12>:	mov	x23, #0x3                   	// #3
+(gdb) no[Ki
+0x00000000004005ec in loop_test ()
+1: x/i $pc
+=> 0x4005ec <loop_test+16>:	mul	x23, x23, x22
+(gdb) ni
+0x00000000004005f0 in loop_test ()
+1: x/i $pc
+=> 0x4005f0 <loop_test+20>:	mul	x23, x23, x22
+(gdb) ni
+0x00000000004005f4 in loop_test ()
+1: x/i $pc
+=> 0x4005f4 <loop_test+24>:	mul	x23, x23, x22
+(gdb) ni
+0x00000000004005f8 in loop_test ()
+1: x/i $pc
+=> 0x4005f8 <loop_test+28>:	mul	x23, x23, x22
+(gdb) ni
+0x00000000004005fc in loop_test ()
+1: x/i $pc
+=> 0x4005fc <loop_test+32>:	mov	x24, #0xfffffffffffffee1    	// #-287
+(gdb) ni
+0x0000000000400600 in loop_test ()
+1: x/i $pc
+=> 0x400600 <loop_test+36>:	mul	x24, x24, x22
+(gdb) ni
+0x0000000000400604 in loop_test ()
+1: x/i $pc
+=> 0x400604 <loop_test+40>:	mul	x24, x24, x22
+(gdb) ni
+0x0000000000400608 in loop_test ()
+1: x/i $pc
+=> 0x400608 <loop_test+44>:	mov	x25, #0xffffffffffffffc1    	// #-63
+(gdb) ni
+0x000000000040060c in loop_test ()
+1: x/i $pc
+=> 0x40060c <loop_test+48>:	mul	x25, x25, x22
+(gdb) ni
+0x0000000000400610 in loop_test ()
+1: x/i $pc
+=> 0x400610 <loop_test+52>:	add	x20, x20, x23
+(gdb) ni
+0x0000000000400614 in loop_test ()
+1: x/i $pc
+=> 0x400614 <loop_test+56>:	add	x20, x20, x24
+(gdb) ni
+0x0000000000400618 in loop_test ()
+1: x/i $pc
+=> 0x400618 <loop_test+60>:	add	x20, x20, x25
+(gdb) ni
+0x000000000040061c in loop_test ()
+1: x/i $pc
+=> 0x40061c <loop_test+64>:	add	x20, x20, #0x25
+(gdb) ni
+0x0000000000400620 in loop_test ()
+1: x/i $pc
+=> 0x400620 <loop_test+68>:	cmp	x19, #0x0
+(gdb) ni
+0x0000000000400624 in loop_test ()
+1: x/i $pc
+=> 0x400624 <loop_test+72>:	b.eq	0x400654 <set_min>  // b.none
+(gdb) ni
+0x0000000000400654 in set_min ()
+1: x/i $pc
+=> 0x400654 <set_min>:	mov	x21, x20
+(gdb) ni
+0x0000000000400658 in set_min ()
+1: x/i $pc
+=> 0x400658 <set_min+4>:	b	0x400630 <loop>
+(gdb) ni
+0x0000000000400630 in loop ()
+1: x/i $pc
+=> 0x400630 <loop>:	adrp	x0, 0x400000
+(gdb) no[Ki
+0x0000000000400634 in loop ()
+1: x/i $pc
+=> 0x400634 <loop+4>:	add	x0, x0, #0x594
+(gdb) ni
+0x0000000000400638 in loop ()
+1: x/i $pc
+=> 0x400638 <loop+8>:	mov	x1, x22
+(gdb) ni
+0x000000000040063c in loop ()
+1: x/i $pc
+=> 0x40063c <loop+12>:	mov	x2, x20
+(gdb) ni
+0x0000000000400640 in loop ()
+1: x/i $pc
+=> 0x400640 <loop+16>:	mov	x3, x21
+(gdb) ni
+0x0000000000400644 in loop ()
+1: x/i $pc
+=> 0x400644 <loop+20>:	bl	0x400480 <printf@plt>
+(gdb) ni
+ x = -10, y = 1967. 
+ Minimum value of y = 1967. 
+0x0000000000400648 in loop ()
+1: x/i $pc
+=> 0x400648 <loop+24>:	add	x22, x22, #0x1
+(gdb) ni
+0x000000000040064c in loop ()
+1: x/i $pc
+=> 0x40064c <loop+28>:	add	x19, x19, #0x1
+(gdb) ni
+0x0000000000400650 in loop ()
+1: x/i $pc
+=> 0x400650 <loop+32>:	b	0x4005dc <loop_test>
+(gdb) ni
+ x = -9, y = -2960. 
+ Minimum value of y = -2960. 
+0x0000000000400648 in loop ()
+1: x/i $pc
+=> 0x400648 <loop+24>:	add	x22, x22, #0x1
+(gdb) nip $x22
+Undefined command: "nip".  Try "help".
+(gdb) p #[K$x22
+$1 = -9
+(gdb) q
+A debugging session is active.
+
+	Inferior 1 [process 26344] will be killed.
+
+Quit anyway? (y or n) y
